@@ -287,7 +287,7 @@
         "week_id": "W02",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green yogurt. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green doll. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -301,8 +301,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "yogurt",
-        "image": "🍨",
+        "audio": "doll",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -620,7 +620,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green bike. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green eraser. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -634,8 +634,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "bike",
-        "image": "🚲",
+        "audio": "eraser",
+        "image": "🧼",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -828,7 +828,7 @@
         "week_id": "W09",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a read?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a ruler?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -842,8 +842,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "read",
-        "image": "📖",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -953,7 +953,7 @@
         "week_id": "W10",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green living room. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green pencil. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -967,8 +967,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "living room",
-        "image": "🛋️",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -1188,21 +1188,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🧑‍⚕️ and select the matching sentence:",
         "options": [
-          "I have a nurse.",
-          "I like nurse.",
-          "Where is the nurse?",
-          "The nurse is big."
+          "The dog is big.",
+          "I like dog.",
+          "I have a dog.",
+          "Where is the dog?"
         ],
         "options_ipa": [
-          "aɪ hæv eɪ nɜːs",
-          "aɪ like nɜːs",
-          "weə ɪz the nɜːs",
-          "the nɜːs ɪz bɪɡ"
+          "ðə dɒɡ ɪz big",
+          "aɪ like dɒɡ",
+          "aɪ hæv ə dɒɡ",
+          "weə ɪz ðə dɒɡ"
         ],
-        "answer": "I like nurse.",
-        "audio": "nurse",
-        "image": "🧑‍⚕️",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like nurse.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I like dog.",
+        "audio": "dog",
+        "image": "🐶",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I like dog.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX4_Q09",
@@ -1286,7 +1286,7 @@
         "week_id": "W03",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green milk. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green rabbit. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -1300,8 +1300,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "milk",
-        "image": "🥛",
+        "audio": "rabbit",
+        "image": "🐰",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -1619,7 +1619,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green run. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ruler. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -1633,8 +1633,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "run",
-        "image": "🏃",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -1827,7 +1827,7 @@
         "week_id": "W06",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a doctor?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a pencil?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -1841,8 +1841,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "doctor",
-        "image": "🩺",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -2285,7 +2285,7 @@
         "week_id": "W06",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dance. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green apple. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -2299,8 +2299,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "dance",
-        "image": "💃",
+        "audio": "apple",
+        "image": "🍎",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -2618,7 +2618,7 @@
         "week_id": "W04",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green banana. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green pencil. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -2632,8 +2632,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "banana",
-        "image": "🍌",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -2826,7 +2826,7 @@
         "week_id": "W01",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a sing?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a pencil?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -2840,8 +2840,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "sing",
-        "image": "🎤",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -2951,7 +2951,7 @@
         "week_id": "W03",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green jeans. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green pencil. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -2965,8 +2965,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "jeans",
-        "image": "👖",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -3284,7 +3284,7 @@
         "week_id": "W07",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green bike. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green robot. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -3298,8 +3298,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "bike",
-        "image": "🚲",
+        "audio": "robot",
+        "image": "🤖",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -3617,7 +3617,7 @@
         "week_id": "W04",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green sing. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cat. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -3631,8 +3631,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "sing",
-        "image": "🎤",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -3950,7 +3950,7 @@
         "week_id": "W11",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green long. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green doll. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -3964,8 +3964,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "long",
-        "image": "📏",
+        "audio": "doll",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -4283,7 +4283,7 @@
         "week_id": "W11",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green play football. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green pencil case. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -4297,8 +4297,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "play football",
-        "image": "⚽",
+        "audio": "pencil_case",
+        "image": "👝",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -4616,7 +4616,7 @@
         "week_id": "W03",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green sunny. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ruler. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -4630,8 +4630,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "sunny",
-        "image": "☀️",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -4949,7 +4949,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green window. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green notebook. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -4963,8 +4963,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "window",
-        "image": "🪟",
+        "audio": "notebook",
+        "image": "📔",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -5184,21 +5184,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture ☀️ and select the matching sentence:",
         "options": [
-          "I like sunny.",
-          "The sunny is big.",
-          "Where is the sunny?",
-          "I have a sunny."
+          "The dog is big.",
+          "I like dog.",
+          "I have a dog.",
+          "Where is the dog?"
         ],
         "options_ipa": [
-          "aɪ like ˈsʌni",
-          "the ˈsʌni ɪz bɪɡ",
-          "weə ɪz the ˈsʌni",
-          "aɪ hæv eɪ ˈsʌni"
+          "ðə dɒɡ ɪz big",
+          "aɪ like dɒɡ",
+          "aɪ hæv ə dɒɡ",
+          "weə ɪz ðə dɒɡ"
         ],
-        "answer": "I like sunny.",
-        "audio": "sunny",
-        "image": "☀️",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like sunny.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "The dog is big.",
+        "audio": "dog",
+        "image": "🐶",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'The dog is big.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX16_Q09",
@@ -5282,7 +5282,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green bedroom. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green eraser. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -5296,8 +5296,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "bedroom",
-        "image": "🛌",
+        "audio": "eraser",
+        "image": "🧼",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -5615,7 +5615,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green nice. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dog. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -5629,8 +5629,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "nice",
-        "image": "✨",
+        "audio": "dog",
+        "image": "🐶",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -5948,7 +5948,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green tall. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cat. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -5962,8 +5962,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "tall",
-        "image": "🦒",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -6156,7 +6156,7 @@
         "week_id": "W02",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a grandmother?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a pencil?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -6170,8 +6170,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "grandmother",
-        "image": "👵",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -6281,7 +6281,7 @@
         "week_id": "W03",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green bird. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green apple. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -6295,8 +6295,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "bird",
-        "image": "🐦",
+        "audio": "apple",
+        "image": "🍎",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -6489,7 +6489,7 @@
         "week_id": "W03",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a windy?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a classroom?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -6503,8 +6503,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "windy",
-        "image": "🍃",
+        "audio": "classroom",
+        "image": "🏫",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -6614,7 +6614,7 @@
         "week_id": "W07",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green sister. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green parrot. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -6628,8 +6628,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "sister",
-        "image": "👧",
+        "audio": "parrot",
+        "image": "🦜",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -6947,7 +6947,7 @@
         "week_id": "W02",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green jacket. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ruler. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -6961,8 +6961,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "jacket",
-        "image": "🧥",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -7280,7 +7280,7 @@
         "week_id": "W07",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dress. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ruler. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -7294,8 +7294,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "dress",
-        "image": "👗",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -7613,7 +7613,7 @@
         "week_id": "W08",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green spelling. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dog. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -7627,8 +7627,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "spelling",
-        "image": "🔤",
+        "audio": "dog",
+        "image": "🐶",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -7848,21 +7848,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 👋 and select the matching sentence:",
         "options": [
-          "The hello is big.",
-          "I like hello.",
-          "I have a hello.",
-          "Where is the hello?"
+          "The dog is big.",
+          "I like dog.",
+          "I have a dog.",
+          "Where is the dog?"
         ],
         "options_ipa": [
-          "the həˈləʊ ɪz bɪɡ",
-          "aɪ like həˈləʊ",
-          "aɪ hæv eɪ həˈləʊ",
-          "weə ɪz the həˈləʊ"
+          "ðə dɒɡ ɪz big",
+          "aɪ like dɒɡ",
+          "aɪ hæv ə dɒɡ",
+          "weə ɪz ðə dɒɡ"
         ],
-        "answer": "I like hello.",
-        "audio": "hello",
-        "image": "👋",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like hello.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I like dog.",
+        "audio": "dog",
+        "image": "🐶",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I like dog.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX24_Q09",
@@ -8279,7 +8279,7 @@
         "week_id": "W04",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green years. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cookie. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -8293,8 +8293,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "years",
-        "image": "🎂",
+        "audio": "cookie",
+        "image": "🍪",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -8612,7 +8612,7 @@
         "week_id": "W10",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green classroom. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green parrot. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -8626,8 +8626,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "classroom",
-        "image": "🏫",
+        "audio": "parrot",
+        "image": "🦜",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -8820,7 +8820,7 @@
         "week_id": "W04",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a dance?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a pencil case?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -8834,8 +8834,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "dance",
-        "image": "💃",
+        "audio": "pencil_case",
+        "image": "👝",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -8945,7 +8945,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green desk. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ruler. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -8959,8 +8959,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "desk",
-        "image": "desk",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -9278,7 +9278,7 @@
         "week_id": "W11",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green living room. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green toy. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -9292,8 +9292,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "living room",
-        "image": "🛋️",
+        "audio": "toy",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -9513,21 +9513,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 👋 and select the matching sentence:",
         "options": [
-          "Where is the hello?",
-          "The hello is big.",
-          "I like hello.",
-          "I have a hello."
+          "The ball is big.",
+          "I like ball.",
+          "I have a ball.",
+          "Where is the ball?"
         ],
         "options_ipa": [
-          "weə ɪz the həˈləʊ",
-          "the həˈləʊ ɪz bɪɡ",
-          "aɪ like həˈləʊ",
-          "aɪ hæv eɪ həˈləʊ"
+          "ðə bɔːl ɪz big",
+          "aɪ like bɔːl",
+          "aɪ hæv ə bɔːl",
+          "weə ɪz ðə bɔːl"
         ],
-        "answer": "I like hello.",
-        "audio": "hello",
-        "image": "👋",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like hello.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I have a ball.",
+        "audio": "ball",
+        "image": "⚽",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I have a ball.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX29_Q09",
@@ -9611,7 +9611,7 @@
         "week_id": "W06",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green run. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cat. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -9625,8 +9625,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "run",
-        "image": "🏃",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -9944,7 +9944,7 @@
         "week_id": "W09",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green soup. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cookie. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -9958,8 +9958,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "soup",
-        "image": "🍲",
+        "audio": "cookie",
+        "image": "🍪",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -10152,7 +10152,7 @@
         "week_id": "W06",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a sister?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a notebook?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -10166,8 +10166,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "sister",
-        "image": "👧",
+        "audio": "notebook",
+        "image": "📔",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -10179,21 +10179,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 👩 and select the matching sentence:",
         "options": [
-          "The mother is big.",
-          "I like mother.",
-          "I have a mother.",
-          "Where is the mother?"
+          "The doll is big.",
+          "I like doll.",
+          "I have a doll.",
+          "Where is the doll?"
         ],
         "options_ipa": [
-          "the ˈmʌðə ɪz bɪɡ",
-          "aɪ like ˈmʌðə",
-          "aɪ hæv eɪ ˈmʌðə",
-          "weə ɪz the ˈmʌðə"
+          "ðə dɒl ɪz big",
+          "aɪ like dɒl",
+          "aɪ hæv ə dɒl",
+          "weə ɪz ðə dɒl"
         ],
-        "answer": "I like mother.",
-        "audio": "mother",
-        "image": "👩",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like mother.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I like doll.",
+        "audio": "doll",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I like doll.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX31_Q09",
@@ -10277,7 +10277,7 @@
         "week_id": "W11",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green poster. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green apple. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -10291,8 +10291,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "poster",
-        "image": "🖼️",
+        "audio": "apple",
+        "image": "🍎",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -10610,7 +10610,7 @@
         "week_id": "W10",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green meat. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dog. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -10624,8 +10624,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "meat",
-        "image": "🥩",
+        "audio": "dog",
+        "image": "🐶",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -10943,7 +10943,7 @@
         "week_id": "W03",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green computer room. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green pencil. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -10957,8 +10957,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "computer room",
-        "image": "💻",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -11276,7 +11276,7 @@
         "week_id": "W08",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green monkey. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dog. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -11290,8 +11290,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "monkey",
-        "image": "🐒",
+        "audio": "dog",
+        "image": "🐶",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -11511,21 +11511,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🔤 and select the matching sentence:",
         "options": [
-          "I like spelling.",
-          "Where is the spelling?",
-          "The spelling is big.",
-          "I have a spelling."
+          "The dog is big.",
+          "I like dog.",
+          "I have a dog.",
+          "Where is the dog?"
         ],
         "options_ipa": [
-          "aɪ like ˈspɛlɪŋ",
-          "weə ɪz the ˈspɛlɪŋ",
-          "the ˈspɛlɪŋ ɪz bɪɡ",
-          "aɪ hæv eɪ ˈspɛlɪŋ"
+          "ðə dɒɡ ɪz big",
+          "aɪ like dɒɡ",
+          "aɪ hæv ə dɒɡ",
+          "weə ɪz ðə dɒɡ"
         ],
-        "answer": "I like spelling.",
-        "audio": "spelling",
-        "image": "🔤",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like spelling.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "The dog is big.",
+        "audio": "dog",
+        "image": "🐶",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'The dog is big.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX35_Q09",
@@ -11942,7 +11942,7 @@
         "week_id": "W11",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green bird. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green car. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -11956,8 +11956,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "bird",
-        "image": "🐦",
+        "audio": "car",
+        "image": "🚗",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -12275,7 +12275,7 @@
         "week_id": "W03",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green mother. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green pencil case. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -12289,8 +12289,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "mother",
-        "image": "👩",
+        "audio": "pencil_case",
+        "image": "👝",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -12816,7 +12816,7 @@
         "week_id": "W10",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a cook?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a book?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -12830,8 +12830,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "cook",
-        "image": "👨‍🍳",
+        "audio": "book",
+        "image": "📖",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -12843,21 +12843,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🧑‍🤝‍🧑 and select the matching sentence:",
         "options": [
-          "Where is the friend?",
-          "I like friend.",
-          "The friend is big.",
-          "I have a friend."
+          "The dog is big.",
+          "I like dog.",
+          "I have a dog.",
+          "Where is the dog?"
         ],
         "options_ipa": [
-          "weə ɪz the frɛnd",
-          "aɪ like frɛnd",
-          "the frɛnd ɪz bɪɡ",
-          "aɪ hæv eɪ frɛnd"
+          "ðə dɒɡ ɪz big",
+          "aɪ like dɒɡ",
+          "aɪ hæv ə dɒɡ",
+          "weə ɪz ðə dɒɡ"
         ],
-        "answer": "I like friend.",
-        "audio": "friend",
-        "image": "🧑‍🤝‍🧑",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like friend.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I like dog.",
+        "audio": "dog",
+        "image": "🐶",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I like dog.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX39_Q09",
@@ -12941,7 +12941,7 @@
         "week_id": "W10",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green play chess. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ball. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -12955,8 +12955,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "play chess",
-        "image": "♟️",
+        "audio": "ball",
+        "image": "⚽",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -13149,7 +13149,7 @@
         "week_id": "W08",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a windy?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a rabbit?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -13163,8 +13163,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "windy",
-        "image": "🍃",
+        "audio": "rabbit",
+        "image": "🐰",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -13274,7 +13274,7 @@
         "week_id": "W11",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dress. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ruler. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -13288,8 +13288,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "dress",
-        "image": "👗",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -13607,7 +13607,7 @@
         "week_id": "W15",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dress. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cat. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -13621,8 +13621,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "dress",
-        "image": "👗",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -13842,21 +13842,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🎤 and select the matching sentence:",
         "options": [
-          "The sing is big.",
-          "I like sing.",
-          "I have a sing.",
-          "Where is the sing?"
+          "The cat is big.",
+          "I like cat.",
+          "I have a cat.",
+          "Where is the cat?"
         ],
         "options_ipa": [
-          "the sɪŋ ɪz bɪɡ",
-          "aɪ like sɪŋ",
-          "aɪ hæv eɪ sɪŋ",
-          "weə ɪz the sɪŋ"
+          "ðə kæt ɪz big",
+          "aɪ like kæt",
+          "aɪ hæv ə kæt",
+          "weə ɪz ðə kæt"
         ],
-        "answer": "I like sing.",
-        "audio": "sing",
-        "image": "🎤",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like sing.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I like cat.",
+        "audio": "cat",
+        "image": "🐱",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I like cat.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX42_Q09",
@@ -14148,7 +14148,7 @@
         "week_id": "W14",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a spelling?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a pen?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -14162,8 +14162,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "spelling",
-        "image": "🔤",
+        "audio": "pen",
+        "image": "🖊️",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -14481,7 +14481,7 @@
         "week_id": "W21",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a draw?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a ball?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -14495,8 +14495,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "draw",
-        "image": "🎨",
+        "audio": "ball",
+        "image": "⚽",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -14606,7 +14606,7 @@
         "week_id": "W20",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green yogurt. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green pencil case. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -14620,8 +14620,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "yogurt",
-        "image": "🍨",
+        "audio": "pencil_case",
+        "image": "👝",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -14939,7 +14939,7 @@
         "week_id": "W23",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green draw. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green robot. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -14953,8 +14953,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "draw",
-        "image": "🎨",
+        "audio": "robot",
+        "image": "🤖",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -15272,7 +15272,7 @@
         "week_id": "W16",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green tree. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green eraser. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -15286,8 +15286,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "tree",
-        "image": "🌳",
+        "audio": "eraser",
+        "image": "🧼",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -15605,7 +15605,7 @@
         "week_id": "W18",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green listen. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dog. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -15619,8 +15619,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "listen",
-        "image": "👂",
+        "audio": "dog",
+        "image": "🐶",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -15938,7 +15938,7 @@
         "week_id": "W15",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green nose. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green pencil case. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -15952,8 +15952,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "nose",
-        "image": "👃",
+        "audio": "pencil_case",
+        "image": "👝",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -16173,21 +16173,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🍃 and select the matching sentence:",
         "options": [
-          "I like windy.",
-          "The windy is big.",
-          "Where is the windy?",
-          "I have a windy."
+          "The doll is big.",
+          "I like doll.",
+          "I have a doll.",
+          "Where is the doll?"
         ],
         "options_ipa": [
-          "aɪ like ˈwɪndi",
-          "the ˈwɪndi ɪz bɪɡ",
-          "weə ɪz the ˈwɪndi",
-          "aɪ hæv eɪ ˈwɪndi"
+          "ðə dɒl ɪz big",
+          "aɪ like dɒl",
+          "aɪ hæv ə dɒl",
+          "weə ɪz ðə dɒl"
         ],
-        "answer": "I like windy.",
-        "audio": "windy",
-        "image": "🍃",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like windy.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "The doll is big.",
+        "audio": "doll",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'The doll is big.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX49_Q09",
@@ -16271,7 +16271,7 @@
         "week_id": "W20",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green short. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green toy. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -16285,8 +16285,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "short",
-        "image": "📏",
+        "audio": "toy",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -16506,21 +16506,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🧍 and select the matching sentence:",
         "options": [
-          "Where is the slim?",
-          "The slim is big.",
-          "I like slim.",
-          "I have a slim."
+          "The car is big.",
+          "I like car.",
+          "I have a car.",
+          "Where is the car?"
         ],
         "options_ipa": [
-          "weə ɪz the slɪm",
-          "the slɪm ɪz bɪɡ",
-          "aɪ like slɪm",
-          "aɪ hæv eɪ slɪm"
+          "ðə kɑː ɪz big",
+          "aɪ like kɑː",
+          "aɪ hæv ə kɑː",
+          "weə ɪz ðə kɑː"
         ],
-        "answer": "I like slim.",
-        "audio": "slim",
-        "image": "🧍",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like slim.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I have a car.",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I have a car.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX50_Q09",
@@ -16604,7 +16604,7 @@
         "week_id": "W14",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green windy. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green book. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -16618,8 +16618,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "windy",
-        "image": "🍃",
+        "audio": "book",
+        "image": "📖",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -16937,7 +16937,7 @@
         "week_id": "W15",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green t-shirt. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cookie. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -16951,8 +16951,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "t-shirt",
-        "image": "👕",
+        "audio": "cookie",
+        "image": "🍪",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -17270,7 +17270,7 @@
         "week_id": "W15",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green mouth. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green book. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -17284,8 +17284,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "mouth",
-        "image": "👄",
+        "audio": "book",
+        "image": "📖",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -17603,7 +17603,7 @@
         "week_id": "W20",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green living room. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green notebook. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -17617,8 +17617,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "living room",
-        "image": "🛋️",
+        "audio": "notebook",
+        "image": "📔",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -17936,7 +17936,7 @@
         "week_id": "W15",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green mother. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cookie. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -17950,8 +17950,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "mother",
-        "image": "👩",
+        "audio": "cookie",
+        "image": "🍪",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -18144,7 +18144,7 @@
         "week_id": "W18",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a rainy?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a cookie?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -18158,8 +18158,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "rainy",
-        "image": "🌧️",
+        "audio": "cookie",
+        "image": "🍪",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -18602,7 +18602,7 @@
         "week_id": "W18",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green rainbow. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green pencil case. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -18616,8 +18616,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "rainbow",
-        "image": "🌈",
+        "audio": "pencil_case",
+        "image": "👝",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -18935,7 +18935,7 @@
         "week_id": "W23",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green rice. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green doll. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -18949,8 +18949,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "rice",
-        "image": "🍚",
+        "audio": "doll",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -19268,7 +19268,7 @@
         "week_id": "W13",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green face. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green book. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -19282,8 +19282,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "face",
-        "image": "👤",
+        "audio": "book",
+        "image": "📖",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -19476,7 +19476,7 @@
         "week_id": "W15",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a friend?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a bathroom?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -19490,8 +19490,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "friend",
-        "image": "🧑‍🤝‍🧑",
+        "audio": "bathroom",
+        "image": "🚿",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -19601,7 +19601,7 @@
         "week_id": "W23",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green fly. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green rabbit. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -19615,8 +19615,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "fly",
-        "image": "🦅",
+        "audio": "rabbit",
+        "image": "🐰",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -19934,7 +19934,7 @@
         "week_id": "W23",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green gym. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green robot. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -19948,8 +19948,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "gym",
-        "image": "💪",
+        "audio": "robot",
+        "image": "🤖",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -20169,21 +20169,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🎤 and select the matching sentence:",
         "options": [
-          "Where is the singer?",
-          "I like singer.",
-          "I have a singer.",
-          "The singer is big."
+          "The ball is big.",
+          "I like ball.",
+          "I have a ball.",
+          "Where is the ball?"
         ],
         "options_ipa": [
-          "weə ɪz the ˈsɪŋə",
-          "aɪ like ˈsɪŋə",
-          "aɪ hæv eɪ ˈsɪŋə",
-          "the ˈsɪŋə ɪz bɪɡ"
+          "ðə bɔːl ɪz big",
+          "aɪ like bɔːl",
+          "aɪ hæv ə bɔːl",
+          "weə ɪz ðə bɔːl"
         ],
-        "answer": "I like singer.",
-        "audio": "singer",
-        "image": "🎤",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like singer.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I like ball.",
+        "audio": "ball",
+        "image": "⚽",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I like ball.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX61_Q09",
@@ -20267,7 +20267,7 @@
         "week_id": "W16",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cloudy. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cat. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -20281,8 +20281,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "cloudy",
-        "image": "☁️",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -20475,7 +20475,7 @@
         "week_id": "W22",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a fly?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a sky?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -20489,8 +20489,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "fly",
-        "image": "🦅",
+        "audio": "sky",
+        "image": "🌌",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -20502,21 +20502,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 📏 and select the matching sentence:",
         "options": [
-          "I like short.",
-          "Where is the short?",
-          "I have a short.",
-          "The short is big."
+          "The doll is big.",
+          "I like doll.",
+          "I have a doll.",
+          "Where is the doll?"
         ],
         "options_ipa": [
-          "aɪ like ʃɔːt",
-          "weə ɪz the ʃɔːt",
-          "aɪ hæv eɪ ʃɔːt",
-          "the ʃɔːt ɪz bɪɡ"
+          "ðə dɒl ɪz big",
+          "aɪ like dɒl",
+          "aɪ hæv ə dɒl",
+          "weə ɪz ðə dɒl"
         ],
-        "answer": "I like short.",
-        "audio": "short",
-        "image": "📏",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like short.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "The doll is big.",
+        "audio": "doll",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'The doll is big.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX62_Q09",
@@ -20600,7 +20600,7 @@
         "week_id": "W15",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green parents. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green rabbit. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -20614,8 +20614,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "parents",
-        "image": "👪",
+        "audio": "rabbit",
+        "image": "🐰",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -20808,7 +20808,7 @@
         "week_id": "W18",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a parents?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a egg?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -20822,8 +20822,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "parents",
-        "image": "👪",
+        "audio": "egg",
+        "image": "🥚",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -20933,7 +20933,7 @@
         "week_id": "W23",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green nose. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green book. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -20947,8 +20947,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "nose",
-        "image": "👃",
+        "audio": "book",
+        "image": "📖",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -21266,7 +21266,7 @@
         "week_id": "W23",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green sunny. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green notebook. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -21280,8 +21280,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "sunny",
-        "image": "☀️",
+        "audio": "notebook",
+        "image": "📔",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -21474,7 +21474,7 @@
         "week_id": "W15",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a fly?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a garden?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -21488,8 +21488,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "fly",
-        "image": "🦅",
+        "audio": "garden",
+        "image": "🏡",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -21807,7 +21807,7 @@
         "week_id": "W21",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a read?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a doll?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -21821,8 +21821,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "read",
-        "image": "📖",
+        "audio": "doll",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -21932,7 +21932,7 @@
         "week_id": "W14",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green hello. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green doll. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -21946,8 +21946,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "hello",
-        "image": "👋",
+        "audio": "doll",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -22500,21 +22500,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 👂 and select the matching sentence:",
         "options": [
-          "The listen is big.",
-          "I have a listen.",
-          "Where is the listen?",
-          "I like listen."
+          "The rabbit is big.",
+          "I like rabbit.",
+          "I have a rabbit.",
+          "Where is the rabbit?"
         ],
         "options_ipa": [
-          "the ˈlɪsn ɪz bɪɡ",
-          "aɪ hæv eɪ ˈlɪsn",
-          "weə ɪz the ˈlɪsn",
-          "aɪ like ˈlɪsn"
+          "ðə ˈræbɪt ɪz big",
+          "aɪ like ˈræbɪt",
+          "aɪ hæv ə ˈræbɪt",
+          "weə ɪz ðə ˈræbɪt"
         ],
-        "answer": "I like listen.",
-        "audio": "listen",
-        "image": "👂",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like listen.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "Where is the rabbit?",
+        "audio": "rabbit",
+        "image": "🐰",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'Where is the rabbit?' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX68_Q09",
@@ -22598,7 +22598,7 @@
         "week_id": "W14",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green water. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green eraser. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -22612,8 +22612,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "water",
-        "image": "💧",
+        "audio": "eraser",
+        "image": "🧼",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -22931,7 +22931,7 @@
         "week_id": "W19",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green paint. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green kite. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -22945,8 +22945,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "paint",
-        "image": "🎨",
+        "audio": "kite",
+        "image": "🪁",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -23139,7 +23139,7 @@
         "week_id": "W20",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a sister?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a cat?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -23153,8 +23153,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "sister",
-        "image": "👧",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -23264,7 +23264,7 @@
         "week_id": "W20",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green parents. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green kite. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -23278,8 +23278,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "parents",
-        "image": "👪",
+        "audio": "kite",
+        "image": "🪁",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -23499,21 +23499,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture ✍️ and select the matching sentence:",
         "options": [
-          "I like write.",
-          "The write is big.",
-          "I have a write.",
-          "Where is the write?"
+          "The cat is big.",
+          "I like cat.",
+          "I have a cat.",
+          "Where is the cat?"
         ],
         "options_ipa": [
-          "aɪ like raɪt",
-          "the raɪt ɪz bɪɡ",
-          "aɪ hæv eɪ raɪt",
-          "weə ɪz the raɪt"
+          "ðə kæt ɪz big",
+          "aɪ like kæt",
+          "aɪ hæv ə kæt",
+          "weə ɪz ðə kæt"
         ],
-        "answer": "I like write.",
-        "audio": "write",
-        "image": "✍️",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like write.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "The cat is big.",
+        "audio": "cat",
+        "image": "🐱",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'The cat is big.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX71_Q09",
@@ -23597,7 +23597,7 @@
         "week_id": "W21",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green bike. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dog. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -23611,8 +23611,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "bike",
-        "image": "🚲",
+        "audio": "dog",
+        "image": "🐶",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -23832,21 +23832,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 📖 and select the matching sentence:",
         "options": [
-          "Where is the read?",
-          "I like read.",
-          "The read is big.",
-          "I have a read."
+          "The car is big.",
+          "I like car.",
+          "I have a car.",
+          "Where is the car?"
         ],
         "options_ipa": [
-          "weə ɪz the riːd",
-          "aɪ like riːd",
-          "the riːd ɪz bɪɡ",
-          "aɪ hæv eɪ riːd"
+          "ðə kɑː ɪz big",
+          "aɪ like kɑː",
+          "aɪ hæv ə kɑː",
+          "weə ɪz ðə kɑː"
         ],
-        "answer": "I like read.",
-        "audio": "read",
-        "image": "📖",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like read.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I like car.",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I like car.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX72_Q09",
@@ -23930,7 +23930,7 @@
         "week_id": "W20",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dance. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cat. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -23944,8 +23944,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "dance",
-        "image": "💃",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -24138,7 +24138,7 @@
         "week_id": "W20",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a speak?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a rabbit?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -24152,8 +24152,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "speak",
-        "image": "🗣️",
+        "audio": "rabbit",
+        "image": "🐰",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -24263,7 +24263,7 @@
         "week_id": "W22",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green brown. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cookie. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -24277,8 +24277,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "brown",
-        "image": "🤎",
+        "audio": "cookie",
+        "image": "🍪",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -24596,7 +24596,7 @@
         "week_id": "W20",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dance. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green robot. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -24610,8 +24610,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "dance",
-        "image": "💃",
+        "audio": "robot",
+        "image": "🤖",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -24929,7 +24929,7 @@
         "week_id": "W18",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dress. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green eraser. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -24943,8 +24943,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "dress",
-        "image": "👗",
+        "audio": "eraser",
+        "image": "🧼",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -25137,7 +25137,7 @@
         "week_id": "W18",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a hi?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a carrots?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -25151,8 +25151,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "hi",
-        "image": "👋",
+        "audio": "carrots",
+        "image": "🥕",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -25262,7 +25262,7 @@
         "week_id": "W23",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green window. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green notebook. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -25276,8 +25276,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "window",
-        "image": "🪟",
+        "audio": "notebook",
+        "image": "📔",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -25595,7 +25595,7 @@
         "week_id": "W18",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green bathroom. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green cookie. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -25609,8 +25609,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "bathroom",
-        "image": "🚿",
+        "audio": "cookie",
+        "image": "🍪",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -25830,21 +25830,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🧑‍🤝‍🧑 and select the matching sentence:",
         "options": [
-          "I like friend.",
-          "The friend is big.",
-          "Where is the friend?",
-          "I have a friend."
+          "The ball is big.",
+          "I like ball.",
+          "I have a ball.",
+          "Where is the ball?"
         ],
         "options_ipa": [
-          "aɪ like frɛnd",
-          "the frɛnd ɪz bɪɡ",
-          "weə ɪz the frɛnd",
-          "aɪ hæv eɪ frɛnd"
+          "ðə bɔːl ɪz big",
+          "aɪ like bɔːl",
+          "aɪ hæv ə bɔːl",
+          "weə ɪz ðə bɔːl"
         ],
-        "answer": "I like friend.",
-        "audio": "friend",
-        "image": "🧑‍🤝‍🧑",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like friend.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "The ball is big.",
+        "audio": "ball",
+        "image": "⚽",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'The ball is big.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX78_Q09",
@@ -26261,7 +26261,7 @@
         "week_id": "W23",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green jacket. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green doll. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -26275,8 +26275,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "jacket",
-        "image": "🧥",
+        "audio": "doll",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -26469,7 +26469,7 @@
         "week_id": "W20",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a hi?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a cat?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -26483,8 +26483,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "hi",
-        "image": "👋",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -26594,7 +26594,7 @@
         "week_id": "W15",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green spelling. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ruler. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -26608,8 +26608,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "spelling",
-        "image": "🔤",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -26802,7 +26802,7 @@
         "week_id": "W13",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a hi?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a pen?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -26816,8 +26816,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "hi",
-        "image": "👋",
+        "audio": "pen",
+        "image": "🖊️",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -26829,21 +26829,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 💃 and select the matching sentence:",
         "options": [
-          "Where is the dance?",
-          "The dance is big.",
-          "I have a dance.",
-          "I like dance."
+          "The dog is big.",
+          "I like dog.",
+          "I have a dog.",
+          "Where is the dog?"
         ],
         "options_ipa": [
-          "weə ɪz the dɑːns",
-          "the dɑːns ɪz bɪɡ",
-          "aɪ hæv eɪ dɑːns",
-          "aɪ like dɑːns"
+          "ðə dɒɡ ɪz big",
+          "aɪ like dɒɡ",
+          "aɪ hæv ə dɒɡ",
+          "weə ɪz ðə dɒɡ"
         ],
-        "answer": "I like dance.",
-        "audio": "dance",
-        "image": "💃",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like dance.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "Where is the dog?",
+        "audio": "dog",
+        "image": "🐶",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'Where is the dog?' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX81_Q09",
@@ -26927,7 +26927,7 @@
         "week_id": "W10",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green fine. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ball. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -26941,8 +26941,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "fine",
-        "image": "😊",
+        "audio": "ball",
+        "image": "⚽",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -27260,7 +27260,7 @@
         "week_id": "W14",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green windy. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green toy. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -27274,8 +27274,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "windy",
-        "image": "🍃",
+        "audio": "toy",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -27593,7 +27593,7 @@
         "week_id": "W11",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green curly. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green book. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -27607,8 +27607,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "curly",
-        "image": "🌀",
+        "audio": "book",
+        "image": "📖",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -27828,21 +27828,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 💃 and select the matching sentence:",
         "options": [
-          "Where is the dance?",
-          "The dance is big.",
-          "I have a dance.",
-          "I like dance."
+          "The kite is big.",
+          "I like kite.",
+          "I have a kite.",
+          "Where is the kite?"
         ],
         "options_ipa": [
-          "weə ɪz the dɑːns",
-          "the dɑːns ɪz bɪɡ",
-          "aɪ hæv eɪ dɑːns",
-          "aɪ like dɑːns"
+          "ðə kaɪt ɪz big",
+          "aɪ like kaɪt",
+          "aɪ hæv ə kaɪt",
+          "weə ɪz ðə kaɪt"
         ],
-        "answer": "I like dance.",
-        "audio": "dance",
-        "image": "💃",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like dance.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "Where is the kite?",
+        "audio": "kite",
+        "image": "🪁",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'Where is the kite?' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX84_Q09",
@@ -28161,21 +28161,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🗣️ and select the matching sentence:",
         "options": [
-          "I like speak.",
-          "I have a speak.",
-          "The speak is big.",
-          "Where is the speak?"
+          "The ball is big.",
+          "I like ball.",
+          "I have a ball.",
+          "Where is the ball?"
         ],
         "options_ipa": [
-          "aɪ like spiːk",
-          "aɪ hæv eɪ spiːk",
-          "the spiːk ɪz bɪɡ",
-          "weə ɪz the spiːk"
+          "ðə bɔːl ɪz big",
+          "aɪ like bɔːl",
+          "aɪ hæv ə bɔːl",
+          "weə ɪz ðə bɔːl"
         ],
-        "answer": "I like speak.",
-        "audio": "speak",
-        "image": "🗣️",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like speak.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "The ball is big.",
+        "audio": "ball",
+        "image": "⚽",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'The ball is big.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX85_Q09",
@@ -28259,7 +28259,7 @@
         "week_id": "W13",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green face. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ruler. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -28273,8 +28273,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "face",
-        "image": "👤",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -29258,7 +29258,7 @@
         "week_id": "W03",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green leg. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ruler. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -29272,8 +29272,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "leg",
-        "image": "🦵",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -29466,7 +29466,7 @@
         "week_id": "W03",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a grandfather?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a classroom?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -29480,8 +29480,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "grandfather",
-        "image": "👴",
+        "audio": "classroom",
+        "image": "🏫",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -29591,7 +29591,7 @@
         "week_id": "W21",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green doctor. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green rabbit. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -29605,8 +29605,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "doctor",
-        "image": "🩺",
+        "audio": "rabbit",
+        "image": "🐰",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -29799,7 +29799,7 @@
         "week_id": "W13",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a swim?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a kite?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -29813,8 +29813,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "swim",
-        "image": "🏊",
+        "audio": "kite",
+        "image": "🪁",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -29826,21 +29826,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 👩‍🏫 and select the matching sentence:",
         "options": [
-          "I have a teacher.",
-          "Where is the teacher?",
-          "I like teacher.",
-          "The teacher is big."
+          "The parrot is big.",
+          "I like parrot.",
+          "I have a parrot.",
+          "Where is the parrot?"
         ],
         "options_ipa": [
-          "aɪ hæv eɪ ˈtiːtʃə",
-          "weə ɪz the ˈtiːtʃə",
-          "aɪ like ˈtiːtʃə",
-          "the ˈtiːtʃə ɪz bɪɡ"
+          "ðə ˈpærət ɪz big",
+          "aɪ like ˈpærət",
+          "aɪ hæv ə ˈpærət",
+          "weə ɪz ðə ˈpærət"
         ],
-        "answer": "I like teacher.",
-        "audio": "teacher",
-        "image": "👩‍🏫",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like teacher.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I have a parrot.",
+        "audio": "parrot",
+        "image": "🦜",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I have a parrot.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX90_Q09",
@@ -29924,7 +29924,7 @@
         "week_id": "W09",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green friend. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ruler. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -29938,8 +29938,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "friend",
-        "image": "🧑‍🤝‍🧑",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -30257,7 +30257,7 @@
         "week_id": "W22",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green egg. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green eraser. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -30271,8 +30271,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "egg",
-        "image": "🥚",
+        "audio": "eraser",
+        "image": "🧼",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -30465,7 +30465,7 @@
         "week_id": "W06",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Listen to Ong Vàng: 'Do you have a fly?' Choose the correct reply:",
+        "question": "Listen to Ong Vàng: 'Do you have a notebook?' Choose the correct reply:",
         "options": [
           "Yes, I do.",
           "No, she can't.",
@@ -30479,8 +30479,8 @@
           "həˈləʊ"
         ],
         "answer": "Yes, I do.",
-        "audio": "fly",
-        "image": "🦅",
+        "audio": "notebook",
+        "image": "📔",
         "explanation": "Ong Vàng hướng dẫn: Khi được hỏi 'Do you have...?', câu trả lời ngắn đồng ý đúng ngữ pháp là 'Yes, I do.'"
       },
       {
@@ -30590,7 +30590,7 @@
         "week_id": "W04",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green read. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ball. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -30604,8 +30604,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "read",
-        "image": "📖",
+        "audio": "ball",
+        "image": "⚽",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -30923,7 +30923,7 @@
         "week_id": "W14",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green tree. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green doll. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -30937,8 +30937,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "tree",
-        "image": "🌳",
+        "audio": "doll",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -31256,7 +31256,7 @@
         "week_id": "W08",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green read. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dog. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -31270,8 +31270,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "read",
-        "image": "📖",
+        "audio": "dog",
+        "image": "🐶",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -31589,7 +31589,7 @@
         "week_id": "W23",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green sunny. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green apple. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -31603,8 +31603,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "sunny",
-        "image": "☀️",
+        "audio": "apple",
+        "image": "🍎",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -31824,21 +31824,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🎤 and select the matching sentence:",
         "options": [
-          "I have a singer.",
-          "Where is the singer?",
-          "I like singer.",
-          "The singer is big."
+          "The parrot is big.",
+          "I like parrot.",
+          "I have a parrot.",
+          "Where is the parrot?"
         ],
         "options_ipa": [
-          "aɪ hæv eɪ ˈsɪŋə",
-          "weə ɪz the ˈsɪŋə",
-          "aɪ like ˈsɪŋə",
-          "the ˈsɪŋə ɪz bɪɡ"
+          "ðə ˈpærət ɪz big",
+          "aɪ like ˈpærət",
+          "aɪ hæv ə ˈpærət",
+          "weə ɪz ðə ˈpærət"
         ],
-        "answer": "I like singer.",
-        "audio": "singer",
-        "image": "🎤",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like singer.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "I have a parrot.",
+        "audio": "parrot",
+        "image": "🦜",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'I have a parrot.' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX96_Q09",
@@ -31922,7 +31922,7 @@
         "week_id": "W09",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green years. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green robot. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -31936,8 +31936,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "years",
-        "image": "🎂",
+        "audio": "robot",
+        "image": "🤖",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -32157,21 +32157,21 @@
         "type": "multiple_choice",
         "question": "Look at the picture 🗣️ and select the matching sentence:",
         "options": [
-          "The speak is big.",
-          "I have a speak.",
-          "Where is the speak?",
-          "I like speak."
+          "The car is big.",
+          "I like car.",
+          "I have a car.",
+          "Where is the car?"
         ],
         "options_ipa": [
-          "the spiːk ɪz bɪɡ",
-          "aɪ hæv eɪ spiːk",
-          "weə ɪz the spiːk",
-          "aɪ like spiːk"
+          "ðə kɑː ɪz big",
+          "aɪ like kɑː",
+          "aɪ hæv ə kɑː",
+          "weə ɪz ðə kɑː"
         ],
-        "answer": "I like speak.",
-        "audio": "speak",
-        "image": "🗣️",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'I like speak.' mô tả chuẩn xác bối cảnh học tập của bé."
+        "answer": "Where is the car?",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'Where is the car?' mô tả chuẩn xác bối cảnh học tập của bé."
       },
       {
         "id": "EX97_Q09",
@@ -32255,7 +32255,7 @@
         "week_id": "W10",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green banana. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green dog. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -32269,8 +32269,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "banana",
-        "image": "🍌",
+        "audio": "dog",
+        "image": "🐶",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -32588,7 +32588,7 @@
         "week_id": "W04",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green hot. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green notebook. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -32602,8 +32602,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "hot",
-        "image": "🥵",
+        "audio": "notebook",
+        "image": "📔",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -32921,7 +32921,7 @@
         "week_id": "W09",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green ear. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green rabbit. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -32935,8 +32935,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "ear",
-        "image": "👂",
+        "audio": "rabbit",
+        "image": "🐰",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {
@@ -33254,7 +33254,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green teacher. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
+        "question": "Read and answer:\n'Ong Vàng is in the classroom. She has a big green pen. It is on her desk.'\n\nQuestion: Where is Ong Vàng?",
         "options": [
           "in the classroom",
           "in the garden",
@@ -33268,8 +33268,8 @@
           "at the zuː"
         ],
         "answer": "in the classroom",
-        "audio": "teacher",
-        "image": "👩‍🏫",
+        "audio": "pen",
+        "image": "🖊️",
         "explanation": "Ong Vàng hướng dẫn: Dòng đầu tiên bài đọc đã viết rõ: 'Ong Vàng is in the classroom' (ở trong lớp học)."
       },
       {

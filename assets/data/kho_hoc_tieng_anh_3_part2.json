@@ -112,7 +112,7 @@
         "week_id": "W13",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my brother.' What is this?",
+        "question": "Read the sentence: 'This is my toy.' What is this?",
         "options": [
           "bố mẹ",
           "quyển sách",
@@ -123,12 +123,12 @@
           "",
           "",
           "",
-          "anh/em trai"
+          ""
         ],
-        "answer": "anh/em trai",
-        "audio": "brother",
-        "image": "👦",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my brother' nghĩa là 'Đây là anh/em trai của tớ' đấy bé!"
+        "answer": "đồ chơi",
+        "audio": "toy",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my toy' nghĩa là 'Đây là đồ chơi của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q06",
@@ -187,9 +187,9 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my spelling.' What is this?",
+        "question": "Read the sentence: 'This is my pencil.' What is this?",
         "options": [
-          "đánh vần",
+          "bút chì",
           "bố mẹ",
           "quả bóng",
           "quyển sách"
@@ -200,10 +200,10 @@
           "",
           ""
         ],
-        "answer": "đánh vần",
-        "audio": "spelling",
-        "image": "🔤",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my spelling' nghĩa là 'Đây là đánh vần của tớ' đấy bé!"
+        "answer": "bút chì",
+        "audio": "pencil",
+        "image": "✏️",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my pencil' nghĩa là 'Đây là bút chì của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q09",
@@ -362,12 +362,12 @@
         "week_id": "W22",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my cloudy.' What is this?",
+        "question": "Read the sentence: 'This is my cloud.' What is this?",
         "options": [
           "quả bóng",
           "quyển sách",
           "bố mẹ",
-          "nhiều mây"
+          "đám mây"
         ],
         "options_ipa": [
           "",
@@ -375,10 +375,10 @@
           "",
           ""
         ],
-        "answer": "nhiều mây",
-        "audio": "cloudy",
+        "answer": "đám mây",
+        "audio": "cloud",
         "image": "☁️",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my cloudy' nghĩa là 'Đây là nhiều mây của tớ' đấy bé!"
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my cloud' nghĩa là 'Đây là đám mây của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q16",
@@ -387,7 +387,7 @@
         "week_id": "W14",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my teacher.' What is this?",
+        "question": "Read the sentence: 'This is my parrot.' What is this?",
         "options": [
           "bố mẹ",
           "quả bóng",
@@ -400,10 +400,10 @@
           "",
           ""
         ],
-        "answer": "giáo viên",
-        "audio": "teacher",
-        "image": "👩‍🏫",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my teacher' nghĩa là 'Đây là giáo viên của tớ' đấy bé!"
+        "answer": "con vẹt",
+        "audio": "parrot",
+        "image": "🦜",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my parrot' nghĩa là 'Đây là con vẹt của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q17",
@@ -412,12 +412,12 @@
         "week_id": "W06",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my speak.' What is this?",
+        "question": "Read the sentence: 'This is my notebook.' What is this?",
         "options": [
           "bố mẹ",
           "quyển sách",
           "quả bóng",
-          "nói"
+          "vở ghi"
         ],
         "options_ipa": [
           "",
@@ -425,10 +425,10 @@
           "",
           ""
         ],
-        "answer": "nói",
-        "audio": "speak",
-        "image": "🗣️",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my speak' nghĩa là 'Đây là nói của tớ' đấy bé!"
+        "answer": "vở ghi",
+        "audio": "notebook",
+        "image": "📔",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my notebook' nghĩa là 'Đây là vở ghi của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q18",
@@ -662,9 +662,9 @@
         "week_id": "W09",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my straight.' What is this?",
+        "question": "Read the sentence: 'This is my cat.' What is this?",
         "options": [
-          "thẳng",
+          "con mèo",
           "quả bóng",
           "bố mẹ",
           "quyển sách"
@@ -675,10 +675,10 @@
           "",
           ""
         ],
-        "answer": "thẳng",
-        "audio": "straight",
-        "image": "📏",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my straight' nghĩa là 'Đây là thẳng của tớ' đấy bé!"
+        "answer": "con mèo",
+        "audio": "cat",
+        "image": "🐱",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my cat' nghĩa là 'Đây là con mèo của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q28",
@@ -687,11 +687,11 @@
         "week_id": "W02",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my fine.' What is this?",
+        "question": "Read the sentence: 'This is my toy.' What is this?",
         "options": [
           "quyển sách",
           "quả bóng",
-          "khỏe",
+          "đồ chơi",
           "bố mẹ"
         ],
         "options_ipa": [
@@ -700,10 +700,10 @@
           "",
           ""
         ],
-        "answer": "khỏe",
-        "audio": "fine",
-        "image": "😊",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my fine' nghĩa là 'Đây là khỏe của tớ' đấy bé!"
+        "answer": "đồ chơi",
+        "audio": "toy",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my toy' nghĩa là 'Đây là đồ chơi của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q29",
@@ -712,9 +712,9 @@
         "week_id": "W22",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my cold.' What is this?",
+        "question": "Read the sentence: 'This is my sky.' What is this?",
         "options": [
-          "lạnh",
+          "bầu trời",
           "quả bóng",
           "quyển sách",
           "bố mẹ"
@@ -725,10 +725,10 @@
           "",
           ""
         ],
-        "answer": "lạnh",
-        "audio": "cold",
-        "image": "🥶",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my cold' nghĩa là 'Đây là lạnh của tớ' đấy bé!"
+        "answer": "bầu trời",
+        "audio": "sky",
+        "image": "🌌",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my sky' nghĩa là 'Đây là bầu trời của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q30",
@@ -737,7 +737,7 @@
         "week_id": "W14",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my nurse.' What is this?",
+        "question": "Read the sentence: 'This is my car.' What is this?",
         "options": [
           "bố mẹ",
           "y tá",
@@ -750,10 +750,10 @@
           "",
           ""
         ],
-        "answer": "y tá",
-        "audio": "nurse",
-        "image": "🧑‍⚕️",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my nurse' nghĩa là 'Đây là y tá của tớ' đấy bé!"
+        "answer": "ô tô",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my car' nghĩa là 'Đây là ô tô của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q31",
@@ -812,9 +812,9 @@
         "week_id": "W22",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my rainy.' What is this?",
+        "question": "Read the sentence: 'This is my river.' What is this?",
         "options": [
-          "mưa",
+          "con sông",
           "quyển sách",
           "quả bóng",
           "bố mẹ"
@@ -825,10 +825,10 @@
           "",
           ""
         ],
-        "answer": "mưa",
-        "audio": "rainy",
-        "image": "🌧️",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my rainy' nghĩa là 'Đây là mưa của tớ' đấy bé!"
+        "answer": "con sông",
+        "audio": "river",
+        "image": "🏞️",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my river' nghĩa là 'Đây là con sông của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q34",
@@ -1087,11 +1087,11 @@
         "week_id": "W22",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my windy.' What is this?",
+        "question": "Read the sentence: 'This is my river.' What is this?",
         "options": [
           "quyển sách",
           "quả bóng",
-          "gió",
+          "con sông",
           "bố mẹ"
         ],
         "options_ipa": [
@@ -1100,10 +1100,10 @@
           "",
           ""
         ],
-        "answer": "gió",
-        "audio": "windy",
-        "image": "🍃",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my windy' nghĩa là 'Đây là gió của tớ' đấy bé!"
+        "answer": "con sông",
+        "audio": "river",
+        "image": "🏞️",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my river' nghĩa là 'Đây là con sông của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q45",
@@ -1112,10 +1112,10 @@
         "week_id": "W01",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my hi.' What is this?",
+        "question": "Read the sentence: 'This is my pencil.' What is this?",
         "options": [
           "quả bóng",
-          "chào",
+          "bút chì",
           "quyển sách",
           "bố mẹ"
         ],
@@ -1125,10 +1125,10 @@
           "",
           ""
         ],
-        "answer": "chào",
-        "audio": "hi",
-        "image": "👋",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my hi' nghĩa là 'Đây là chào của tớ' đấy bé!"
+        "answer": "bút chì",
+        "audio": "pencil",
+        "image": "✏️",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my pencil' nghĩa là 'Đây là bút chì của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q46",
@@ -1137,23 +1137,23 @@
         "week_id": "W06",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my listen.' What is this?",
+        "question": "Read the sentence: 'This is my notebook.' What is this?",
         "options": [
           "quả bóng",
-          "nghe",
+          "vở ghi",
           "bố mẹ",
           "quyển sách"
         ],
         "options_ipa": [
           "",
-          "nghe",
+          "",
           "",
           ""
         ],
-        "answer": "nghe",
-        "audio": "listen",
-        "image": "👂",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my listen' nghĩa là 'Đây là nghe của tớ' đấy bé!"
+        "answer": "vở ghi",
+        "audio": "notebook",
+        "image": "📔",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my notebook' nghĩa là 'Đây là vở ghi của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q47",
@@ -1162,7 +1162,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Read the sentence: 'This is my friend.' What is this?",
+        "question": "Read the sentence: 'This is my pencil.' What is this?",
         "options": [
           "quyển sách",
           "bố mẹ",
@@ -1175,10 +1175,10 @@
           "",
           ""
         ],
-        "answer": "bạn bè",
-        "audio": "friend",
-        "image": "🧑‍🤝‍🧑",
-        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my friend' nghĩa là 'Đây là bạn bè của tớ' đấy bé!"
+        "answer": "bút chì",
+        "audio": "pencil",
+        "image": "✏️",
+        "explanation": "Ong Vàng hướng dẫn: Câu 'This is my pencil' nghĩa là 'Đây là bút chì của tớ' đấy bé!"
       },
       {
         "id": "M6_1_Q48",
@@ -1320,23 +1320,23 @@
         "week_id": "W13",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big mother. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big parrot. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "cat",
           "friend",
-          "mother",
+          "parrot",
           "pencil"
         ],
         "options_ipa": [
           "kæt",
           "frɛnd",
-          "ˈmʌðə",
+          "ˈpærət",
           "ˈpɛnsl"
         ],
-        "answer": "mother",
-        "audio": "mother",
-        "image": "👩",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big mother' nên đáp án đúng là 'mother'."
+        "answer": "parrot",
+        "audio": "parrot",
+        "image": "🦜",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big parrot.' nên đáp án đúng là 'parrot' nhé!"
       },
       {
         "id": "M6_2_Q04",
@@ -1395,23 +1395,23 @@
         "week_id": "W22",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big windy. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big rainbow. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
-          "windy",
+          "rainbow",
           "friend",
           "pencil",
           "cat"
         ],
         "options_ipa": [
-          "ˈwɪndi",
+          "ˈreɪnbəʊ",
           "frɛnd",
           "ˈpɛnsl",
           "kæt"
         ],
-        "answer": "windy",
-        "audio": "windy",
-        "image": "🍃",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big windy' nên đáp án đúng là 'windy'."
+        "answer": "rainbow",
+        "audio": "rainbow",
+        "image": "🌈",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big rainbow.' nên đáp án đúng là 'rainbow' nhé!"
       },
       {
         "id": "M6_2_Q07",
@@ -1420,23 +1420,23 @@
         "week_id": "W14",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big nurse. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big car. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "friend",
-          "nurse",
+          "car",
           "cat",
           "pencil"
         ],
         "options_ipa": [
           "frɛnd",
-          "nɜːs",
+          "kɑː",
           "kæt",
           "ˈpɛnsl"
         ],
-        "answer": "nurse",
-        "audio": "nurse",
-        "image": "🧑‍⚕️",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big nurse' nên đáp án đúng là 'nurse'."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big car.' nên đáp án đúng là 'car' nhé!"
       },
       {
         "id": "M6_2_Q08",
@@ -1470,23 +1470,23 @@
         "week_id": "W22",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big sunny. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big river. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "pencil",
           "cat",
           "friend",
-          "sunny"
+          "river"
         ],
         "options_ipa": [
           "ˈpɛnsl",
           "kæt",
           "frɛnd",
-          "ˈsʌni"
+          "ˈrɪvə"
         ],
-        "answer": "sunny",
-        "audio": "sunny",
-        "image": "☀️",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big sunny' nên đáp án đúng là 'sunny'."
+        "answer": "river",
+        "audio": "river",
+        "image": "🏞️",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big river.' nên đáp án đúng là 'river' nhé!"
       },
       {
         "id": "M6_2_Q10",
@@ -1495,23 +1495,23 @@
         "week_id": "W06",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big speak. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big book. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
-          "speak",
+          "book",
           "friend",
           "pencil",
           "cat"
         ],
         "options_ipa": [
-          "spiːk",
+          "bʊk",
           "frɛnd",
           "ˈpɛnsl",
           "kæt"
         ],
-        "answer": "speak",
-        "audio": "speak",
-        "image": "🗣️",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big speak' nên đáp án đúng là 'speak'."
+        "answer": "book",
+        "audio": "book",
+        "image": "📖",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big book.' nên đáp án đúng là 'book' nhé!"
       },
       {
         "id": "M6_2_Q11",
@@ -1520,23 +1520,23 @@
         "week_id": "W09",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big curly. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big book. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
-          "curly",
+          "book",
           "cat",
           "pencil",
           "friend"
         ],
         "options_ipa": [
-          "ˈkɜːli",
+          "bʊk",
           "kæt",
           "ˈpɛnsl",
           "frɛnd"
         ],
-        "answer": "curly",
-        "audio": "curly",
-        "image": "🌀",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big curly' nên đáp án đúng là 'curly'."
+        "answer": "book",
+        "audio": "book",
+        "image": "📖",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big book.' nên đáp án đúng là 'book' nhé!"
       },
       {
         "id": "M6_2_Q12",
@@ -1570,23 +1570,23 @@
         "week_id": "W09",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big short. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big ruler. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "pencil",
           "friend",
-          "short",
+          "ruler",
           "cat"
         ],
         "options_ipa": [
           "ˈpɛnsl",
           "frɛnd",
-          "ʃɔːt",
+          "ˈruːlə",
           "kæt"
         ],
-        "answer": "short",
-        "audio": "short",
+        "answer": "ruler",
+        "audio": "ruler",
         "image": "📏",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big short' nên đáp án đúng là 'short'."
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big ruler.' nên đáp án đúng là 'ruler' nhé!"
       },
       {
         "id": "M6_2_Q14",
@@ -1595,23 +1595,23 @@
         "week_id": "W13",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big grandfather. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big pencil case. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
-          "grandfather",
+          "pencil case",
           "cat",
           "friend",
           "pencil"
         ],
         "options_ipa": [
-          "ˈɡrændˌfɑːðə",
+          "ˈpɛnsl keɪs",
           "kæt",
           "frɛnd",
           "ˈpɛnsl"
         ],
-        "answer": "grandfather",
-        "audio": "grandfather",
-        "image": "👴",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big grandfather' nên đáp án đúng là 'grandfather'."
+        "answer": "pencil case",
+        "audio": "pencil_case",
+        "image": "👝",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big pencil case.' nên đáp án đúng là 'pencil case' nhé!"
       },
       {
         "id": "M6_2_Q15",
@@ -1770,23 +1770,23 @@
         "week_id": "W13",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big sister. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big pen. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "cat",
           "friend",
           "pencil",
-          "sister"
+          "pen"
         ],
         "options_ipa": [
           "kæt",
           "frɛnd",
           "ˈpɛnsl",
-          "ˈsɪstə"
+          "pɛn"
         ],
-        "answer": "sister",
-        "audio": "sister",
-        "image": "👧",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big sister' nên đáp án đúng là 'sister'."
+        "answer": "pen",
+        "audio": "pen",
+        "image": "🖊️",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big pen.' nên đáp án đúng là 'pen' nhé!"
       },
       {
         "id": "M6_2_Q22",
@@ -1820,23 +1820,23 @@
         "week_id": "W02",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big fine. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big pencil. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
-          "cat",
-          "fine",
           "pencil",
-          "friend"
+          "friend",
+          "face",
+          "cat"
         ],
         "options_ipa": [
-          "kæt",
-          "faɪn",
           "ˈpɛnsl",
-          "frɛnd"
+          "frɛnd",
+          "face",
+          "kæt"
         ],
-        "answer": "fine",
-        "audio": "fine",
-        "image": "😊",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big fine' nên đáp án đúng là 'fine'."
+        "answer": "pencil",
+        "audio": "pencil",
+        "image": "✏️",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big pencil.' nên đáp án đúng là 'pencil' nhé!"
       },
       {
         "id": "M6_2_Q24",
@@ -1920,23 +1920,23 @@
         "week_id": "W13",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big parents. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big cookie. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "friend",
           "cat",
-          "parents",
+          "cookie",
           "pencil"
         ],
         "options_ipa": [
           "frɛnd",
           "kæt",
-          "ˈpeərənts",
+          "ˈkʊki",
           "ˈpɛnsl"
         ],
-        "answer": "parents",
-        "audio": "parents",
-        "image": "👪",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big parents' nên đáp án đúng là 'parents'."
+        "answer": "cookie",
+        "audio": "cookie",
+        "image": "🍪",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big cookie.' nên đáp án đúng là 'cookie' nhé!"
       },
       {
         "id": "M6_2_Q28",
@@ -1995,23 +1995,23 @@
         "week_id": "W10",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big fly. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big pencil. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
-          "fly",
+          "toy",
           "cat",
-          "friend",
+          "face",
           "pencil"
         ],
         "options_ipa": [
-          "flaɪ",
+          "tɔɪ",
           "kæt",
-          "frɛnd",
+          "face",
           "ˈpɛnsl"
         ],
-        "answer": "fly",
-        "audio": "fly",
-        "image": "🦅",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big fly' nên đáp án đúng là 'fly'."
+        "answer": "pencil",
+        "audio": "pencil",
+        "image": "✏️",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big pencil.' nên đáp án đúng là 'pencil' nhé!"
       },
       {
         "id": "M6_2_Q31",
@@ -2070,23 +2070,23 @@
         "week_id": "W14",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big worker. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big kite. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "cat",
-          "worker",
+          "kite",
           "pencil",
           "friend"
         ],
         "options_ipa": [
           "kæt",
-          "ˈwɜːkə",
+          "kaɪt",
           "ˈpɛnsl",
           "frɛnd"
         ],
-        "answer": "worker",
-        "audio": "worker",
-        "image": "👷",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big worker' nên đáp án đúng là 'worker'."
+        "answer": "kite",
+        "audio": "kite",
+        "image": "🪁",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big kite.' nên đáp án đúng là 'kite' nhé!"
       },
       {
         "id": "M6_2_Q34",
@@ -2195,23 +2195,23 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big hi. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big book. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
-          "hi",
+          "book",
           "cat",
           "friend",
           "pencil"
         ],
         "options_ipa": [
-          "haɪ",
+          "bʊk",
           "kæt",
           "frɛnd",
           "ˈpɛnsl"
         ],
-        "answer": "hi",
-        "audio": "hi",
-        "image": "👋",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big hi' nên đáp án đúng là 'hi'."
+        "answer": "book",
+        "audio": "book",
+        "image": "📖",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big book.' nên đáp án đúng là 'book' nhé!"
       },
       {
         "id": "M6_2_Q39",
@@ -2495,23 +2495,23 @@
         "week_id": "W22",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big cold. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big tree. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "friend",
-          "cold",
+          "tree",
           "cat",
           "pencil"
         ],
         "options_ipa": [
           "frɛnd",
-          "kəʊld",
+          "triː",
           "kæt",
           "ˈpɛnsl"
         ],
-        "answer": "cold",
-        "audio": "cold",
-        "image": "🥶",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói 'I have a big cold' nên đáp án đúng là 'cold'."
+        "answer": "tree",
+        "audio": "tree",
+        "image": "🌳",
+        "explanation": "Ong Vàng hướng dẫn: Đoạn văn viết rõ 'I have a big tree.' nên đáp án đúng là 'tree' nhé!"
       }
     ]
   },
@@ -3836,23 +3836,23 @@
         "week_id": "W10",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / sing",
+        "question": "Arrange the words: is / my / This / pencil",
         "options": [
-          "This is my sing.",
-          "My sing is this.",
-          "This my is sing.",
-          "Is this my sing."
+          "This is my pencil.",
+          "My pencil is this.",
+          "This my is pencil.",
+          "Is this my pencil."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ sɪŋ",
-          "maɪ sɪŋ ɪz ðɪs",
-          "ðɪs maɪ ɪz sɪŋ",
-          "ɪz ðɪs maɪ sɪŋ"
+          "ðɪs ɪz maɪ ˈpɛnsl",
+          "maɪ ˈpɛnsl ɪz ðɪs",
+          "ðɪs maɪ ɪz ˈpɛnsl",
+          "ɪz ðɪs maɪ ˈpɛnsl"
         ],
-        "answer": "This is my sing.",
-        "audio": "sing",
-        "image": "🎤",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my sing.'"
+        "answer": "This is my pencil.",
+        "audio": "pencil",
+        "image": "✏️",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my pencil.'"
       },
       {
         "id": "M7_1_Q04",
@@ -3936,23 +3936,23 @@
         "week_id": "W14",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / cook",
+        "question": "Arrange the words: is / my / This / dog",
         "options": [
-          "This is my cook.",
-          "My cook is this.",
-          "This my is cook.",
-          "Is this my cook."
+          "This is my dog.",
+          "My dog is this.",
+          "This my is dog.",
+          "Is this my dog."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ kʊk",
-          "maɪ kʊk ɪz ðɪs",
-          "ðɪs maɪ ɪz kʊk",
-          "ɪz ðɪs maɪ kʊk"
+          "ðɪs ɪz maɪ dɒɡ",
+          "maɪ dɒɡ ɪz ðɪs",
+          "ðɪs maɪ ɪz dɒɡ",
+          "ɪz ðɪs maɪ dɒɡ"
         ],
-        "answer": "This is my cook.",
-        "audio": "cook",
-        "image": "👨‍🍳",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my cook.'"
+        "answer": "This is my dog.",
+        "audio": "dog",
+        "image": "🐶",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my dog.'"
       },
       {
         "id": "M7_1_Q08",
@@ -3986,23 +3986,23 @@
         "week_id": "W22",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / hot",
+        "question": "Arrange the words: is / my / This / rainbow",
         "options": [
-          "This is my hot.",
-          "My hot is this.",
-          "This my is hot.",
-          "Is this my hot."
+          "This is my rainbow.",
+          "My rainbow is this.",
+          "This my is rainbow.",
+          "Is this my rainbow."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ hɒt",
-          "maɪ hɒt ɪz ðɪs",
-          "ðɪs maɪ ɪz hɒt",
-          "ɪz ðɪs maɪ hɒt"
+          "ðɪs ɪz maɪ ˈreɪnbəʊ",
+          "maɪ ˈreɪnbəʊ ɪz ðɪs",
+          "ðɪs maɪ ɪz ˈreɪnbəʊ",
+          "ɪz ðɪs maɪ ˈreɪnbəʊ"
         ],
-        "answer": "This is my hot.",
-        "audio": "hot",
-        "image": "🥵",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my hot.'"
+        "answer": "This is my rainbow.",
+        "audio": "rainbow",
+        "image": "🌈",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my rainbow.'"
       },
       {
         "id": "M7_1_Q10",
@@ -4036,23 +4036,23 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / friend",
+        "question": "Arrange the words: is / my / This / toy",
         "options": [
-          "This is my friend.",
-          "My friend is this.",
-          "This my is friend.",
-          "Is this my friend."
+          "This is my toy.",
+          "My toy is this.",
+          "This my is toy.",
+          "Is this my toy."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ frɛnd",
-          "maɪ frɛnd ɪz ðɪs",
-          "ðɪs maɪ ɪz frɛnd",
-          "ɪz ðɪs maɪ frɛnd"
+          "ðɪs ɪz maɪ tɔɪ",
+          "maɪ tɔɪ ɪz ðɪs",
+          "ðɪs maɪ ɪz tɔɪ",
+          "ɪz ðɪs maɪ tɔɪ"
         ],
-        "answer": "This is my friend.",
-        "audio": "friend",
-        "image": "🧑‍🤝‍🧑",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my friend.'"
+        "answer": "This is my toy.",
+        "audio": "toy",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my toy.'"
       },
       {
         "id": "M7_1_Q12",
@@ -4061,23 +4061,23 @@
         "week_id": "W02",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / fine",
+        "question": "Arrange the words: is / my / This / book",
         "options": [
-          "This is my fine.",
-          "My fine is this.",
-          "This my is fine.",
-          "Is this my fine."
+          "This is my book.",
+          "My book is this.",
+          "This my is book.",
+          "Is this my book."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ faɪn",
-          "maɪ faɪn ɪz ðɪs",
-          "ðɪs maɪ ɪz faɪn",
-          "ɪz ðɪs maɪ faɪn"
+          "ðɪs ɪz maɪ bʊk",
+          "maɪ bʊk ɪz ðɪs",
+          "ðɪs maɪ ɪz bʊk",
+          "ɪz ðɪs maɪ bʊk"
         ],
-        "answer": "This is my fine.",
-        "audio": "fine",
-        "image": "😊",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my fine.'"
+        "answer": "This is my book.",
+        "audio": "book",
+        "image": "📖",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my book.'"
       },
       {
         "id": "M7_1_Q13",
@@ -4111,23 +4111,23 @@
         "week_id": "W09",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / curly",
+        "question": "Arrange the words: is / my / This / cookie",
         "options": [
-          "This is my curly.",
-          "My curly is this.",
-          "This my is curly.",
-          "Is this my curly."
+          "This is my cookie.",
+          "My cookie is this.",
+          "This my is cookie.",
+          "Is this my cookie."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ ˈkɜːli",
-          "maɪ ˈkɜːli ɪz ðɪs",
-          "ðɪs maɪ ɪz ˈkɜːli",
-          "ɪz ðɪs maɪ ˈkɜːli"
+          "ðɪs ɪz maɪ ˈkʊki",
+          "maɪ ˈkʊki ɪz ðɪs",
+          "ðɪs maɪ ɪz ˈkʊki",
+          "ɪz ðɪs maɪ ˈkʊki"
         ],
-        "answer": "This is my curly.",
-        "audio": "curly",
-        "image": "🌀",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my curly.'"
+        "answer": "This is my cookie.",
+        "audio": "cookie",
+        "image": "🍪",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my cookie.'"
       },
       {
         "id": "M7_1_Q15",
@@ -4186,23 +4186,23 @@
         "week_id": "W06",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / write",
+        "question": "Arrange the words: is / my / This / notebook",
         "options": [
-          "This is my write.",
-          "My write is this.",
-          "This my is write.",
-          "Is this my write."
+          "This is my notebook.",
+          "My notebook is this.",
+          "This my is notebook.",
+          "Is this my notebook."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ raɪt",
-          "maɪ raɪt ɪz ðɪs",
-          "ðɪs maɪ ɪz raɪt",
-          "ɪz ðɪs maɪ raɪt"
+          "ðɪs ɪz maɪ ˈnəʊtbʊk",
+          "maɪ ˈnəʊtbʊk ɪz ðɪs",
+          "ðɪs maɪ ɪz ˈnəʊtbʊk",
+          "ɪz ðɪs maɪ ˈnəʊtbʊk"
         ],
-        "answer": "This is my write.",
-        "audio": "write",
-        "image": "✍️",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my write.'"
+        "answer": "This is my notebook.",
+        "audio": "notebook",
+        "image": "📔",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my notebook.'"
       },
       {
         "id": "M7_1_Q18",
@@ -4336,23 +4336,23 @@
         "week_id": "W10",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / swim",
+        "question": "Arrange the words: is / my / This / pencil",
         "options": [
-          "This is my swim.",
-          "My swim is this.",
-          "This my is swim.",
-          "Is this my swim."
+          "This is my pencil.",
+          "My pencil is this.",
+          "This my is pencil.",
+          "Is this my pencil."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ swɪm",
-          "maɪ swɪm ɪz ðɪs",
-          "ðɪs maɪ ɪz swɪm",
-          "ɪz ðɪs maɪ swɪm"
+          "ðɪs ɪz maɪ ˈpɛnsl",
+          "maɪ ˈpɛnsl ɪz ðɪs",
+          "ðɪs maɪ ɪz ˈpɛnsl",
+          "ɪz ðɪs maɪ ˈpɛnsl"
         ],
-        "answer": "This is my swim.",
-        "audio": "swim",
-        "image": "🏊",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my swim.'"
+        "answer": "This is my pencil.",
+        "audio": "pencil",
+        "image": "✏️",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my pencil.'"
       },
       {
         "id": "M7_1_Q24",
@@ -4461,23 +4461,23 @@
         "week_id": "W22",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / windy",
+        "question": "Arrange the words: is / my / This / tree",
         "options": [
-          "This is my windy.",
-          "My windy is this.",
-          "This my is windy.",
-          "Is this my windy."
+          "This is my tree.",
+          "My tree is this.",
+          "This my is tree.",
+          "Is this my tree."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ ˈwɪndi",
-          "maɪ ˈwɪndi ɪz ðɪs",
-          "ðɪs maɪ ɪz ˈwɪndi",
-          "ɪz ðɪs maɪ ˈwɪndi"
+          "ðɪs ɪz maɪ triː",
+          "maɪ triː ɪz ðɪs",
+          "ðɪs maɪ ɪz triː",
+          "ɪz ðɪs maɪ triː"
         ],
-        "answer": "This is my windy.",
-        "audio": "windy",
-        "image": "🍃",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my windy.'"
+        "answer": "This is my tree.",
+        "audio": "tree",
+        "image": "🌳",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my tree.'"
       },
       {
         "id": "M7_1_Q29",
@@ -4636,23 +4636,23 @@
         "week_id": "W22",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / cold",
+        "question": "Arrange the words: is / my / This / sky",
         "options": [
-          "This is my cold.",
-          "My cold is this.",
-          "This my is cold.",
-          "Is this my cold."
+          "This is my sky.",
+          "My sky is this.",
+          "This my is sky.",
+          "Is this my sky."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ kəʊld",
-          "maɪ kəʊld ɪz ðɪs",
-          "ðɪs maɪ ɪz kəʊld",
-          "ɪz ðɪs maɪ kəʊld"
+          "ðɪs ɪz maɪ skaɪ",
+          "maɪ skaɪ ɪz ðɪs",
+          "ðɪs maɪ ɪz skaɪ",
+          "ɪz ðɪs maɪ skaɪ"
         ],
-        "answer": "This is my cold.",
-        "audio": "cold",
-        "image": "🥶",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my cold.'"
+        "answer": "This is my sky.",
+        "audio": "sky",
+        "image": "🌌",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my sky.'"
       },
       {
         "id": "M7_1_Q36",
@@ -4786,23 +4786,23 @@
         "week_id": "W06",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / listen",
+        "question": "Arrange the words: is / my / This / book",
         "options": [
-          "This is my listen.",
-          "My listen is this.",
-          "This my is listen.",
-          "Is this my listen."
+          "This is my book.",
+          "My book is this.",
+          "This my is book.",
+          "Is this my book."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ ˈlɪsn",
-          "maɪ ˈlɪsn ɪz ðɪs",
-          "ðɪs maɪ ɪz ˈlɪsn",
-          "ɪz ðɪs maɪ ˈlɪsn"
+          "ðɪs ɪz maɪ bʊk",
+          "maɪ bʊk ɪz ðɪs",
+          "ðɪs maɪ ɪz bʊk",
+          "ɪz ðɪs maɪ bʊk"
         ],
-        "answer": "This is my listen.",
-        "audio": "listen",
-        "image": "👂",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my listen.'"
+        "answer": "This is my book.",
+        "audio": "book",
+        "image": "📖",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my book.'"
       },
       {
         "id": "M7_1_Q42",
@@ -4986,23 +4986,23 @@
         "week_id": "W06",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / read",
+        "question": "Arrange the words: is / my / This / pencil",
         "options": [
-          "This is my read.",
-          "My read is this.",
-          "This my is read.",
-          "Is this my read."
+          "This is my pencil.",
+          "My pencil is this.",
+          "This my is pencil.",
+          "Is this my pencil."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ riːd",
-          "maɪ riːd ɪz ðɪs",
-          "ðɪs maɪ ɪz riːd",
-          "ɪz ðɪs maɪ riːd"
+          "ðɪs ɪz maɪ ˈpɛnsl",
+          "maɪ ˈpɛnsl ɪz ðɪs",
+          "ðɪs maɪ ɪz ˈpɛnsl",
+          "ɪz ðɪs maɪ ˈpɛnsl"
         ],
-        "answer": "This is my read.",
-        "audio": "read",
-        "image": "📖",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my read.'"
+        "answer": "This is my pencil.",
+        "audio": "pencil",
+        "image": "✏️",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my pencil.'"
       },
       {
         "id": "M7_1_Q50",
@@ -5011,23 +5011,23 @@
         "week_id": "W09",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Arrange the words: is / my / This / tall",
+        "question": "Arrange the words: is / my / This / doll",
         "options": [
-          "This is my tall.",
-          "My tall is this.",
-          "This my is tall.",
-          "Is this my tall."
+          "This is my doll.",
+          "My doll is this.",
+          "This my is doll.",
+          "Is this my doll."
         ],
         "options_ipa": [
-          "ðɪs ɪz maɪ tɔːl",
-          "maɪ tɔːl ɪz ðɪs",
-          "ðɪs maɪ ɪz tɔːl",
-          "ɪz ðɪs maɪ tɔːl"
+          "ðɪs ɪz maɪ dɒl",
+          "maɪ dɒl ɪz ðɪs",
+          "ðɪs maɪ ɪz dɒl",
+          "ɪz ðɪs maɪ dɒl"
         ],
-        "answer": "This is my tall.",
-        "audio": "tall",
-        "image": "🦒",
-        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my tall.'"
+        "answer": "This is my doll.",
+        "audio": "doll",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Cú pháp câu khẳng định đúng là: 'This is my doll.'"
       }
     ]
   },
@@ -10076,7 +10076,7 @@
         "week_id": "W22",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a cold?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a river?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -10090,8 +10090,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "cold",
-        "image": "🥶",
+        "audio": "river",
+        "image": "🏞️",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -10201,7 +10201,7 @@
         "week_id": "W09",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a straight?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a cat?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -10215,8 +10215,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "straight",
-        "image": "📏",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -10326,7 +10326,7 @@
         "week_id": "W13",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a sister?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a notebook?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -10340,8 +10340,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "sister",
-        "image": "👧",
+        "audio": "notebook",
+        "image": "📔",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -10426,7 +10426,7 @@
         "week_id": "W14",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a cook?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a ball?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -10440,8 +10440,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "cook",
-        "image": "👨‍🍳",
+        "audio": "ball",
+        "image": "⚽",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -10451,7 +10451,7 @@
         "week_id": "W10",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a swim?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a pencil?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -10465,8 +10465,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "swim",
-        "image": "🏊",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -10626,7 +10626,7 @@
         "week_id": "W09",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a slim?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a pencil?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -10640,8 +10640,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "slim",
-        "image": "🧍",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -10651,7 +10651,7 @@
         "week_id": "W13",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a grandmother?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a ruler?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -10665,8 +10665,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "grandmother",
-        "image": "👵",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -10726,7 +10726,7 @@
         "week_id": "W14",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a teacher?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a cat?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -10740,8 +10740,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "teacher",
-        "image": "👩‍🏫",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -10926,7 +10926,7 @@
         "week_id": "W06",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a listen?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a pen?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -10940,8 +10940,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "listen",
-        "image": "👂",
+        "audio": "pen",
+        "image": "🖊️",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -11001,7 +11001,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a spelling?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a book?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -11015,8 +11015,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "spelling",
-        "image": "🔤",
+        "audio": "book",
+        "image": "📖",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -11101,7 +11101,7 @@
         "week_id": "W09",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a short?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a kite?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -11115,8 +11115,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "short",
-        "image": "📏",
+        "audio": "kite",
+        "image": "🪁",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -11176,7 +11176,7 @@
         "week_id": "W14",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a nurse?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a cat?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -11190,8 +11190,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "nurse",
-        "image": "🧑‍⚕️",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -11251,7 +11251,7 @@
         "week_id": "W09",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Do you have a tall?'\nBé: 'Yes, I ________.'",
+        "question": "Ong Vàng: 'Do you have a notebook?'\nBé: 'Yes, I ________.'",
         "options": [
           "do",
           "have",
@@ -11265,8 +11265,8 @@
           "æm"
         ],
         "answer": "do",
-        "audio": "tall",
-        "image": "🦒",
+        "audio": "notebook",
+        "image": "📔",
         "explanation": "Ong Vàng hướng dẫn: Để trả lời ngắn cho câu hỏi 'Do you...?', bé nói 'Yes, I do' nhé!"
       },
       {
@@ -16366,7 +16366,7 @@
         "week_id": "W13",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "The sister is ________ the desk.",
+        "question": "The ball is ________ the desk.",
         "options": [
           "behind",
           "on",
@@ -16380,8 +16380,8 @@
           "ˈʌndə"
         ],
         "answer": "on",
-        "audio": "sister",
-        "image": "👧",
+        "audio": "ball",
+        "image": "⚽",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -16441,7 +16441,7 @@
         "week_id": "W01",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "The spelling is ________ the desk.",
+        "question": "The toy is ________ the desk.",
         "options": [
           "behind",
           "on",
@@ -16455,8 +16455,8 @@
           "ɪn"
         ],
         "answer": "on",
-        "audio": "spelling",
-        "image": "🔤",
+        "audio": "toy",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -16541,7 +16541,7 @@
         "week_id": "W22",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "The cold is ________ the desk.",
+        "question": "The sky is ________ the desk.",
         "options": [
           "under",
           "on",
@@ -16555,8 +16555,8 @@
           "ɪn"
         ],
         "answer": "on",
-        "audio": "cold",
-        "image": "🥶",
+        "audio": "sky",
+        "image": "🌌",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -16591,7 +16591,7 @@
         "week_id": "W22",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "The rainy is ________ the desk.",
+        "question": "The river is ________ the desk.",
         "options": [
           "on",
           "behind",
@@ -16605,8 +16605,8 @@
           "ˈʌndə"
         ],
         "answer": "on",
-        "audio": "rainy",
-        "image": "🌧️",
+        "audio": "river",
+        "image": "🏞️",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -16616,7 +16616,7 @@
         "week_id": "W01",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "The hello is ________ the desk.",
+        "question": "The book is ________ the desk.",
         "options": [
           "in",
           "under",
@@ -16630,8 +16630,8 @@
           "bɪˈhaɪnd"
         ],
         "answer": "on",
-        "audio": "hello",
-        "image": "👋",
+        "audio": "book",
+        "image": "📖",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -16716,7 +16716,7 @@
         "week_id": "W14",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "The cook is ________ the desk.",
+        "question": "The rabbit is ________ the desk.",
         "options": [
           "on",
           "in",
@@ -16730,8 +16730,8 @@
           "ˈʌndə"
         ],
         "answer": "on",
-        "audio": "cook",
-        "image": "👨‍🍳",
+        "audio": "rabbit",
+        "image": "🐰",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -16841,7 +16841,7 @@
         "week_id": "W09",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "The tall is ________ the desk.",
+        "question": "The robot is ________ the desk.",
         "options": [
           "on",
           "under",
@@ -16855,8 +16855,8 @@
           "ɪn"
         ],
         "answer": "on",
-        "audio": "tall",
-        "image": "🦒",
+        "audio": "robot",
+        "image": "🤖",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -16866,7 +16866,7 @@
         "week_id": "W06",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "The read is ________ the desk.",
+        "question": "The pencil is ________ the desk.",
         "options": [
           "in",
           "under",
@@ -16880,8 +16880,8 @@
           "ɒn"
         ],
         "answer": "on",
-        "audio": "read",
-        "image": "📖",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -16941,7 +16941,7 @@
         "week_id": "W22",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "The windy is ________ the desk.",
+        "question": "The river is ________ the desk.",
         "options": [
           "in",
           "under",
@@ -16955,8 +16955,8 @@
           "ɒn"
         ],
         "answer": "on",
-        "audio": "windy",
-        "image": "🍃",
+        "audio": "river",
+        "image": "🏞️",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -16991,7 +16991,7 @@
         "week_id": "W09",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "The straight is ________ the desk.",
+        "question": "The notebook is ________ the desk.",
         "options": [
           "in",
           "on",
@@ -17005,8 +17005,8 @@
           "bɪˈhaɪnd"
         ],
         "answer": "on",
-        "audio": "straight",
-        "image": "📏",
+        "audio": "notebook",
+        "image": "📔",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -17016,7 +17016,7 @@
         "week_id": "W10",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "The sing is ________ the desk.",
+        "question": "The bag is ________ the desk.",
         "options": [
           "in",
           "under",
@@ -17030,8 +17030,8 @@
           "ɒn"
         ],
         "answer": "on",
-        "audio": "sing",
-        "image": "🎤",
+        "audio": "bag",
+        "image": "🎒",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -17041,7 +17041,7 @@
         "week_id": "W09",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "The slim is ________ the desk.",
+        "question": "The cat is ________ the desk.",
         "options": [
           "in",
           "behind",
@@ -17055,8 +17055,8 @@
           "ˈʌndə"
         ],
         "answer": "on",
-        "audio": "slim",
-        "image": "🧍",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -17116,7 +17116,7 @@
         "week_id": "W14",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "The driver is ________ the desk.",
+        "question": "The pencil is ________ the desk.",
         "options": [
           "under",
           "in",
@@ -17130,8 +17130,8 @@
           "bɪˈhaɪnd"
         ],
         "answer": "on",
-        "audio": "driver",
-        "image": "🚗",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -17191,7 +17191,7 @@
         "week_id": "W13",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "The father is ________ the desk.",
+        "question": "The doll is ________ the desk.",
         "options": [
           "behind",
           "under",
@@ -17205,8 +17205,8 @@
           "ɪn"
         ],
         "answer": "on",
-        "audio": "father",
-        "image": "👨",
+        "audio": "doll",
+        "image": "🧸",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -17266,7 +17266,7 @@
         "week_id": "W06",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "The listen is ________ the desk.",
+        "question": "The book is ________ the desk.",
         "options": [
           "on",
           "in",
@@ -17280,8 +17280,8 @@
           "bɪˈhaɪnd"
         ],
         "answer": "on",
-        "audio": "listen",
-        "image": "👂",
+        "audio": "book",
+        "image": "📖",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -17341,7 +17341,7 @@
         "week_id": "W14",
         "difficulty": "easy",
         "type": "multiple_choice",
-        "question": "The teacher is ________ the desk.",
+        "question": "The pencil is ________ the desk.",
         "options": [
           "under",
           "on",
@@ -17355,8 +17355,8 @@
           "ɪn"
         ],
         "answer": "on",
-        "audio": "teacher",
-        "image": "👩‍🏫",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -17441,7 +17441,7 @@
         "week_id": "W06",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "The write is ________ the desk.",
+        "question": "The pencil is ________ the desk.",
         "options": [
           "on",
           "under",
@@ -17455,8 +17455,8 @@
           "bɪˈhaɪnd"
         ],
         "answer": "on",
-        "audio": "write",
-        "image": "✍️",
+        "audio": "pencil",
+        "image": "✏️",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -17466,7 +17466,7 @@
         "week_id": "W13",
         "difficulty": "hard",
         "type": "multiple_choice",
-        "question": "The brother is ________ the desk.",
+        "question": "The cat is ________ the desk.",
         "options": [
           "on",
           "in",
@@ -17480,8 +17480,8 @@
           "ˈʌndə"
         ],
         "answer": "on",
-        "audio": "brother",
-        "image": "👦",
+        "audio": "cat",
+        "image": "🐱",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
@@ -17516,7 +17516,7 @@
         "week_id": "W14",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "The nurse is ________ the desk.",
+        "question": "The ruler is ________ the desk.",
         "options": [
           "on",
           "behind",
@@ -17530,8 +17530,8 @@
           "ɪn"
         ],
         "answer": "on",
-        "audio": "nurse",
-        "image": "🧑‍⚕️",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Dùng giới từ 'on' để chỉ vật nằm 'ở trên' mặt bàn nhé."
       },
       {
