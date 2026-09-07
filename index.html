@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    <title>Tiếng Anh lớp 3 - Cô giáo Chim Xanh</title>
+    <title>Tiếng Anh lớp 3 - Cô giáo Ong Vàng</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,7 +33,7 @@
         .pastel-card {
             background: #ffffff;
             border-radius: 28px;
-            box-shadow: 0 12px 30px rgba(236, 72, 153, 0.12);
+            box-shadow: 0 12px 30px rgba(249,115,22, 0.12);
             border: 3px solid #fbcfe8;
         }
         .pastel-btn {
@@ -61,8 +61,8 @@
             transform-origin: bottom center;
         }
         @keyframes pulse-glow {
-            0%, 100% { filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.6)); transform: scale(1); }
-            50% { filter: drop-shadow(0 0 16px rgba(236, 72, 153, 0.9)); transform: scale(1.04); }
+            0%, 100% { filter: drop-shadow(0 0 6px rgba(249,115,22, 0.6)); transform: scale(1); }
+            50% { filter: drop-shadow(0 0 16px rgba(249,115,22, 0.9)); transform: scale(1.04); }
         }
         .node-current {
             animation: pulse-glow 2s infinite ease-in-out;
@@ -97,102 +97,102 @@
         <!-- 1. MÀN HÌNH ĐĂNG NHẬP / ĐĂNG KÝ -->
         <div id="screen-login" class="w-full max-w-md pastel-card p-6 md:p-8 flex flex-col items-center text-center my-auto">
             <div class="mb-2">
-                <span class="text-7xl md:text-8xl swaying select-none">🐦</span>
+                <span class="text-7xl md:text-8xl swaying select-none">🐝</span>
             </div>
 
-            <h1 class="text-2xl md:text-3xl font-extrabold text-pink-600 tracking-wide uppercase mb-1">Tiếng Anh lớp 3</h1>
-            <p class="text-sm font-bold text-purple-600 mb-5">Cô giáo Chim Xanh</p>
+            <h1 class="text-2xl md:text-3xl font-extrabold text-yellow-600 tracking-wide uppercase mb-1">Tiếng Anh lớp 3</h1>
+            <p class="text-sm font-bold text-orange-600 mb-5">Cô giáo Ong Vàng</p>
 
-            <div class="w-full grid grid-cols-2 bg-pink-50 rounded-2xl p-1 mb-5 border border-pink-200">
-                <button id="tab-btn-login" onclick="switchAuthTab('login')" class="py-2.5 rounded-xl font-extrabold text-sm pastel-btn bg-white text-pink-600 shadow-sm">Đăng nhập</button>
+            <div class="w-full grid grid-cols-2 bg-yellow-50 rounded-2xl p-1 mb-5 border border-yellow-200">
+                <button id="tab-btn-login" onclick="switchAuthTab('login')" class="py-2.5 rounded-xl font-extrabold text-sm pastel-btn bg-white text-yellow-600 shadow-sm">Đăng nhập</button>
                 <button id="tab-btn-register" onclick="switchAuthTab('register')" class="py-2.5 rounded-xl font-extrabold text-sm pastel-btn text-gray-400">Đăng ký tài khoản</button>
             </div>
 
             <div id="form-login" class="w-full space-y-3">
                 <div class="relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-pink-400"><i class="fa-solid fa-id-card"></i></span>
-                    <input type="text" id="login-mahs" placeholder="Mã ID thẻ học sinh (ví dụ: 1A-09)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-yellow-400"><i class="fa-solid fa-id-card"></i></span>
+                    <input type="text" id="login-mahs" placeholder="Mã ID thẻ học sinh (ví dụ: 1A-09)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
                 </div>
                 <div class="relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-pink-400"><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" id="login-mapin" maxlength="4" inputmode="numeric" placeholder="Mã PIN (4 số)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-yellow-400"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" id="login-mapin" maxlength="4" inputmode="numeric" placeholder="Mã PIN (4 số)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
                 </div>
-                <button onclick="doLogin()" id="btn-do-login" class="w-full py-3.5 bg-gradient-to-r from-pink-400 to-rose-400 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
+                <button onclick="doLogin()" id="btn-do-login" class="w-full py-3.5 bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
                     <i class="fa-solid fa-right-to-bracket mr-1"></i> Đăng nhập
                 </button>
             </div>
 
             <div id="form-register" class="w-full space-y-3 hidden text-left">
                 <div>
-                    <label class="text-xs font-extrabold text-pink-600">Họ và tên học sinh <span class="text-rose-400">*</span></label>
-                    <input type="text" id="reg-hoten" placeholder="Ví dụ: Phùng Tường Vy" class="w-full mt-1 px-4 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                    <label class="text-xs font-extrabold text-yellow-600">Họ và tên học sinh <span class="text-orange-400">*</span></label>
+                    <input type="text" id="reg-hoten" placeholder="Ví dụ: Phùng Tường Vy" class="w-full mt-1 px-4 py-3 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
                 </div>
                 <div class="grid grid-cols-2 gap-2">
                     <div>
-                        <label class="text-xs font-extrabold text-pink-600">Ngày sinh <span class="text-rose-400">*</span></label>
-                        <input type="date" id="reg-ngaysinh" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 bg-pink-50/20 text-sm">
+                        <label class="text-xs font-extrabold text-yellow-600">Ngày sinh <span class="text-orange-400">*</span></label>
+                        <input type="date" id="reg-ngaysinh" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 bg-yellow-50/20 text-sm">
                     </div>
                     <div>
-                        <label class="text-xs font-extrabold text-pink-600">Tên lớp <span class="text-rose-400">*</span></label>
-                        <input type="text" id="reg-lop" placeholder="1A" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                        <label class="text-xs font-extrabold text-yellow-600">Tên lớp <span class="text-orange-400">*</span></label>
+                        <input type="text" id="reg-lop" placeholder="1A" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-2">
                     <div>
-                        <label class="text-xs font-extrabold text-pink-600">Số thứ tự <span class="text-rose-400">*</span></label>
-                        <input type="number" id="reg-stt" placeholder="09" min="1" max="99" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                        <label class="text-xs font-extrabold text-yellow-600">Số thứ tự <span class="text-orange-400">*</span></label>
+                        <input type="number" id="reg-stt" placeholder="09" min="1" max="99" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
                     </div>
                     <div>
-                        <label class="text-xs font-extrabold text-pink-600">Mã PIN (4 số) <span class="text-rose-400">*</span></label>
-                        <input type="password" id="reg-mapin" maxlength="4" inputmode="numeric" placeholder="••••" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                        <label class="text-xs font-extrabold text-yellow-600">Mã PIN (4 số) <span class="text-orange-400">*</span></label>
+                        <input type="password" id="reg-mapin" maxlength="4" inputmode="numeric" placeholder="••••" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
                     </div>
                 </div>
-                <div class="flex items-center justify-between bg-pink-50 border border-pink-200 rounded-xl px-3 py-2.5">
+                <div class="flex items-center justify-between bg-yellow-50 border border-yellow-200 rounded-xl px-3 py-2.5">
                     <span class="text-xs font-bold text-gray-500">Mã ID thẻ học sinh:</span>
-                    <span id="mahs-preview" class="text-sm font-extrabold text-pink-600 bg-white px-2.5 py-1 rounded-lg border border-pink-200">--</span>
+                    <span id="mahs-preview" class="text-sm font-extrabold text-yellow-600 bg-white px-2.5 py-1 rounded-lg border border-yellow-200">--</span>
                 </div>
-                <button onclick="doRegister()" id="btn-do-register" class="w-full py-3.5 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
+                <button onclick="doRegister()" id="btn-do-register" class="w-full py-3.5 bg-gradient-to-r from-orange-400 to-orange-600 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
                     <i class="fa-solid fa-user-plus mr-1"></i> Đăng ký ngay
                 </button>
             </div>
 
-            <div class="w-full mt-4 pt-4 border-t border-pink-100">
-                <button onclick="handleGuestMode()" class="w-full py-3 bg-gradient-to-r from-pink-100 to-purple-100 text-purple-700 font-extrabold rounded-2xl text-xs md:text-sm pastel-btn hover:from-pink-200 hover:to-purple-200 border border-purple-200 flex items-center justify-center space-x-1.5">
+            <div class="w-full mt-4 pt-4 border-t border-yellow-100">
+                <button onclick="handleGuestMode()" class="w-full py-3 bg-gradient-to-r from-yellow-100 to-orange-100 text-orange-700 font-extrabold rounded-2xl text-xs md:text-sm pastel-btn hover:from-yellow-200 hover:to-orange-200 border border-orange-200 flex items-center justify-center space-x-1.5">
                     <i class="fa-solid fa-compass"></i><span>Vào học thử - không cần tài khoản (khách)</span>
                 </button>
             </div>
-            <p id="auth-error-msg" class="text-xs font-bold text-rose-500 mt-3 hidden"></p>
+            <p id="auth-error-msg" class="text-xs font-bold text-orange-500 mt-3 hidden"></p>
         </div>
 
         <!-- 2. KHUNG CHÍNH CHUẨN TỶ LỆ 16:9 / 16:10 -->
         <div id="screen-dashboard" class="w-full max-w-5xl hidden flex flex-col space-y-1.5 md:space-y-2 p-1 md:p-2">
             
-            <header class="w-full bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-sm border-2 border-pink-200 flex flex-col md:flex-row justify-between items-center gap-2">
+            <header class="w-full bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-sm border-2 border-yellow-200 flex flex-col md:flex-row justify-between items-center gap-2">
                 <div class="flex items-center space-x-2 w-full md:w-auto justify-between md:justify-start overflow-x-auto pb-0.5">
-                    <button id="btn-header-home" onclick="goHome()" title="Về trang chủ" class="h-12 flex items-center gap-1.5 bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 pl-2 pr-3 rounded-2xl border-2 border-pink-300 shadow-sm shrink-0 transition-all duration-200 hover:border-pink-400 hover:shadow-[0_0_18px_rgba(244,114,182,0.65)]">
-                        <span class="w-8 h-8 flex items-center justify-center bg-white rounded-full text-lg shadow-inner border border-pink-200 shrink-0">🐦</span>
-                        <span class="flex flex-col items-start leading-none">
-                            <span class="text-sm font-black bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent uppercase tracking-wide whitespace-nowrap">Tiếng Anh lớp 3</span>
-                            <span class="text-[10px] font-bold text-purple-500 mt-0.5 whitespace-nowrap">Cô giáo Chim Xanh</span>
+                    <button id="btn-header-home" onclick="goHome()" title="Về trang chủ" class="h-12 flex items-center gap-1.5 bg-gradient-to-br from-yellow-50 via-orange-50 to-orange-50 pl-2 pr-3 rounded-2xl border-2 border-yellow-300 shadow-sm shrink-0 transition-all duration-200 hover:border-yellow-400 hover:shadow-[0_0_18px_rgba(250,204,21,0.65)]">
+                        <span class="w-8 h-8 flex items-center justify-center bg-white rounded-full text-lg shadow-inner border border-yellow-200 shrink-0">🐝</span>
+                        <span class="flex flex-col items-center leading-none">
+                            <span class="text-sm font-black bg-gradient-to-r from-yellow-600 to-orange-500 bg-clip-text text-transparent uppercase tracking-wide whitespace-nowrap">Tiếng Anh lớp 3</span>
+                            <span class="text-[10px] font-bold text-orange-500 mt-0.5 whitespace-nowrap">Cô giáo Ong Vàng</span>
                         </span>
                     </button>
 
                     <div id="header-level2-tab" class="hidden items-center">
-                        <button onclick="returnToTopicLecture()" class="h-10 px-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-extrabold rounded-xl text-xs md:text-sm flex items-center space-x-1.5 shadow-sm border border-pink-300 shrink-0 max-w-[200px] md:max-w-[260px] transition-shadow duration-200 hover:shadow-[0_0_14px_rgba(244,63,94,0.65)]">
+                        <button onclick="returnToTopicLecture()" class="h-10 px-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-extrabold rounded-xl text-xs md:text-sm flex items-center space-x-1.5 shadow-sm border border-yellow-300 shrink-0 max-w-[200px] md:max-w-[260px] transition-shadow duration-200 hover:shadow-[0_0_14px_rgba(249,115,22,0.65)]">
                             <span id="header-level2-icon">🔢</span>
                             <span id="header-level2-title" class="truncate">Chủ đề học</span>
                         </button>
                     </div>
 
                     <div id="header-level3-tab" class="hidden items-center space-x-1">
-                        <span class="text-pink-300 font-bold text-xs">/</span>
-                        <div class="h-10 px-2.5 bg-purple-50 border border-purple-200 text-purple-700 font-extrabold rounded-xl text-xs md:text-sm max-w-[170px] md:max-w-[210px] truncate shadow-inner flex items-center">
+                        <span class="text-yellow-300 font-bold text-xs">/</span>
+                        <div class="h-10 px-2.5 bg-orange-50 border border-orange-200 text-orange-700 font-extrabold rounded-xl text-xs md:text-sm max-w-[170px] md:max-w-[210px] truncate shadow-inner flex items-center">
                             <span id="header-level3-title" class="truncate">Mục nhỏ</span>
                         </div>
                     </div>
 
                     <div id="header-level4-tab" class="hidden items-center space-x-1">
-                        <span class="text-pink-300 font-bold text-xs">/</span>
+                        <span class="text-yellow-300 font-bold text-xs">/</span>
                         <div class="h-10 px-2.5 bg-amber-50 border border-amber-200 text-amber-700 font-extrabold rounded-xl text-xs md:text-sm max-w-[200px] md:max-w-[260px] truncate shadow-inner flex items-center">
                             <span id="header-level4-title" class="truncate">Chủ đề tuần</span>
                         </div>
@@ -200,24 +200,24 @@
                 </div>
 
                 <div class="flex items-center space-x-2 w-full md:w-auto justify-between md:justify-end ml-auto shrink-0">
-                    <button id="btn-toggle-autospeech" onclick="toggleAutoSpeech()" title="Bật/tắt tự động đọc câu hỏi" class="h-10 w-10 shrink-0 flex items-center justify-center bg-pink-50 text-pink-600 border border-pink-200 rounded-xl shadow-inner transition-colors">
+                    <button id="btn-toggle-autospeech" onclick="toggleAutoSpeech()" title="Bật/tắt tự động đọc câu hỏi" class="h-10 w-10 shrink-0 flex items-center justify-center bg-yellow-50 text-yellow-600 border border-yellow-200 rounded-xl shadow-inner transition-colors">
                         <i class="fa-solid fa-volume-high"></i>
                     </button>
 
-                    <div class="flex flex-col space-y-0.5 bg-pink-50/90 px-2.5 py-1 rounded-xl border border-pink-200 shadow-inner">
+                    <div class="flex flex-col space-y-0.5 bg-yellow-50/90 px-2.5 py-1 rounded-xl border border-yellow-200 shadow-inner">
                         <div class="flex items-center justify-between space-x-2 font-extrabold">
                             <span class="px-1.5 py-0.2 bg-emerald-500 text-white rounded text-[10px] shadow-sm"><i class="fa-solid fa-star mr-0.5"></i> Đúng</span>
                             <span class="text-emerald-600 font-extrabold text-xs" id="star-green-count">0</span>
                         </div>
                         <div class="flex items-center justify-between space-x-2 font-extrabold">
-                            <span class="px-1.5 py-0.2 bg-rose-500 text-white rounded text-[10px] shadow-sm"><i class="fa-solid fa-star mr-0.5"></i> Sai</span>
-                            <span class="text-rose-600 font-extrabold text-xs" id="star-red-count">0</span>
+                            <span class="px-1.5 py-0.2 bg-orange-500 text-white rounded text-[10px] shadow-sm"><i class="fa-solid fa-star mr-0.5"></i> Sai</span>
+                            <span class="text-orange-600 font-extrabold text-xs" id="star-red-count">0</span>
                         </div>
                     </div>
 
                     <div id="user-info-box" class="text-xs font-bold text-gray-600 text-right"></div>
 
-                    <button onclick="clickProgressOrExam('progress')" class="h-10 px-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-extrabold rounded-xl text-xs md:text-sm shadow-md hover:from-purple-600 hover:to-indigo-600 flex items-center space-x-1.5 shrink-0 transition-shadow duration-200 hover:shadow-[0_0_14px_rgba(244,63,94,0.65)]">
+                    <button onclick="clickProgressOrExam('progress')" class="h-10 px-3 bg-gradient-to-r from-orange-500 to-orange-700 text-white font-extrabold rounded-xl text-xs md:text-sm shadow-md hover:from-orange-600 hover:to-orange-700 flex items-center space-x-1.5 shrink-0 transition-shadow duration-200 hover:shadow-[0_0_14px_rgba(249,115,22,0.65)]">
                         <i class="fa-solid fa-map-location-dot"></i><span>Bản đồ tuần</span>
                     </button>
                 </div>
@@ -232,21 +232,21 @@
                 <div id="view-lecture" class="w-full hidden pastel-card p-4 md:p-6 flex flex-col justify-between items-center min-h-[480px]">
                     <div class="w-full max-w-4xl flex flex-col items-center">
                         <h2 id="lecture-title" class="hidden"></h2>
-                        <div class="w-full bg-pink-50/40 p-3.5 md:p-4 rounded-2xl border-2 border-pink-100 mb-3">
+                        <div class="w-full bg-yellow-50/40 p-3.5 md:p-4 rounded-2xl border-2 border-yellow-100 mb-3">
                             <p id="lecture-content" class="text-base md:text-lg text-gray-700 leading-relaxed whitespace-pre-line text-center"></p>
                         </div>
 
-                        <button onclick="speakLecture()" class="w-full max-w-xs py-2 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-sm md:text-base pastel-btn flex items-center justify-center space-x-2 border-2 border-purple-200 shadow-sm mb-2.5">
+                        <button onclick="speakLecture()" class="w-full max-w-xs py-2 bg-orange-100 hover:bg-orange-200 text-orange-700 font-extrabold rounded-xl text-sm md:text-base pastel-btn flex items-center justify-center space-x-2 border-2 border-orange-200 shadow-sm mb-2.5">
                             <i class="fa-solid fa-volume-high text-base"></i><span>Nghe cô đọc</span>
                         </button>
 
-                        <div class="w-full pt-2 border-t border-pink-100 flex flex-col items-center">
+                        <div class="w-full pt-2 border-t border-yellow-100 flex flex-col items-center">
                             <div id="lecture-subtopics-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-2xl"></div>
                         </div>
                     </div>
 
                     <div class="w-full flex justify-center mt-2.5 pt-1" id="wrap-mix-all-subtopics">
-                        <button id="btn-mix-all-subtopics" onclick="selectSubtopic(null)" class="w-full max-w-xs py-2 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md">
+                        <button id="btn-mix-all-subtopics" onclick="selectSubtopic(null)" class="w-full max-w-xs py-2 bg-gradient-to-r from-orange-400 to-orange-600 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md">
                             🌟 Học trộn tất cả các mục
                         </button>
                     </div>
@@ -261,14 +261,14 @@
                 <div id="view-quiz" class="w-full hidden flex flex-col space-y-1.5">
                     
                     <!-- TOP BAR CỦA ĐỀ THI (ẨN HOÀN TOÀN TRONG CHẾ ĐỘ LUYỆN TẬP) -->
-                    <div id="quiz-top-bar" class="w-full bg-white rounded-2xl p-2.5 border-2 border-pink-200 flex flex-wrap items-center justify-between gap-2.5 shadow-xs">
+                    <div id="quiz-top-bar" class="w-full bg-white rounded-2xl p-2.5 border-2 border-yellow-200 flex flex-wrap items-center justify-between gap-2.5 shadow-xs">
                         <div id="quiz-timer-container" class="flex items-center space-x-2">
-                            <div class="w-8 h-8 rounded-xl bg-pink-50 border border-pink-200 flex items-center justify-center text-pink-500 font-bold text-sm">
+                            <div class="w-8 h-8 rounded-xl bg-yellow-50 border border-yellow-200 flex items-center justify-center text-yellow-500 font-bold text-sm">
                                 <i class="fa-solid fa-stopwatch"></i>
                             </div>
                             <div>
                                 <span class="text-xs font-bold text-gray-400 uppercase tracking-wider block">Thời gian</span>
-                                <span id="quiz-timer-display" class="text-base font-black text-rose-500 tracking-wider">40:00</span>
+                                <span id="quiz-timer-display" class="text-base font-black text-orange-500 tracking-wider">40:00</span>
                             </div>
                         </div>
 
@@ -282,23 +282,23 @@
                     <div class="w-full pastel-card p-3.5 md:p-5 flex flex-col justify-between min-h-[380px]">
                         
                         <!-- HEADER TRONG CARD (CHỈ HIỆN KHI THI) -->
-                        <div id="quiz-card-header" class="hidden items-center justify-between flex-wrap gap-2 border-b border-pink-100 pb-2">
+                        <div id="quiz-card-header" class="hidden items-center justify-between flex-wrap gap-2 border-b border-yellow-100 pb-2">
                             <div class="flex items-center space-x-2">
-                                <span id="q-badge-index" class="px-2.5 py-1 bg-pink-100 text-pink-800 text-sm font-black rounded-lg">CÂU 1 / 13</span>
-                                <span id="q-badge-skill" class="px-2.5 py-1 bg-pink-50 text-pink-700 border border-pink-200 text-sm font-bold rounded-lg flex items-center space-x-1">
+                                <span id="q-badge-index" class="px-2.5 py-1 bg-yellow-100 text-yellow-800 text-sm font-black rounded-lg">CÂU 1 / 13</span>
+                                <span id="q-badge-skill" class="px-2.5 py-1 bg-yellow-50 text-yellow-700 border border-yellow-200 text-sm font-bold rounded-lg flex items-center space-x-1">
                                     <i class="fa-solid fa-tag text-xs"></i>
                                     <span id="q-skill-text">Kiến thức cơ bản</span>
                                 </span>
                                 <span id="q-badge-score" class="px-2 py-1 bg-amber-50 text-amber-700 border border-amber-200 text-sm font-bold rounded-lg">(0.5 điểm)</span>
                             </div>
                             
-                            <button id="btn-roadmap-history" onclick="openHistoryModal('LichSuTienTrinhTuan')" class="hidden px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 rounded-xl text-sm font-extrabold items-center space-x-1.5 transition-shadow duration-200 hover:shadow-[0_0_10px_rgba(99,102,241,0.5)] shadow-xs">
+                            <button id="btn-roadmap-history" onclick="openHistoryModal('LichSuTienTrinhTuan')" class="hidden px-3 py-1.5 bg-orange-100 hover:bg-orange-100 text-orange-800 border border-orange-200 rounded-xl text-sm font-extrabold items-center space-x-1.5 transition-shadow duration-200 hover:shadow-[0_0_10px_rgba(249,115,22,0.5)] shadow-xs">
                                 <i class="fa-solid fa-chart-line"></i>
                                 <span>Lịch sử tiến trình tuần</span>
                             </button>
 
-                            <button onclick="speakCurrentQuestion()" class="px-3 py-1.5 bg-pink-50 hover:bg-pink-100 text-pink-700 border border-pink-200 rounded-xl text-sm font-extrabold flex items-center space-x-1.5 transition-all pastel-btn shadow-xs">
-                                <i class="fa-solid fa-volume-high text-pink-600"></i>
+                            <button onclick="speakCurrentQuestion()" class="px-3 py-1.5 bg-yellow-50 hover:bg-yellow-100 text-yellow-700 border border-yellow-200 rounded-xl text-sm font-extrabold flex items-center space-x-1.5 transition-all pastel-btn shadow-xs">
+                                <i class="fa-solid fa-volume-high text-yellow-600"></i>
                                 <span>Nghe câu hỏi</span>
                             </button>
                         </div>
@@ -314,11 +314,11 @@
                                     <i class="fa-solid fa-chevron-left"></i><span>Câu trước</span>
                                 </button>
 
-                                <div id="practice-step-indicator" class="px-5 py-1.5 bg-pink-50 border border-pink-200 text-pink-700 font-black rounded-full text-xs md:text-sm flex items-center justify-center space-x-1.5 shadow-xs select-none">
-                                    <span>🔢</span><span id="practice-step-text">Câu 1 / 59</span><span>🔢</span>
+                                <div id="practice-step-indicator" class="px-5 py-1.5 bg-yellow-50 border border-yellow-200 text-yellow-700 font-black rounded-full text-xs md:text-sm flex items-center justify-center space-x-1.5 shadow-xs select-none">
+                                    <span id="practice-step-text">Câu 1 / 59</span>
                                 </div>
 
-                                <button id="btn-next-q-prac" onclick="nextQuestion()" class="px-6 py-2 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-black rounded-2xl text-xs md:text-sm pastel-btn shadow-md flex items-center justify-center space-x-1.5 transition-all">
+                                <button id="btn-next-q-prac" onclick="nextQuestion()" class="px-6 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-black rounded-2xl text-xs md:text-sm pastel-btn shadow-md flex items-center justify-center space-x-1.5 transition-all">
                                     <span id="btn-next-text-prac">Câu tiếp theo</span>
                                     <i id="btn-next-icon-prac" class="fa-solid fa-chevron-right ml-1"></i>
                                 </button>
@@ -332,7 +332,7 @@
 
                                 <div id="quiz-pallet-container" class="grid grid-cols-10 gap-1.5 max-w-xl mx-2"></div>
 
-                                <button id="btn-next-q-exam" onclick="nextQuestion()" class="px-5 py-2 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-black rounded-xl text-xs md:text-sm pastel-btn shadow-md flex items-center justify-center space-x-1.5 transition-all">
+                                <button id="btn-next-q-exam" onclick="nextQuestion()" class="px-5 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-black rounded-xl text-xs md:text-sm pastel-btn shadow-md flex items-center justify-center space-x-1.5 transition-all">
                                     <span id="btn-next-text-exam">Câu tiếp theo</span>
                                     <i id="btn-next-icon-exam" class="fa-solid fa-chevron-right ml-1"></i>
                                 </button>
@@ -347,21 +347,21 @@
                     <div class="w-full max-w-5xl flex flex-col items-center">
                         <div class="flex flex-col sm:flex-row items-center justify-between w-full px-2 mb-2 gap-2">
                             <div>
-                                <h2 class="text-base md:text-lg font-extrabold text-indigo-600 flex items-center space-x-2">
+                                <h2 class="text-base md:text-lg font-extrabold text-orange-700 flex items-center space-x-2">
                                     <span>🗺️</span><span>Bản đồ lộ trình 24 tuần bứt phá</span>
                                 </h2>
                                 <p class="text-[11px] md:text-xs text-gray-500 font-bold">Mỗi tuần 30 câu (tỷ lệ 3:4:3). Đạt từ 80% trở lên để mở khóa tuần kế tiếp!</p>
                             </div>
                             
                             <div class="flex items-center space-x-2 shrink-0">
-                                <button onclick="openHistoryModal('LichSuTienTrinhTuan')" class="px-3 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-extrabold rounded-xl border border-indigo-200 text-xs pastel-btn flex items-center space-x-1.5 shadow-sm">
-                                    <i class="fa-solid fa-chart-line text-indigo-600"></i>
+                                <button onclick="openHistoryModal('LichSuTienTrinhTuan')" class="px-3 py-2 bg-orange-100 hover:bg-orange-100 text-orange-800 font-extrabold rounded-xl border border-orange-200 text-xs pastel-btn flex items-center space-x-1.5 shadow-sm">
+                                    <i class="fa-solid fa-chart-line text-orange-700"></i>
                                     <span>📊 Xem lịch sử tiến trình</span>
                                 </button>
                             </div>
                         </div>
 
-                        <div id="roadmap-svg-container" class="w-full max-w-3xl mx-auto flex justify-center items-center overflow-hidden bg-gradient-to-b from-pink-50/30 to-purple-50/30 rounded-2xl border-2 border-pink-100 p-1" style="aspect-ratio: 650 / 400;"></div>
+                        <div id="roadmap-svg-container" class="w-full max-w-3xl mx-auto flex justify-center items-center overflow-hidden bg-gradient-to-b from-yellow-50/30 to-orange-50/30 rounded-2xl border-2 border-yellow-100 p-1" style="aspect-ratio: 650 / 400;"></div>
                     </div>
                 </div>
 
@@ -381,51 +381,51 @@
                 <!-- VIEW 6: MÀN HÌNH KẾT QUẢ & BÁO CÁO -->
                 <div id="view-result" class="w-full hidden flex flex-col space-y-3">
                     
-                    <div class="bg-gradient-to-tr from-rose-900 via-pink-950 to-rose-900 rounded-3xl p-4 sm:p-5 text-white shadow-xl relative overflow-hidden">
+                    <div class="bg-gradient-to-tr from-orange-900 via-yellow-950 to-orange-900 rounded-3xl p-4 sm:p-5 text-white shadow-xl relative overflow-hidden">
                         <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4">
                             <div class="space-y-1 text-center md:text-left">
-                                <span class="px-3 py-0.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold tracking-wider text-pink-200 border border-white/15 inline-block" id="report-exam-badge">
+                                <span class="px-3 py-0.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold tracking-wider text-yellow-200 border border-white/15 inline-block" id="report-exam-badge">
                                     Kết quả bài thi
                                 </span>
                                 <h2 id="report-student-display" class="text-lg sm:text-xl font-black tracking-tight">Học sinh: --</h2>
-                                <p id="report-meta-display" class="text-xs text-pink-200">Lớp: -- | Mã số: -- | Thời gian: --</p>
+                                <p id="report-meta-display" class="text-xs text-yellow-200">Lớp: -- | Mã số: -- | Thời gian: --</p>
                             </div>
 
                             <div class="flex items-center gap-3">
                                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-2 text-center">
-                                    <span class="text-[10px] uppercase tracking-wider text-pink-200 font-bold block mb-0.5">Tổng điểm</span>
+                                    <span class="text-[10px] uppercase tracking-wider text-yellow-200 font-bold block mb-0.5">Tổng điểm</span>
                                     <div class="text-2xl sm:text-3xl font-black font-math text-amber-300" id="report-total-score-val">0.0</div>
-                                    <span class="text-[9px] text-pink-200">Thang điểm 10</span>
+                                    <span class="text-[9px] text-yellow-200">Thang điểm 10</span>
                                 </div>
                                 <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-2 text-center">
-                                    <span class="text-[10px] uppercase tracking-wider text-pink-200 font-bold block mb-0.5">Độ chính xác</span>
+                                    <span class="text-[10px] uppercase tracking-wider text-yellow-200 font-bold block mb-0.5">Độ chính xác</span>
                                     <div class="text-2xl sm:text-3xl font-black font-math text-emerald-300" id="report-correct-ratio-val">0/13</div>
-                                    <span class="text-[9px] text-pink-200">Câu đúng</span>
+                                    <span class="text-[9px] text-yellow-200">Câu đúng</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-3xl p-4 sm:p-5 border border-pink-100 soft-shadow-pink space-y-2.5">
+                    <div class="bg-white rounded-3xl p-4 sm:p-5 border border-yellow-100 soft-shadow-pink space-y-2.5">
                         <h3 class="text-sm sm:text-base font-black text-slate-800 tracking-tight flex items-center space-x-2">
-                            <i class="fa-solid fa-chart-bar text-pink-600"></i>
+                            <i class="fa-solid fa-chart-bar text-yellow-600"></i>
                             <span>Bóc tách điểm số & đánh giá năng lực 6 chủ đề</span>
                         </h3>
                         <div id="report-topics-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-0.5">
-                        <button onclick="openReviewWrongModal()" class="py-2.5 px-3 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-black text-xs rounded-2xl shadow-xs transition-all flex items-center justify-center space-x-1.5 pastel-btn">
-                            <i class="fa-solid fa-circle-question text-rose-500"></i>
+                        <button onclick="openReviewWrongModal()" class="py-2.5 px-3 bg-orange-50 hover:bg-orange-100 text-orange-700 border border-orange-200 font-black text-xs rounded-2xl shadow-xs transition-all flex items-center justify-center space-x-1.5 pastel-btn">
+                            <i class="fa-solid fa-circle-question text-orange-500"></i>
                             <span>👉 Xem lại các câu làm sai</span>
                         </button>
 
-                        <button id="report-history-btn" onclick="openHistoryModal('LichSuBaiThi_HK1')" class="py-2.5 px-3 bg-pink-50 hover:bg-pink-100 text-pink-700 border border-pink-200 font-black text-xs rounded-2xl shadow-xs transition-all flex items-center justify-center space-x-1.5 pastel-btn">
-                            <i class="fa-solid fa-chart-line text-pink-600"></i>
+                        <button id="report-history-btn" onclick="openHistoryModal('LichSuBaiThi_HK1')" class="py-2.5 px-3 bg-yellow-50 hover:bg-yellow-100 text-yellow-700 border border-yellow-200 font-black text-xs rounded-2xl shadow-xs transition-all flex items-center justify-center space-x-1.5 pastel-btn">
+                            <i class="fa-solid fa-chart-line text-yellow-600"></i>
                             <span>📊 Lịch sử & biểu đồ tiến trình</span>
                         </button>
 
-                        <button id="report-next-action-btn" onclick="handleNextExamFromReport()" class="py-2.5 px-3 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-black text-xs rounded-2xl shadow-sm transition-all flex items-center justify-center space-x-1.5 pastel-btn">
+                        <button id="report-next-action-btn" onclick="handleNextExamFromReport()" class="py-2.5 px-3 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-black text-xs rounded-2xl shadow-sm transition-all flex items-center justify-center space-x-1.5 pastel-btn">
                             <span id="report-next-action-label">🚀 Làm đề thi tiếp theo</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
@@ -439,10 +439,10 @@
 
     <!-- MODAL XEM LẠI CÂU SAI -->
     <div id="modal-review-wrong" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3">
-        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-pink-100 overflow-hidden">
-            <div class="p-3.5 border-b border-pink-100 flex items-center justify-between bg-rose-50/50">
-                <div class="flex items-center space-x-2 text-rose-800">
-                    <i class="fa-solid fa-triangle-exclamation text-rose-600"></i>
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-yellow-100 overflow-hidden">
+            <div class="p-3.5 border-b border-yellow-100 flex items-center justify-between bg-orange-50/50">
+                <div class="flex items-center space-x-2 text-orange-800">
+                    <i class="fa-solid fa-triangle-exclamation text-orange-600"></i>
                     <h3 class="font-black text-sm">Chi tiết các câu trả lời chưa chính xác</h3>
                 </div>
                 <button onclick="closeReviewWrongModal()" class="w-7 h-7 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-700"><i class="fa-solid fa-xmark"></i></button>
@@ -458,26 +458,26 @@
 
     <!-- MODAL BÁO CÁO TIẾN TRÌNH & BIỂU ĐỒ (PHÂN TRANG 3 TRANG KHI XUẤT PDF) -->
     <div id="modal-history-progress" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4">
-        <div class="bg-white rounded-3xl max-w-5xl w-full max-h-[96vh] flex flex-col shadow-2xl border-2 border-pink-200 overflow-hidden">
+        <div class="bg-white rounded-3xl max-w-5xl w-full max-h-[96vh] flex flex-col shadow-2xl border-2 border-yellow-200 overflow-hidden">
             
             <div id="printable-report-area" class="p-4 sm:p-6 overflow-y-auto space-y-4 flex-grow bg-white">
                 
                 <!-- TRANG 1: THÔNG TIN & BIỂU ĐỒ -->
                 <div class="space-y-4 page-break-1">
-                    <div class="p-3.5 sm:p-4 rounded-2xl border border-pink-200 bg-pink-50/70 flex flex-col md:flex-row items-center justify-between gap-3 shadow-xs">
-                        <div class="flex items-center space-x-3 text-pink-950 flex-1">
-                            <div class="w-10 h-10 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center shadow-xs shrink-0">
+                    <div class="p-3.5 sm:p-4 rounded-2xl border border-yellow-200 bg-yellow-50/70 flex flex-col md:flex-row items-center justify-between gap-3 shadow-xs">
+                        <div class="flex items-center space-x-3 text-yellow-950 flex-1">
+                            <div class="w-10 h-10 rounded-2xl bg-yellow-100 text-yellow-600 flex items-center justify-center shadow-xs shrink-0">
                                 <i class="fa-solid fa-award text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="font-black text-base sm:text-lg text-pink-950" id="hist-modal-title">Kết quả tiến trình học tập</h3>
-                                <p class="text-xs font-bold text-pink-600 whitespace-nowrap">Phân tích chuyên sâu 6 chủ đề & nhận xét sư phạm chi tiết</p>
+                                <h3 class="font-black text-base sm:text-lg text-yellow-950" id="hist-modal-title">Kết quả tiến trình học tập</h3>
+                                <p class="text-xs font-bold text-yellow-600 whitespace-nowrap">Phân tích chuyên sâu 6 chủ đề & nhận xét sư phạm chi tiết</p>
                             </div>
                         </div>
 
-                        <div class="bg-white/95 border-2 border-pink-200 px-4 py-2 rounded-2xl shadow-xs text-left shrink-0">
+                        <div class="bg-white/95 border-2 border-yellow-200 px-4 py-2 rounded-2xl shadow-xs text-left shrink-0">
                             <div class="text-sm font-black text-slate-900 leading-tight">
-                                Học sinh: <span id="hist-info-name" class="text-pink-600">--</span>
+                                Học sinh: <span id="hist-info-name" class="text-yellow-600">--</span>
                             </div>
                             <div class="text-xs font-bold text-slate-600 mt-0.5">
                                 Lớp: <span id="hist-info-class" class="text-slate-900 font-extrabold">--</span> &nbsp;|&nbsp; 
@@ -487,19 +487,20 @@
                         </div>
 
                         <div class="flex items-center space-x-2 shrink-0">
-                            <div class="text-xs font-bold text-slate-700 bg-white/95 px-3 py-2 rounded-xl border border-pink-200 text-center shadow-xs">
-                                Ngày báo cáo: <span id="hist-report-date" class="font-bold text-rose-600">03/09/2026</span>
+                            <div class="text-xs font-bold text-slate-700 bg-white/95 px-3 py-2 rounded-xl border border-yellow-200 text-center shadow-xs leading-snug">
+                                <div>Ngày báo cáo</div>
+                                <div id="hist-report-date" class="font-bold text-orange-600">03/09/2026</div>
                             </div>
-                            <button onclick="closeHistoryModal()" class="w-8 h-8 rounded-full bg-white border border-pink-200 flex items-center justify-center text-pink-400 hover:text-rose-600 transition-all shadow-xs no-print">
+                            <button onclick="closeHistoryModal()" class="w-8 h-8 rounded-full bg-white border border-yellow-200 flex items-center justify-center text-yellow-400 hover:text-orange-600 transition-all shadow-xs no-print">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </div>
                     </div>
 
                     <div class="flex flex-col md:flex-row gap-4 w-full">
-                        <div class="w-full md:w-[60%] bg-pink-50/40 border border-pink-100 rounded-2xl p-4 flex flex-col justify-between shadow-xs">
+                        <div class="w-full md:w-[60%] bg-yellow-50/40 border border-yellow-100 rounded-2xl p-4 flex flex-col justify-between shadow-xs">
                             <h4 class="text-xs sm:text-sm font-black text-slate-800 mb-2 flex items-center space-x-1.5">
-                                <i class="fa-solid fa-chart-line text-pink-600"></i>
+                                <i class="fa-solid fa-chart-line text-yellow-600"></i>
                                 <span>Biến thiên tổng điểm các bài thi (/10)</span>
                             </h4>
                             <div class="h-64 w-full relative">
@@ -507,9 +508,9 @@
                             </div>
                         </div>
 
-                        <div class="w-full md:w-[40%] bg-pink-50/40 border border-pink-100 rounded-2xl p-4 flex flex-col justify-between shadow-xs">
+                        <div class="w-full md:w-[40%] bg-yellow-50/40 border border-yellow-100 rounded-2xl p-4 flex flex-col justify-between shadow-xs">
                             <h4 class="text-xs sm:text-sm font-black text-slate-800 mb-2 flex items-center space-x-1.5">
-                                <i class="fa-solid fa-chart-bar text-rose-600"></i>
+                                <i class="fa-solid fa-chart-bar text-orange-600"></i>
                                 <span>Năng lực trung bình 6 chủ đề (%)</span>
                             </h4>
                             <div class="h-64 w-full relative">
@@ -521,15 +522,21 @@
 
                 <!-- TRANG 2: NHẬN XÉT SƯ PHẠM CHI TIẾT -->
                 <div class="space-y-4 page-break-2">
-                    <div class="bg-gradient-to-br from-amber-50/90 via-orange-50/60 to-rose-50/50 border border-amber-200/80 rounded-2xl p-4 space-y-3 shadow-xs">
-                        <div class="flex items-center space-x-2.5 border-b border-amber-200/60 pb-1.5">
-                            <div class="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shadow-xs shrink-0">
-                                <i class="fa-solid fa-award"></i>
+                    <div class="bg-gradient-to-br from-amber-50/90 via-orange-50/60 to-orange-50/50 border border-amber-200/80 rounded-2xl p-4 space-y-3 shadow-xs">
+                        <div class="flex items-center justify-between space-x-2.5 border-b border-amber-200/60 pb-1.5">
+                            <div class="flex items-center space-x-2.5">
+                                <div class="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shadow-xs shrink-0">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-base font-black text-amber-950 leading-tight">Nhận xét sư phạm & kế hoạch bồi dưỡng của giáo viên</h4>
+                                    <p class="text-xs font-bold text-amber-700">Đánh giá năng lực tư duy 6 chủ đề & lời khuyên phụ huynh đồng hành</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="text-base font-black text-amber-950 leading-tight">Nhận xét sư phạm & kế hoạch bồi dưỡng của giáo viên</h4>
-                                <p class="text-xs font-bold text-amber-700">Đánh giá năng lực tư duy 6 chủ đề & lời khuyên phụ huynh đồng hành</p>
-                            </div>
+                            <button onclick="speakPedagogicalEvaluation()" id="btn-speak-evaluation" class="no-print shrink-0 flex items-center space-x-1.5 bg-white border-2 border-amber-300 hover:bg-amber-50 text-amber-700 font-extrabold text-xs px-3 py-2 rounded-xl shadow-xs transition-all whitespace-nowrap">
+                                <i class="fa-solid fa-volume-high"></i>
+                                <span class="hidden sm:inline">Nghe cô giáo đọc</span>
+                            </button>
                         </div>
                         <div id="pedagogical-evaluation-box" class="space-y-2.5 text-xs sm:text-sm text-slate-800 leading-normal font-semibold"></div>
                     </div>
@@ -538,35 +545,35 @@
                 <!-- TRANG 3: BẢNG THỐNG KÊ CHI TIẾT TỪNG BÀI THI -->
                 <div class="space-y-3 page-break-3">
                     <h4 class="text-base font-black text-slate-900 flex items-center space-x-2">
-                        <i class="fa-solid fa-table text-pink-600"></i>
+                        <i class="fa-solid fa-table text-yellow-600"></i>
                         <span>Bảng thống kê điểm số chi tiết từng bài thi</span>
                     </h4>
-                    <div class="border border-pink-200 rounded-2xl overflow-hidden shadow-xs bg-white overflow-x-auto">
+                    <div class="border border-yellow-200 rounded-2xl overflow-hidden shadow-xs bg-white overflow-x-auto">
                         <table class="w-full text-center text-xs border-collapse">
-                            <thead class="bg-pink-100/70 text-pink-950 font-black border-b border-pink-200">
-                                <tr class="divide-x divide-pink-200">
+                            <thead class="bg-yellow-100/70 text-yellow-950 font-black border-b border-yellow-200">
+                                <tr class="divide-x divide-yellow-200">
                                     <th class="py-2.5 px-2 whitespace-nowrap">Lần thi</th>
                                     <th class="py-2.5 px-2 whitespace-nowrap">Đề / Tuần</th>
-                                    <th class="py-2.5 px-2 whitespace-nowrap text-rose-600">Tổng điểm</th>
-                                    <th class="py-2 px-1 leading-tight">Ngữ âm<br><span class="text-[10px] text-pink-700">(Spelling)</span></th>
-                                    <th class="py-2 px-1 leading-tight">Từ vựng<br><span class="text-[10px] text-pink-700">(Vocabulary)</span></th>
-                                    <th class="py-2 px-1 leading-tight">Nghe hiểu<br><span class="text-[10px] text-pink-700">(Listening)</span></th>
-                                    <th class="py-2 px-1 leading-tight">Ngữ pháp<br><span class="text-[10px] text-pink-700">(Grammar)</span></th>
-                                    <th class="py-2 px-1 leading-tight">Cú pháp<br><span class="text-[10px] text-pink-700">(Syntax)</span></th>
-                                    <th class="py-2 px-1 leading-tight">Đọc hiểu<br><span class="text-[10px] text-pink-700">(Reading)</span></th>
+                                    <th class="py-2.5 px-2 whitespace-nowrap text-orange-600">Tổng điểm</th>
+                                    <th class="py-2 px-1 leading-tight">Ngữ âm<br><span class="text-[10px] text-yellow-700">(Spelling)</span></th>
+                                    <th class="py-2 px-1 leading-tight">Từ vựng<br><span class="text-[10px] text-yellow-700">(Vocabulary)</span></th>
+                                    <th class="py-2 px-1 leading-tight">Nghe hiểu<br><span class="text-[10px] text-yellow-700">(Listening)</span></th>
+                                    <th class="py-2 px-1 leading-tight">Ngữ pháp<br><span class="text-[10px] text-yellow-700">(Grammar)</span></th>
+                                    <th class="py-2 px-1 leading-tight">Cú pháp<br><span class="text-[10px] text-yellow-700">(Syntax)</span></th>
+                                    <th class="py-2 px-1 leading-tight">Đọc hiểu<br><span class="text-[10px] text-yellow-700">(Reading)</span></th>
                                     <th class="py-2.5 px-2 whitespace-nowrap">Ngày làm</th>
                                     <th class="py-2.5 px-2 whitespace-nowrap">Thời gian</th>
                                 </tr>
                             </thead>
-                            <tbody id="hist-table-body" class="divide-y divide-pink-100 font-bold text-slate-700"></tbody>
+                            <tbody id="hist-table-body" class="divide-y divide-yellow-100 font-bold text-slate-700"></tbody>
                         </table>
                     </div>
                 </div>
 
             </div>
 
-            <div class="p-3.5 border-t border-pink-100 flex items-center justify-between bg-pink-50/40 no-print">
-                <button onclick="exportReportToPDF()" class="px-5 py-2.5 bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-700 hover:to-red-700 text-white font-extrabold text-xs md:text-sm rounded-xl transition-all shadow-md pastel-btn flex items-center space-x-1.5">
+            <div class="p-3.5 border-t border-yellow-100 flex items-center justify-between bg-yellow-50/40 no-print">
+                <button onclick="exportReportToPDF()" class="px-5 py-2.5 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-extrabold text-xs md:text-sm rounded-xl transition-all shadow-md pastel-btn flex items-center space-x-1.5">
                     <i class="fa-solid fa-file-pdf"></i>
                     <span>Xuất PDF</span>
                 </button>
@@ -579,7 +586,7 @@
     </div>
 
     <!-- CHÂN TRANG BẢN QUYỀN CHUẨN ĐỊNH DẠNG -->
-    <footer class="w-full mt-2 md:mt-3 pb-2 text-center text-sm font-bold text-pink-500 tracking-wider">
+    <footer class="w-full mt-2 md:mt-3 pb-2 text-center text-sm font-bold text-yellow-500 tracking-wider">
         epsilon.vn@gmail.com
     </footer>
 
