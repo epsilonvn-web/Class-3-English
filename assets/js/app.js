@@ -149,6 +149,11 @@ let ALPHABET_DATA = [];
 let IPA_DATA = [];
 let currentAlphaTab = 'alpha';
 let allQuestionsFlatCache = null;
+// Từ điển "từ tiếng Anh -> nghĩa tiếng Việt" gom TỰ ĐỘNG từ chính các thẻ từ vựng (type: "flashcard")
+// trong kho dữ liệu — không tự bịa nghĩa. Dùng để, sau khi bé chọn xong đáp án đúng (màu xanh),
+// bấm vào BẤT KỲ đáp án nào trong 4 lựa chọn sẽ vừa đọc to từ đó, vừa hiện nghĩa tiếng Việt ngay
+// cạnh (đúng ý đồ: học đủ cả 4 từ trong câu, không chỉ riêng từ đáp án đúng).
+let wordMeaningMap = {};
 // Bật/tắt đọc câu hỏi TỰ ĐỘNG khi vào câu mới — nút "Nghe câu hỏi" thủ công vẫn luôn hoạt động
 // dù tắt tính năng này (đây chỉ tắt phần tự động phát, không tắt hẳn tính năng nghe).
 let autoSpeechEnabled = localStorage.getItem('autoSpeechEnabled') !== 'false';
@@ -394,6 +399,9 @@ async function fetchAllQuestionsFlat() {
                         a: it.word,
                         oipa: optionItems.map(w => w.ipa || null)
                     };
+                    // Gom nghĩa tiếng Việt của TẤT CẢ các từ xuất hiện (kể cả từ làm đáp án nhiễu)
+                    // vào từ điển toàn cục, để lúc nghe lại đáp án nào cũng hiện đúng nghĩa của nó.
+                    optionItems.forEach(w => { if (w.word && w.vietnamese) wordMeaningMap[w.word.toLowerCase()] = w.vietnamese; });
                 } else {
                     qFields = { q: it.question, o: it.options || [], a: it.answer, oipa: it.options_ipa || null };
                 }
@@ -1700,7 +1708,7 @@ function loadQuestion() {
         } else {
             html += `
                 <button data-opt="${escapeHtml(opt)}" onclick="checkAnswer('${opt.replace(/'/g, "\\'")}')" class="option-btn w-full p-3 md:p-3.5 bg-yellow-50/40 hover:bg-yellow-100/70 border-2 border-yellow-200 rounded-2xl font-extrabold text-gray-800 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs pastel-btn">
-                    <span><strong class="text-yellow-600 mr-2 text-base md:text-lg">${letter}.</strong> ${escapeHtml(formattedOpt)}${ipaHtml}</span>
+                    <span><strong class="text-yellow-600 mr-2 text-base md:text-lg">${letter}.</strong> ${escapeHtml(formattedOpt)}${ipaHtml}<span class="opt-meaning-vi text-xs md:text-sm text-orange-600 font-bold ml-1.5"></span></span>
                     <span class="option-icon text-yellow-500 text-base md:text-lg"></span>
                 </button>`;
         }
@@ -1866,7 +1874,12 @@ function checkAnswer(selectedOpt) {
                 b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
                 b.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
             }
-            b.onclick = () => speakEnglish(bOpt); // Từ giờ bấm nút = nghe lại từ đó, không phải chọn đáp án nữa
+            b.onclick = () => {
+                speakEnglish(bOpt); // Từ giờ bấm nút = nghe lại từ đó, không phải chọn đáp án nữa
+                const meaning = wordMeaningMap[bOpt.toLowerCase()];
+                const meaningSpan = b.querySelector('.opt-meaning-vi');
+                if (meaning && meaningSpan) meaningSpan.textContent = ` (${meaning})`;
+            };
             b.title = 'Bấm để nghe lại từ này';
         });
 
@@ -1899,7 +1912,12 @@ function checkAnswer(selectedOpt) {
                 b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
                 b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
             }
-            b.onclick = () => speakEnglish(bOpt); // Từ giờ bấm nút = nghe lại từ đó, không phải chọn đáp án nữa
+            b.onclick = () => {
+                speakEnglish(bOpt); // Từ giờ bấm nút = nghe lại từ đó, không phải chọn đáp án nữa
+                const meaning = wordMeaningMap[bOpt.toLowerCase()];
+                const meaningSpan = b.querySelector('.opt-meaning-vi');
+                if (meaning && meaningSpan) meaningSpan.textContent = ` (${meaning})`;
+            };
             b.title = 'Bấm để nghe lại từ này';
         });
 
