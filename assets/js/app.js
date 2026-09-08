@@ -374,7 +374,29 @@ async function fetchAllQuestionsFlat() {
         (Array.isArray(sectionsArray) ? sectionsArray : []).forEach(section => {
             const { topicId, subCode } = parseSubCodeFromSubcategoryId(section.subcategory_id);
             const label = stripLeadingNumber(section.subcategory_name) || section.category_name || subCode;
+
+            // SỬA LỖI: riêng mục "2.1 Flashcards Library" dữ liệu là DẠNG THẺ TỪ VỰNG
+            // (type: "flashcard", chỉ có word/ipa/vietnamese — KHÔNG có question/options/answer),
+            // khác hẳn schema trắc nghiệm bình thường của mọi mục còn lại. Nếu để nguyên, câu hỏi
+            // sẽ hiện trống và KHÔNG có đáp án nào để bấm cả. Tự chế lại thành câu trắc nghiệm:
+            // hỏi nghĩa tiếng Việt, 4 lựa chọn tiếng Anh lấy ngẫu nhiên trong CHÍNH nhóm từ vựng đó
+            // (giữ đúng phiên âm riêng của từng từ, không bịa).
+            const flashcardPool = (section.questions || []).filter(q => q.type === 'flashcard' && q.word);
+
             (section.questions || []).forEach(it => {
+                let qFields;
+                if (it.type === 'flashcard' && it.word) {
+                    const distractors = shuffleArray(flashcardPool.filter(w => w.word !== it.word)).slice(0, 3);
+                    const optionItems = shuffleArray([it, ...distractors]);
+                    qFields = {
+                        q: `Từ nào có nghĩa là '${it.vietnamese}'?`,
+                        o: optionItems.map(w => w.word),
+                        a: it.word,
+                        oipa: optionItems.map(w => w.ipa || null)
+                    };
+                } else {
+                    qFields = { q: it.question, o: it.options || [], a: it.answer, oipa: it.options_ipa || null };
+                }
                 rawQuestions.push({
                     id: it.id,
                     sub: label,
@@ -389,11 +411,12 @@ async function fetchAllQuestionsFlat() {
                     img: it.image || '',
                     emo: '',
                     aud: it.audio || '',
-                    q: it.question,
-                    o: it.options || [],
-                    a: it.answer,
                     h: it.explanation || '',
-                    oipa: it.options_ipa || null
+                    // "pg" (paired_group) đã có sẵn cơ chế xử lý từ trước (showPairedGroupMenu):
+                    // hễ 1 chuyên mục con có >1 giá trị pg khác nhau, app tự động chèn thêm màn
+                    // "chọn thư mục con" trước khi vào bài — không cần sửa gì thêm ở phần hiển thị.
+                    pg: it.group_name || '',
+                    ...qFields
                 });
             });
         });
@@ -1834,7 +1857,7 @@ function checkAnswer(selectedOpt) {
         }
 
         document.querySelectorAll('.option-btn').forEach(b => {
-            b.disabled = true;
+            b.disabled = false; // Không khoá nút nữa — để bé bấm nghe lại BẤT KỲ đáp án nào (học đủ cả 4 từ, không chỉ từ đúng)
             const bOpt = b.getAttribute('data-opt');
             if (bOpt === q.answer) {
                 b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
@@ -1843,6 +1866,8 @@ function checkAnswer(selectedOpt) {
                 b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
                 b.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
             }
+            b.onclick = () => speakEnglish(bOpt); // Từ giờ bấm nút = nghe lại từ đó, không phải chọn đáp án nữa
+            b.title = 'Bấm để nghe lại từ này';
         });
 
         if (isCorrect) {
@@ -1868,11 +1893,14 @@ function checkAnswer(selectedOpt) {
         document.getElementById('star-green-count').textContent = starGreenCount;
 
         document.querySelectorAll('.option-btn').forEach(b => {
-            b.disabled = true;
-            if (b.getAttribute('data-opt') === q.answer) {
+            b.disabled = false; // Không khoá nút nữa — để bé bấm nghe lại BẤT KỲ đáp án nào (học đủ cả 4 từ, không chỉ từ đúng)
+            const bOpt = b.getAttribute('data-opt');
+            if (bOpt === q.answer) {
                 b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
                 b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
             }
+            b.onclick = () => speakEnglish(bOpt); // Từ giờ bấm nút = nghe lại từ đó, không phải chọn đáp án nữa
+            b.title = 'Bấm để nghe lại từ này';
         });
 
         playAudio('correct');
