@@ -6,6 +6,17 @@
     <meta name="referrer" content="no-referrer">
     <title>Tiếng Anh lớp 3 - Cô giáo Ong Vàng</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- ===== PWA: Cài app ra Màn hình chính, mở full màn hình, dùng tạm được khi mất mạng ===== -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#f59e0b">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+    <!-- iOS/iPadOS không đọc manifest.json để lấy icon+chế độ full màn hình, cần khai riêng bằng thẻ meta -->
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="TA Lớp 3">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome 6 -->
@@ -115,7 +126,7 @@
                 </div>
                 <div class="relative">
                     <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-yellow-400"><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" id="login-mapin" maxlength="4" inputmode="numeric" placeholder="Mã PIN (4 số)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
+                    <input type="password" id="login-mapin" maxlength="6" inputmode="numeric" placeholder="Mã PIN (6 số)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
                 </div>
                 <button onclick="doLogin()" id="btn-do-login" class="w-full py-3.5 bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
                     <i class="fa-solid fa-right-to-bracket mr-1"></i> Đăng nhập
@@ -143,8 +154,8 @@
                         <input type="number" id="reg-stt" placeholder="09" min="1" max="99" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
                     </div>
                     <div>
-                        <label class="text-xs font-extrabold text-yellow-600">Mã PIN (4 số) <span class="text-orange-400">*</span></label>
-                        <input type="password" id="reg-mapin" maxlength="4" inputmode="numeric" placeholder="••••" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
+                        <label class="text-xs font-extrabold text-yellow-600">Mã PIN (6 số) <span class="text-orange-400">*</span></label>
+                        <input type="password" id="reg-mapin" maxlength="6" inputmode="numeric" placeholder="••••••" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-yellow-200 focus:border-yellow-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-yellow-50/20 text-sm">
                     </div>
                 </div>
                 <div class="flex items-center justify-between bg-yellow-50 border border-yellow-200 rounded-xl px-3 py-2.5">
@@ -607,5 +618,14 @@
 
     <!-- NẠP ENGINE JAVASCRIPT ĐỒNG BỘ -->
     <script src="assets/js/app.js?v=6.6"></script>
+    <script>
+        // Đăng ký Service Worker (chỉ chạy khi trình duyệt hỗ trợ) — cho phép mở app tạm thời
+        // khi mất mạng và là điều kiện bắt buộc để trình duyệt cho phép "Cài đặt/Thêm vào Màn hình chính".
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').catch(() => {});
+            });
+        }
+    </script>
 </body>
 </html>

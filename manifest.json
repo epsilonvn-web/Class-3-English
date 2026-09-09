@@ -1,0 +1,17 @@
+{
+  "name": "Tiếng Anh Lớp 3 - Cô giáo Ong Vàng",
+  "short_name": "TA Lớp 3",
+  "description": "Ứng dụng học Tiếng Anh lớp 3 cùng Cô giáo Ong Vàng — Học tự do 11 chuyên mục, Lộ trình 24 tuần, Đấu trường đề thi.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "id": "tienganh-lop3-ongvang",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fff7ed",
+  "theme_color": "#f59e0b",
+  "lang": "vi",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
