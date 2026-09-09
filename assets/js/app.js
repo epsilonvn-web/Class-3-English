@@ -154,6 +154,43 @@ let allQuestionsFlatCache = null;
 // bấm vào BẤT KỲ đáp án nào trong 4 lựa chọn sẽ vừa đọc to từ đó, vừa hiện nghĩa tiếng Việt ngay
 // cạnh (đúng ý đồ: học đủ cả 4 từ trong câu, không chỉ riêng từ đáp án đúng).
 let wordMeaningMap = {};
+
+// ==========================================
+// THÔNG BÁO DỄ THƯƠNG — ghi đè alert() mặc định (xấu, khô khan) của trình duyệt bằng 1 modal
+// pastel đồng bộ giao diện app, có mascot Ong Vàng. Ghi đè NGAY TẠI ĐÂY nên toàn bộ ~26 lời gọi
+// alert(...) rải rác khắp app.js (cảnh báo khoá tuần, lỗi tải dữ liệu, yêu cầu đăng nhập...)
+// tự động dùng giao diện mới, KHÔNG cần sửa từng chỗ gọi alert() một.
+const nativeAlert = (typeof window !== 'undefined' && typeof window.alert === 'function')
+    ? window.alert.bind(window)
+    : (msg) => console.log('[ALERT]', msg); // Phòng hờ môi trường không có alert() gốc (không xảy ra trên trình duyệt thật)
+window.alert = function (message) {
+    try {
+        const modal = document.getElementById('modal-cute-alert');
+        const msgEl = document.getElementById('cute-alert-message');
+        if (!modal || !msgEl) return nativeAlert(message); // Phòng hờ modal chưa kịp render trong HTML thì vẫn có thông báo, không mất tính năng
+        msgEl.textContent = String(message);
+        modal.classList.remove('hidden');
+    } catch (e) {
+        nativeAlert(message);
+    }
+};
+function closeCuteAlert() {
+    const modal = document.getElementById('modal-cute-alert');
+    if (modal) modal.classList.add('hidden');
+}
+
+// Gộp nghĩa tiếng Việt cho 1 từ vào từ điển toàn cục — nhận cả 2 dạng: 1 chuỗi ("khỏe") hoặc
+// 1 mảng nhiều nghĩa (["con ruồi", "bay"]). Nếu từ đã có sẵn nghĩa khác trong từ điển (do xuất
+// hiện ở nhiều câu khác nhau), tự gộp thêm chứ không ghi đè mất nghĩa cũ.
+function addWordMeanings(word, meaning) {
+    if (!word || !meaning) return;
+    const key = word.toLowerCase();
+    const newMeanings = Array.isArray(meaning) ? meaning : [meaning];
+    const existing = wordMeaningMap[key] || [];
+    const merged = [...existing];
+    newMeanings.forEach(m => { const t = String(m || '').trim(); if (t && !merged.includes(t)) merged.push(t); });
+    wordMeaningMap[key] = merged;
+}
 // Bật/tắt đọc câu hỏi TỰ ĐỘNG khi vào câu mới — nút "Nghe câu hỏi" thủ công vẫn luôn hoạt động
 // dù tắt tính năng này (đây chỉ tắt phần tự động phát, không tắt hẳn tính năng nghe).
 let autoSpeechEnabled = localStorage.getItem('autoSpeechEnabled') !== 'false';
@@ -400,8 +437,11 @@ async function fetchAllQuestionsFlat() {
                         oipa: optionItems.map(w => w.ipa || null)
                     };
                     // Gom nghĩa tiếng Việt của TẤT CẢ các từ xuất hiện (kể cả từ làm đáp án nhiễu)
-                    // vào từ điển toàn cục, để lúc nghe lại đáp án nào cũng hiện đúng nghĩa của nó.
-                    optionItems.forEach(w => { if (w.word && w.vietnamese) wordMeaningMap[w.word.toLowerCase()] = w.vietnamese; });
+                    // vào từ điển toàn cục — tự nhận cả 2 dạng field "vietnamese": 1 chuỗi ("khỏe")
+                    // HOẶC 1 mảng nhiều nghĩa (["con ruồi", "bay"]) cho từ có nhiều nghĩa khác nhau,
+                    // và tự gộp thêm nếu cùng 1 từ xuất hiện nhiều nơi với nghĩa khác nhau — để sau
+                    // này anh chỉ cần đổi dữ liệu là hiện đủ, không phải sửa code lần nữa.
+                    optionItems.forEach(w => addWordMeanings(w.word, w.vietnamese));
                 } else {
                     qFields = { q: it.question, o: it.options || [], a: it.answer, oipa: it.options_ipa || null };
                 }
@@ -547,7 +587,7 @@ async function renderDashboardGrid() {
     });
 
     html += `
-        <div onclick="openExamHub()" class="pastel-card p-3 flex flex-col justify-between cursor-pointer hover:border-amber-400 transition-all group bg-gradient-to-br from-white to-amber-50/50 min-h-[92px]">
+        <div onclick="clickProgressOrExam('exam')" class="pastel-card p-3 flex flex-col justify-between cursor-pointer hover:border-amber-400 transition-all group bg-gradient-to-br from-white to-amber-50/50 min-h-[92px]">
             <div class="flex items-center space-x-2.5">
                 <div class="w-8 h-8 bg-amber-100 rounded-xl flex items-center justify-center text-sm font-extrabold text-amber-600 shadow-inner group-hover:scale-110 transition-transform shrink-0">🏆</div>
                 <h3 class="font-extrabold text-amber-700 text-sm md:text-base leading-tight">12. Đấu trường đề thi</h3>
@@ -1248,6 +1288,11 @@ function clickProgressOrExam(type) {
 // CHỦ ĐỀ 1: BẢNG CHỮ CÁI TƯƠNG TÁC (1.1 ĐẾN 1.4)
 // ==========================================
 function openTopic(topicNum, topicName, icon) {
+    // Mục 11 (Practice & Play) là ôn tập tổng hợp gắn với tiến trình học/điểm số cá nhân —
+    // bắt buộc đăng nhập, giống hệt cách chặn khách ở Lộ trình tuần & Đấu trường đề thi.
+    if (topicNum === 11 && (!currentUser || currentUser.isGuest)) {
+        return alert('Bé vui lòng đăng nhập để sử dụng tính năng Ôn tập tổng hợp này nhé!');
+    }
     stopSpeaking();
     inAlphaIpaFlow = false;
     activeTopicId = topicNum; activeExamContext = null; activeRoadmapContext = null;
@@ -1876,9 +1921,9 @@ function checkAnswer(selectedOpt) {
             }
             b.onclick = () => {
                 speakEnglish(bOpt); // Từ giờ bấm nút = nghe lại từ đó, không phải chọn đáp án nữa
-                const meaning = wordMeaningMap[bOpt.toLowerCase()];
+                const meanings = wordMeaningMap[bOpt.toLowerCase()];
                 const meaningSpan = b.querySelector('.opt-meaning-vi');
-                if (meaning && meaningSpan) meaningSpan.textContent = ` (${meaning})`;
+                if (meanings && meanings.length && meaningSpan) meaningSpan.textContent = ` (${meanings.join(' / ')})`;
             };
             b.title = 'Bấm để nghe lại từ này';
         });
@@ -1914,9 +1959,9 @@ function checkAnswer(selectedOpt) {
             }
             b.onclick = () => {
                 speakEnglish(bOpt); // Từ giờ bấm nút = nghe lại từ đó, không phải chọn đáp án nữa
-                const meaning = wordMeaningMap[bOpt.toLowerCase()];
+                const meanings = wordMeaningMap[bOpt.toLowerCase()];
                 const meaningSpan = b.querySelector('.opt-meaning-vi');
-                if (meaning && meaningSpan) meaningSpan.textContent = ` (${meaning})`;
+                if (meanings && meanings.length && meaningSpan) meaningSpan.textContent = ` (${meanings.join(' / ')})`;
             };
             b.title = 'Bấm để nghe lại từ này';
         });
