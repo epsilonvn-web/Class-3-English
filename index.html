@@ -457,6 +457,21 @@
     </div>
 
     <!-- MODAL BÁO CÁO TIẾN TRÌNH & BIỂU ĐỒ (PHÂN TRANG 3 TRANG KHI XUẤT PDF) -->
+    <!-- Modal thông báo dễ thương thay cho alert() mặc định xấu xí của trình duyệt -->
+    <div id="modal-cute-alert" class="hidden fixed inset-0 z-[70] bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-sm shadow-2xl border-2 border-yellow-200 overflow-hidden">
+            <div class="bg-gradient-to-br from-yellow-50 via-orange-50 to-orange-50 px-5 pt-6 pb-4 flex flex-col items-center text-center">
+                <span class="text-6xl mb-2 select-none swaying">🐝</span>
+                <p id="cute-alert-message" class="text-sm md:text-base font-bold text-slate-700 leading-snug whitespace-pre-line">Nội dung thông báo</p>
+            </div>
+            <div class="p-4 pt-2">
+                <button onclick="closeCuteAlert()" class="w-full py-3 bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-700 text-white font-extrabold rounded-2xl text-sm shadow-md pastel-btn">
+                    Bé đã hiểu rồi! 🌻
+                </button>
+            </div>
+        </div>
+    </div>
+
     <div id="modal-history-progress" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4">
         <div class="bg-white rounded-3xl max-w-5xl w-full max-h-[96vh] flex flex-col shadow-2xl border-2 border-yellow-200 overflow-hidden">
             
