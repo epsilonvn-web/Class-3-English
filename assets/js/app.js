@@ -1152,8 +1152,8 @@ async function doRegister() {
         alert(msg);
         return;
     }
-    if (!/^\d{4}$/.test(maPin)) {
-        const msg = 'Mã PIN phải gồm đúng 4 chữ số!';
+    if (!/^\d{6}$/.test(maPin)) {
+        const msg = 'Mã PIN phải gồm đúng 6 chữ số!';
         showAuthError(msg);
         alert(msg);
         return;
