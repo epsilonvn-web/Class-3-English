@@ -12,9 +12,9 @@ const CORE_ASSETS = [
     './favicon.svg',
     './manifest.json',
     './assets/js/app.js',
-    './icons/icon-192.png',
-    './icons/icon-512.png',
-    './icons/apple-touch-icon.png',
+    './assets/images/icon-192.png',
+    './assets/images/icon-512.png',
+    './assets/images/apple-touch-icon.png',
     './assets/data/kho_hoc_tieng_anh_3_part1.json',
     './assets/data/kho_hoc_tieng_anh_3_part2.json',
     './assets/data/de_thi_tieng_anh_3.json'
