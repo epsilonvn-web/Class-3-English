@@ -1,11 +1,16 @@
 // ============================================================
 // SERVICE WORKER — Tiếng Anh Lớp 3 (Cô giáo Ong Vàng)
-// Chiến lược: "Network first, fallback to Cache" — khi có mạng luôn lấy bản mới nhất (và tự cập
-// nhật cache), khi MẤT MẠNG thì lấy tạm bản đã lưu trong cache lần gần nhất để app vẫn mở được.
-// Đổi CACHE_NAME (tăng số version) mỗi khi muốn buộc xoá cache cũ, nạp lại toàn bộ tài nguyên mới.
+// Chiến lược: NETWORK-FIRST cho tài nguyên cùng domain.
+// QUAN TRỌNG:
+// - assets/data/* luôn đi thẳng ra mạng.
+// - mọi request cross-origin (Google TTS, CDN, Google Apps Script...) KHÔNG qua Service Worker.
+// Điều này tránh Service Worker can thiệp vào Google Translate TTS và làm mất/đổi giọng đọc.
 // ============================================================
-const CACHE_NAME = 'tienganh-lop3-ongvang-v1';
 
+const CACHE_NAME = 'tienganh-lop3-ongvang-v2';
+
+// Chỉ cache "vỏ" tối thiểu của ứng dụng.
+// Dữ liệu động không precache để luôn lấy bản mới nhất từ server.
 const CORE_ASSETS = [
     './',
     './index.html',
@@ -14,48 +19,69 @@ const CORE_ASSETS = [
     './assets/js/app.js',
     './assets/images/icon-192.png',
     './assets/images/icon-512.png',
-    './assets/images/apple-touch-icon.png',
-    './assets/data/kho_hoc_tieng_anh_3_part1.json',
-    './assets/data/kho_hoc_tieng_anh_3_part2.json',
-    './assets/data/de_thi_tieng_anh_3.json'
+    './assets/images/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (event) => {
-    self.skipWaiting(); // Kích hoạt bản Service Worker mới ngay, không phải đợi đóng hết tab cũ
     event.waitUntil(
         caches.open(CACHE_NAME)
-            .then((cache) => cache.addAll(CORE_ASSETS))
-            .catch(() => {}) // Lỗi cache 1 vài file (VD mạng chập chờn lúc cài) không được chặn cài đặt
+            .then((cache) =>
+                cache.addAll(
+                    CORE_ASSETS.map((url) => new Request(url, { cache: 'reload' }))
+                )
+            )
+            .catch(() => {})
+            .then(() => self.skipWaiting())
     );
 });
 
 self.addEventListener('activate', (event) => {
     event.waitUntil(
-        caches.keys().then((keys) =>
-            Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
-        )
+        caches.keys()
+            .then((keys) =>
+                Promise.all(
+                    keys
+                        .filter((key) => key !== CACHE_NAME)
+                        .map((key) => caches.delete(key))
+                )
+            )
+            .then(() => self.clients.claim())
     );
-    self.clients.claim();
+});
+
+// Cho phép index.html yêu cầu Service Worker mới kích hoạt ngay nếu cần.
+self.addEventListener('message', (event) => {
+    if (event.data === 'SKIP_WAITING') self.skipWaiting();
 });
 
 self.addEventListener('fetch', (event) => {
-    if (event.request.method !== 'GET') return; // Chỉ cache các request đọc dữ liệu (GET) — request
-    // ghi dữ liệu lên Google Apps Script (POST) luôn phải đi mạng thật, không được lấy từ cache.
+    const req = event.request;
 
-    // Tạo lại request với cache: 'no-store' để ép trình duyệt bỏ qua cache HTTP nội bộ của
-    // chính nó, đảm bảo có mạng là chắc chắn hỏi thẳng server lấy bản mới nhất, không bị
-    // trình duyệt "lừa" trả về bản cũ nó tự lưu.
-    const networkRequest = new Request(event.request, { cache: 'no-store' });
+    // Không cache/can thiệp request ghi dữ liệu.
+    if (req.method !== 'GET') return;
 
+    const url = new URL(req.url);
+
+    // Dữ liệu động và MỌI request ngoài domain đi thẳng qua trình duyệt.
+    // Google Translate TTS thuộc cross-origin nên sẽ không còn bị Service Worker chặn.
+    const isDynamicData = url.pathname.includes('/assets/data/');
+    const isCrossOrigin = url.origin !== self.location.origin;
+
+    if (isDynamicData || isCrossOrigin) return;
+
+    // Chỉ với tài nguyên cùng domain: network-first, cache làm dự phòng khi mất mạng.
     event.respondWith(
-        fetch(networkRequest)
+        fetch(new Request(req.url, { cache: 'no-store' }))
             .then((response) => {
                 const responseCopy = response.clone();
-                caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseCopy)).catch(() => {});
+                caches.open(CACHE_NAME)
+                    .then((cache) => cache.put(req, responseCopy))
+                    .catch(() => {});
                 return response;
             })
             .catch(() =>
-                caches.match(event.request).then((cached) => cached || caches.match('./index.html'))
+                caches.match(req)
+                    .then((cached) => cached || caches.match('./index.html'))
             )
     );
 });
