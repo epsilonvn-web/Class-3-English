@@ -42,8 +42,13 @@ self.addEventListener('fetch', (event) => {
     if (event.request.method !== 'GET') return; // Chỉ cache các request đọc dữ liệu (GET) — request
     // ghi dữ liệu lên Google Apps Script (POST) luôn phải đi mạng thật, không được lấy từ cache.
 
+    // Tạo lại request với cache: 'no-store' để ép trình duyệt bỏ qua cache HTTP nội bộ của
+    // chính nó, đảm bảo có mạng là chắc chắn hỏi thẳng server lấy bản mới nhất, không bị
+    // trình duyệt "lừa" trả về bản cũ nó tự lưu.
+    const networkRequest = new Request(event.request, { cache: 'no-store' });
+
     event.respondWith(
-        fetch(event.request)
+        fetch(networkRequest)
             .then((response) => {
                 const responseCopy = response.clone();
                 caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseCopy)).catch(() => {});
