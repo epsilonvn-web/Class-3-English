@@ -229,7 +229,11 @@
                     <div id="user-info-box" class="text-xs font-bold text-gray-600 text-right"></div>
 
                     <button onclick="clickProgressOrExam('progress')" class="h-10 px-3 bg-gradient-to-r from-orange-500 to-orange-700 text-white font-extrabold rounded-xl text-xs md:text-sm shadow-md hover:from-orange-600 hover:to-orange-700 flex items-center space-x-1.5 shrink-0 transition-shadow duration-200 hover:shadow-[0_0_14px_rgba(249,115,22,0.65)]">
-                        <i class="fa-solid fa-map-location-dot"></i><span>Bản đồ tuần</span>
+                        <i class="fa-solid fa-map-location-dot"></i><span>Bản đồ tuần</span><i class="fa-solid fa-lock text-[9px] opacity-90" title="Cần tài khoản"></i>
+                    </button>
+
+                    <button onclick="openMiniGameHub()" class="h-10 px-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-extrabold rounded-xl text-xs md:text-sm shadow-md hover:from-teal-600 hover:to-emerald-600 flex items-center space-x-1.5 shrink-0 transition-shadow duration-200 hover:shadow-[0_0_14px_rgba(16,185,129,0.55)]">
+                        <i class="fa-solid fa-gamepad"></i><span>Mini Game</span><i class="fa-solid fa-lock text-[9px] opacity-90" title="Cần tài khoản"></i>
                     </button>
                 </div>
             </header>
@@ -373,6 +377,32 @@
                         </div>
 
                         <div id="roadmap-svg-container" class="w-full max-w-3xl mx-auto flex justify-center items-center overflow-hidden bg-gradient-to-b from-yellow-50/30 to-orange-50/30 rounded-2xl border-2 border-yellow-100 p-1" style="aspect-ratio: 650 / 400;"></div>
+                    </div>
+                </div>
+
+                <!-- VIEW: TRUNG TÂM MINI GAME (12 GAME, LƯỚI 3x4) -->
+                <div id="view-minigame-hub" class="w-full hidden pastel-card p-3 md:p-5 flex flex-col items-center">
+                    <div class="w-full max-w-5xl">
+                        <div class="text-center mb-4">
+                            <h2 class="text-base md:text-lg font-extrabold text-teal-600 flex items-center justify-center space-x-2">
+                                <span>🎮</span><span>Trung tâm Mini Game - Tiếng Anh lớp 3</span>
+                            </h2>
+                            <p class="text-[11px] md:text-xs text-gray-500 font-bold">Chọn 1 trò chơi để vừa học vừa chơi với chính học liệu lớp 3 nhé!</p>
+                        </div>
+                        <div id="minigame-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"></div>
+                    </div>
+                </div>
+
+                <!-- VIEW: MÀN CHƠI GAME -->
+                <div id="view-game-play" class="w-full hidden pastel-card p-3 md:p-5 flex flex-col items-center">
+                    <div class="w-full max-w-2xl">
+                        <div class="flex items-center justify-between mb-3">
+                            <h2 id="game-play-title" class="text-base md:text-lg font-extrabold text-teal-600 flex items-center gap-2"></h2>
+                            <button onclick="openMiniGameHub()" class="px-3 py-1.5 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold rounded-xl text-xs md:text-sm shadow-sm pastel-btn shrink-0">
+                                <i class="fa-solid fa-arrow-left"></i> Chọn game khác
+                            </button>
+                        </div>
+                        <div id="game-play-container" class="w-full"></div>
                     </div>
                 </div>
 
@@ -617,7 +647,7 @@
     </footer>
 
     <!-- NẠP ENGINE JAVASCRIPT ĐỒNG BỘ -->
-    <script src="assets/js/app.js?v=6.6"></script>
+    <script src="assets/js/app.js?v=6.7"></script>
     <script>
         // Đăng ký Service Worker (chỉ chạy khi trình duyệt hỗ trợ) — cho phép mở app tạm thời
         // khi mất mạng và là điều kiện bắt buộc để trình duyệt cho phép "Cài đặt/Thêm vào Màn hình chính".
