@@ -149,6 +149,8 @@ let ALPHABET_DATA = [];
 let IPA_DATA = [];
 let currentAlphaTab = 'alpha';
 let allQuestionsFlatCache = null;
+// Nguồn dữ liệu chuẩn cho Mini Game lớp 3: lấy từ Chuyên mục 2.1 - Flashcards Library.
+let miniGameVocabCache = null;
 // Từ điển "từ tiếng Anh -> nghĩa tiếng Việt" gom TỰ ĐỘNG từ chính các thẻ từ vựng (type: "flashcard")
 // trong kho dữ liệu — không tự bịa nghĩa. Dùng để, sau khi bé chọn xong đáp án đúng (màu xanh),
 // bấm vào BẤT KỲ đáp án nào trong 4 lựa chọn sẽ vừa đọc to từ đó, vừa hiện nghĩa tiếng Việt ngay
@@ -202,6 +204,7 @@ let starRedCount = 0;
 let activeTopicId = null;
 let activeExamContext = null;
 let activeRoadmapContext = null;
+let inMiniGameFlow = false;
 let activeQuestionsList = [];
 let practiceCycleRawPool = [];
 let pendingTopicQuiz = null;
@@ -411,6 +414,38 @@ async function fetchAllQuestionsFlat() {
         return res.json();
     }));
 
+    // Adapter dữ liệu Mini Game lớp 3: chỉ lấy đúng Chuyên mục 2.1 - Flashcards Library.
+    // Dữ liệu lớp 3 là mảng các subcategory (M2_1), khác schema lớp 2; game vẫn dùng chung
+    // interface word/vietnamese/topic_id/topic_name để toàn bộ 12 game không phải sửa riêng.
+    if (!miniGameVocabCache) {
+        miniGameVocabCache = [];
+        const groupIdMap = new Map();
+        let nextGroupId = 1;
+        results.forEach(sectionsArray => {
+            (Array.isArray(sectionsArray) ? sectionsArray : []).forEach(section => {
+                const sid = String(section.subcategory_id || '').trim().toUpperCase();
+                if (sid !== 'M2_1') return;
+                (section.questions || []).forEach(it => {
+                    if (!it || it.type !== 'flashcard' || !it.word) return;
+                    const groupName = String(it.group_name || section.subcategory_name || 'Flashcards Library').trim();
+                    if (!groupIdMap.has(groupName)) groupIdMap.set(groupName, nextGroupId++);
+                    const vi = Array.isArray(it.vietnamese) ? it.vietnamese.join(' / ') : String(it.vietnamese || '').trim();
+                    miniGameVocabCache.push({
+                        id: it.id || it.question_id || '',
+                        word: String(it.word).trim(),
+                        vietnamese: vi,
+                        emoji: it.emoji || (it.image && !/[\/\.]/.test(String(it.image)) ? it.image : '✨'),
+                        image_url: it.image_url || (/^(https?:|assets\/)/i.test(String(it.image || '')) ? it.image : ''),
+                        sentence: it.sentence || '',
+                        hint: it.hint || it.explanation || '',
+                        topic_id: groupIdMap.get(groupName),
+                        topic_name: groupName
+                    });
+                });
+            });
+        });
+    }
+
     const rawQuestions = [];
     results.forEach(sectionsArray => {
         (Array.isArray(sectionsArray) ? sectionsArray : []).forEach(section => {
@@ -483,6 +518,55 @@ let weeklyQuestionsFlatCache = null;
 async function fetchWeeklyQuestionsFlat() {
     weeklyQuestionsFlatCache = await fetchAllQuestionsFlat();
     return weeklyQuestionsFlatCache;
+}
+
+
+/** Dữ liệu từ vựng dùng chung cho Mini Game lớp 3. */
+function getMiniGameVocabPool(options = {}) {
+    const { topicId = null, singleWordOnly = false, maxLength = null, minLength = null } = options;
+    let pool = Array.isArray(miniGameVocabCache) ? miniGameVocabCache : [];
+    if (topicId !== null && topicId !== undefined && topicId !== 'all') {
+        pool = pool.filter(item => Number(item.topic_id) === Number(topicId));
+    }
+    if (singleWordOnly) pool = pool.filter(item => /^[A-Za-z]+$/.test(item.word));
+    if (Number.isFinite(minLength)) pool = pool.filter(item => item.word.replace(/[^A-Za-z]/g, '').length >= minLength);
+    if (Number.isFinite(maxLength)) pool = pool.filter(item => item.word.replace(/[^A-Za-z]/g, '').length <= maxLength);
+    return pool.map(item => ({ ...item }));
+}
+
+function getMiniGameTopicGroups() {
+    const map = new Map();
+    (miniGameVocabCache || []).forEach(item => {
+        const id = Number(item.topic_id || 0);
+        if (!id || map.has(id)) return;
+        map.set(id, { id, name: item.topic_name || `Nhóm ${id}` });
+    });
+    return [...map.values()].sort((a, b) => a.id - b.id);
+}
+
+async function ensureMiniGameVocabReady() {
+    await fetchAllQuestionsFlat();
+    if (!miniGameVocabCache || !miniGameVocabCache.length) {
+        throw new Error('Không tìm thấy dữ liệu từ Chuyên mục 2.1 - Flashcards Library lớp 3.');
+    }
+    return miniGameVocabCache;
+}
+
+function getMiniGameSectionPool(sectionCodes = []) {
+    const codes = new Set((Array.isArray(sectionCodes) ? sectionCodes : [sectionCodes]).map(String));
+    const pool = Array.isArray(allQuestionsFlatCache) ? allQuestionsFlatCache : [];
+    return pool.filter(q => codes.has(String(q.sub_topic || ''))).map(q => ({
+        ...q,
+        options: Array.isArray(q.options) ? q.options.slice() : [],
+        options_ipa: Array.isArray(q.options_ipa) ? q.options_ipa.slice() : q.options_ipa
+    }));
+}
+
+async function ensureMiniGameLearningReady(sectionCodes = []) {
+    await fetchAllQuestionsFlat();
+    const pool = getMiniGameSectionPool(sectionCodes);
+    if (!pool.length) throw new Error(`Không tìm thấy học liệu lớp 3 cho Chuyên mục ${[].concat(sectionCodes).join(', ')}.`);
+    return pool;
 }
 
 async function fetchAllTopicsData() {
@@ -573,7 +657,8 @@ async function renderDashboardGrid() {
             : `<div class="w-8 h-8 bg-${t.color}-100 rounded-xl flex items-center justify-center text-sm font-extrabold text-${t.color}-600 shadow-inner group-hover:scale-110 transition-transform shrink-0">${t.icon}</div>`;
 
         html += `
-            <div onclick="openTopic(${t.id}, '${t.title}', '${t.icon}')" class="pastel-card p-3 flex flex-col justify-between cursor-pointer hover:border-${t.color}-400 transition-all group min-h-[92px]">
+            <div onclick="openTopic(${t.id}, '${t.title}', '${t.icon}')" class="pastel-card p-3 flex flex-col justify-between cursor-pointer hover:border-${t.color}-400 transition-all group min-h-[92px] relative">
+                ${t.id === 11 ? '<i class="fa-solid fa-lock absolute top-2 right-2 text-slate-400 text-xs" title="Cần tài khoản"></i>' : ''}
                 <div class="flex items-center space-x-2.5">
                     ${iconHtml}
                     <h3 class="font-extrabold text-${t.color}-700 text-sm md:text-base leading-tight">${t.title}</h3>
@@ -587,7 +672,8 @@ async function renderDashboardGrid() {
     });
 
     html += `
-        <div onclick="clickProgressOrExam('exam')" class="pastel-card p-3 flex flex-col justify-between cursor-pointer hover:border-amber-400 transition-all group bg-gradient-to-br from-white to-amber-50/50 min-h-[92px]">
+        <div onclick="clickProgressOrExam('exam')" class="pastel-card p-3 flex flex-col justify-between cursor-pointer hover:border-amber-400 transition-all group bg-gradient-to-br from-white to-amber-50/50 min-h-[92px] relative">
+            <i class="fa-solid fa-lock absolute top-2 right-2 text-slate-400 text-xs" title="Cần tài khoản"></i>
             <div class="flex items-center space-x-2.5">
                 <div class="w-8 h-8 bg-amber-100 rounded-xl flex items-center justify-center text-sm font-extrabold text-amber-600 shadow-inner group-hover:scale-110 transition-transform shrink-0">🏆</div>
                 <h3 class="font-extrabold text-amber-700 text-sm md:text-base leading-tight">12. Đấu trường đề thi</h3>
@@ -1033,12 +1119,14 @@ function returnToTopicLecture() {
     } else if (inAlphaIpaFlow) {
         // Đang duyệt Alphabet A-Z hoặc Bảng IPA (không phải quiz) -> quay về đúng menu 3 lựa chọn
         openAlphabetIPA();
+    } else if (inMiniGameFlow) {
+        openMiniGameHub();
     }
 }
 
 function switchAppView(viewId) {
     stopSpeaking();
-    ['view-dashboard-grid', 'view-alphabet', 'view-lecture', 'view-quiz', 'view-roadmap', 'view-exam-hub', 'view-result'].forEach(id => {
+    ['view-dashboard-grid', 'view-alphabet', 'view-lecture', 'view-quiz', 'view-roadmap', 'view-minigame-hub', 'view-game-play', 'view-exam-hub', 'view-result'].forEach(id => {
         const el = document.getElementById(id);
         if (!el) return;
         if (id === viewId) el.classList.remove('hidden');
@@ -1050,6 +1138,7 @@ function goHome() {
     stopSpeaking();
     clearInterval(quizTimerInterval);
     inAlphaIpaFlow = false;
+    inMiniGameFlow = false;
     updateNavTabs(null, null, null);
     switchAppView('view-dashboard-grid');
 }
@@ -1066,10 +1155,38 @@ function switchAuthTab(tab) {
     hideAuthError();
 }
 
+let maHSPreviewTimer = null;
+let maHSPreviewRequestSeq = 0;
+
 function updateMaHSPreview() {
-    const lop = document.getElementById('reg-lop').value.trim().toUpperCase();
-    const stt = document.getElementById('reg-stt').value.trim();
-    document.getElementById('mahs-preview').textContent = (lop && stt) ? `${lop}-${stt.padStart(2, '0')}` : '--';
+    const lopEl = document.getElementById('reg-lop');
+    const sttEl = document.getElementById('reg-stt');
+    const previewEl = document.getElementById('mahs-preview');
+    if (!lopEl || !sttEl || !previewEl) return;
+
+    const lop = lopEl.value.trim().toUpperCase();
+    const stt = sttEl.value.trim();
+    if (!lop || !stt) {
+        previewEl.textContent = '--';
+        clearTimeout(maHSPreviewTimer);
+        return;
+    }
+
+    // Hiện ngay mã cơ sở để giao diện phản hồi tức thì, sau đó hỏi server mã THẬT còn trống.
+    const baseId = `${lop}-${stt.padStart(2, '0')}`;
+    previewEl.textContent = baseId;
+    clearTimeout(maHSPreviewTimer);
+    const seq = ++maHSPreviewRequestSeq;
+
+    maHSPreviewTimer = setTimeout(async () => {
+        try {
+            const result = await callAppsScript('previewStudentId', { lop, soThuTu: stt });
+            if (seq !== maHSPreviewRequestSeq) return;
+            if (result && result.ok && result.maHS) previewEl.textContent = result.maHS;
+        } catch (e) {
+            // Preview chỉ là tiện ích; nếu mạng chậm/lỗi thì vẫn giữ mã cơ sở.
+        }
+    }, 350);
 }
 
 function showAuthError(msg) {
@@ -1097,6 +1214,196 @@ async function callAppsScript(action, payload) {
         throw new Error('Google Apps Script trả về dữ liệu không hợp lệ (không phải JSON) — thường do link Apps Script chưa được Deploy đúng cách (cần đặt quyền truy cập là "Anyone"/"Bất kỳ ai") hoặc đã hết hạn uỷ quyền. Anh vui lòng kiểm tra lại bước Deploy > Manage deployments trên Apps Script nhé.');
     }
 }
+
+// ==========================================
+// QUẢN TRỊ TÀI KHOẢN — Admin / Student
+// ==========================================
+let adminAccountsCache = [];
+
+function isAdminUser() {
+    return !!currentUser && !currentUser.isGuest && String(currentUser.role || '').toLowerCase() === 'admin';
+}
+
+function getAdminCredentials() {
+    return {
+        adminMaHS: currentUser?.maHS || localStorage.getItem('tv1_mahs') || '',
+        adminPin: localStorage.getItem('tv1_mapin') || ''
+    };
+}
+
+async function callAdminAction(action, extraPayload = {}) {
+    if (!isAdminUser()) throw new Error('Tài khoản hiện tại không có quyền Admin.');
+    return callAppsScript(action, { ...getAdminCredentials(), ...extraPayload });
+}
+
+function setAdminPendingBadge(count) {
+    const badge = document.getElementById('admin-pending-badge');
+    if (!badge) return;
+    const n = Number(count) || 0;
+    badge.textContent = n;
+    badge.classList.toggle('hidden', n <= 0);
+}
+
+async function refreshAdminPending(announce = false) {
+    if (!isAdminUser()) return;
+    try {
+        const result = await callAdminAction('listAccounts');
+        if (!result.ok) return;
+        adminAccountsCache = Array.isArray(result.accounts) ? result.accounts : [];
+        const pending = adminAccountsCache.filter(a => String(a.trangThai || '').toLowerCase() === 'pending');
+        setAdminPendingBadge(pending.length);
+
+        if (announce && pending.length > 0) {
+            const names = pending.slice(0, 5).map(a => `${a.hoTen || a.maHS} (${a.maHS})`).join(', ');
+            const more = pending.length > 5 ? ` và ${pending.length - 5} tài khoản khác` : '';
+            alert(`Admin có ${pending.length} tài khoản đang chờ duyệt: ${names}${more}. Bấm “Quản lý tài khoản” để duyệt trực tiếp nhé!`);
+        }
+    } catch (err) {
+        console.warn('Không tải được số tài khoản chờ duyệt:', err);
+    }
+}
+
+function formatAdminDate(value) {
+    if (!value) return '--';
+    const d = new Date(value);
+    if (Number.isNaN(d.getTime())) return String(value);
+    return d.toLocaleDateString('vi-VN');
+}
+
+async function openAdminAccountsModal() {
+    if (!isAdminUser()) return;
+
+    let modal = document.getElementById('modal-admin-accounts');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'modal-admin-accounts';
+        modal.className = 'fixed inset-0 z-[130] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3';
+        modal.innerHTML = `
+            <div class="w-full max-w-5xl max-h-[92vh] bg-white rounded-[28px] border-2 border-yellow-200 shadow-2xl flex flex-col overflow-hidden">
+                <div class="px-4 md:px-6 py-4 bg-gradient-to-r from-yellow-50 via-orange-50 to-amber-50 border-b border-yellow-100 flex items-center justify-between gap-3">
+                    <div>
+                        <h3 class="text-base md:text-lg font-black text-orange-700">👤 Quản lý tài khoản học sinh</h3>
+                        <p id="admin-accounts-summary" class="text-[11px] md:text-xs font-bold text-gray-500 mt-0.5">Đang tải danh sách...</p>
+                    </div>
+                    <button onclick="closeAdminAccountsModal()" class="w-9 h-9 rounded-xl bg-white border border-yellow-200 text-orange-500 hover:bg-yellow-100 font-black">✕</button>
+                </div>
+                <div class="p-3 md:p-5 overflow-auto flex-1">
+                    <div id="admin-accounts-loading" class="py-10 text-center text-sm font-bold text-gray-400">⏳ Đang tải tài khoản...</div>
+                    <div id="admin-accounts-table-wrap" class="hidden overflow-x-auto">
+                        <table class="w-full min-w-[760px] text-xs md:text-sm border-collapse">
+                            <thead>
+                                <tr class="bg-yellow-50 text-orange-800">
+                                    <th class="p-2.5 border border-yellow-100 text-left">Mã ID</th>
+                                    <th class="p-2.5 border border-yellow-100 text-left">Họ tên</th>
+                                    <th class="p-2.5 border border-yellow-100">Lớp</th>
+                                    <th class="p-2.5 border border-yellow-100">Ngày đăng ký</th>
+                                    <th class="p-2.5 border border-yellow-100">Trạng thái</th>
+                                    <th class="p-2.5 border border-yellow-100">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-accounts-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="px-4 md:px-6 py-3 border-t border-yellow-100 bg-slate-50 flex justify-end">
+                    <button onclick="closeAdminAccountsModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 text-white text-xs md:text-sm font-extrabold">Đóng</button>
+                </div>
+            </div>`;
+        document.body.appendChild(modal);
+    } else {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    await loadAdminAccounts();
+}
+
+function closeAdminAccountsModal() {
+    const modal = document.getElementById('modal-admin-accounts');
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
+
+async function loadAdminAccounts() {
+    const loading = document.getElementById('admin-accounts-loading');
+    const wrap = document.getElementById('admin-accounts-table-wrap');
+    if (loading) {
+        loading.textContent = '⏳ Đang tải tài khoản...';
+        loading.classList.remove('hidden');
+    }
+    if (wrap) wrap.classList.add('hidden');
+
+    try {
+        const result = await callAdminAction('listAccounts');
+        if (!result.ok) throw new Error(result.error || 'Không tải được danh sách tài khoản.');
+        adminAccountsCache = Array.isArray(result.accounts) ? result.accounts : [];
+        renderAdminAccountsTable();
+        setAdminPendingBadge(result.pendingCount || 0);
+        if (loading) loading.classList.add('hidden');
+        if (wrap) wrap.classList.remove('hidden');
+    } catch (err) {
+        if (loading) loading.textContent = '❌ ' + err.message;
+    }
+}
+
+function renderAdminAccountsTable() {
+    const body = document.getElementById('admin-accounts-body');
+    const summary = document.getElementById('admin-accounts-summary');
+    if (!body) return;
+
+    const pendingCount = adminAccountsCache.filter(a => String(a.trangThai || '').toLowerCase() === 'pending').length;
+    if (summary) summary.textContent = pendingCount > 0
+        ? `Có ${pendingCount} tài khoản đang chờ duyệt / ${adminAccountsCache.length} tài khoản học sinh`
+        : `Không có tài khoản chờ duyệt / ${adminAccountsCache.length} tài khoản học sinh`;
+
+    if (adminAccountsCache.length === 0) {
+        body.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-gray-400 font-bold">Chưa có tài khoản học sinh nào.</td></tr>';
+        return;
+    }
+
+    body.innerHTML = adminAccountsCache.map(acc => {
+        const status = String(acc.trangThai || 'Active');
+        const lower = status.toLowerCase();
+        const isPending = lower === 'pending';
+        const isBlocked = lower === 'block';
+        const rowClass = isPending ? 'bg-amber-50/70' : '';
+        const badge = isPending
+            ? '<span class="px-2 py-1 rounded-lg bg-amber-100 text-amber-700 font-extrabold">Pending</span>'
+            : isBlocked
+                ? '<span class="px-2 py-1 rounded-lg bg-rose-100 text-rose-700 font-extrabold">Block</span>'
+                : '<span class="px-2 py-1 rounded-lg bg-emerald-100 text-emerald-700 font-extrabold">Active</span>';
+        const safeId = escapeHtml(acc.maHS);
+        const actionButtons = isPending
+            ? `<button onclick="changeStudentAccountStatus('${safeId}', 'Active')" class="px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold mr-1">✓ Duyệt</button>
+               <button onclick="changeStudentAccountStatus('${safeId}', 'Block')" class="px-3 py-1.5 rounded-lg bg-rose-100 hover:bg-rose-200 text-rose-700 font-extrabold">Khóa</button>`
+            : isBlocked
+                ? `<button onclick="changeStudentAccountStatus('${safeId}', 'Active')" class="px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold">Mở khóa</button>`
+                : `<button onclick="changeStudentAccountStatus('${safeId}', 'Block')" class="px-3 py-1.5 rounded-lg bg-rose-100 hover:bg-rose-200 text-rose-700 font-extrabold">Khóa</button>`;
+
+        return `<tr class="${rowClass}">
+            <td class="p-2.5 border border-slate-100 text-left font-black text-orange-700">${safeId}</td>
+            <td class="p-2.5 border border-slate-100 text-left font-bold text-gray-700">${escapeHtml(acc.hoTen || '')}</td>
+            <td class="p-2.5 border border-slate-100 text-center font-bold">${escapeHtml(acc.lop || '--')}</td>
+            <td class="p-2.5 border border-slate-100 text-center text-gray-500">${escapeHtml(formatAdminDate(acc.ngayDangKy))}</td>
+            <td class="p-2.5 border border-slate-100 text-center">${badge}</td>
+            <td class="p-2.5 border border-slate-100 text-center whitespace-nowrap">${actionButtons}</td>
+        </tr>`;
+    }).join('');
+}
+
+async function changeStudentAccountStatus(maHS, status) {
+    if (!isAdminUser()) return;
+    const actionText = status === 'Active' ? 'duyệt/mở khóa' : 'khóa';
+    try {
+        const result = await callAdminAction('updateAccountStatus', { targetMaHS: maHS, status });
+        if (!result.ok) throw new Error(result.error || `Không thể ${actionText} tài khoản.`);
+        await loadAdminAccounts();
+    } catch (err) {
+        alert('Lỗi cập nhật tài khoản: ' + err.message);
+    }
+}
+
 
 async function doLogin() {
     hideAuthError();
@@ -1233,6 +1540,7 @@ function enterDashboard(isSilent = false) {
     document.getElementById('screen-login').classList.add('hidden');
     document.getElementById('screen-dashboard').classList.remove('hidden');
     updateUserInfoBox();
+    if (isAdminUser()) refreshAdminPending(!isSilent);
     resetStars();
     renderDashboardGrid();
     renderExamHubGrid();
@@ -1257,12 +1565,22 @@ function updateUserInfoBox() {
     const box = document.getElementById('user-info-box');
     if (!box) return;
     if (currentUser && !currentUser.isGuest) {
+        const adminBtn = isAdminUser() ? `
+            <button onclick="openAdminAccountsModal()" title="Quản lý tài khoản"
+                class="relative h-8 px-2.5 flex items-center gap-1.5 bg-yellow-100 hover:bg-yellow-200 text-orange-700 rounded-xl border border-yellow-200 text-[10px] md:text-xs font-extrabold transition-shadow duration-200 hover:shadow-[0_0_12px_rgba(249,115,22,0.35)]">
+                <i class="fa-solid fa-users-gear"></i><span class="hidden lg:inline">Quản lý tài khoản</span>
+                <span id="admin-pending-badge" class="hidden absolute -top-2 -right-2 min-w-[18px] h-[18px] px-1 rounded-full bg-rose-500 text-white text-[10px] leading-[18px] font-black shadow">0</span>
+            </button>` : '';
+        const roleLine = isAdminUser()
+            ? `<div class="text-orange-600 font-semibold text-[10px]">ADMIN | Quản trị viên</div>`
+            : `<div class="text-gray-500 font-semibold text-[10px]">ID: ${escapeHtml(currentUser.maHS)} | Lớp ${escapeHtml(currentUser.lop)}</div>`;
         box.innerHTML = `
             <div class="flex items-center space-x-2">
                 <div class="text-right">
-                    <div class="text-yellow-600 font-extrabold text-xs md:text-sm leading-tight">${escapeHtml(currentUser.hoTen)}</div>
-                    <div class="text-gray-500 font-semibold text-[10px]">ID: ${escapeHtml(currentUser.maHS)} | Lớp ${escapeHtml(currentUser.lop)}</div>
+                    <div class="text-yellow-600 font-extrabold text-xs md:text-sm leading-tight">${escapeHtml(currentUser.hoTen || currentUser.maHS)}</div>
+                    ${roleLine}
                 </div>
+                ${adminBtn}
                 <button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-orange-100 hover:bg-orange-200 text-orange-500 rounded-xl border border-orange-200 text-xs transition-shadow duration-200 hover:shadow-[0_0_12px_rgba(249,115,22,0.55)]"><i class="fa-solid fa-right-from-bracket"></i></button>
             </div>`;
     } else {
@@ -2814,18 +3132,37 @@ function speakGoogleTTS(text, lang, rate) {
     } catch (err) {}
 }
 
+// Nhận diện câu tiếng Việt để luôn chuyển đúng sang Google TTS tiếng Việt (giọng chị Ban Mai).
+// Trước đây speakCurrentQuestion() ép mọi question_text sang tiếng Anh nên các câu hướng dẫn
+// tiếng Việt như "Từ nào có nghĩa là..." bị đọc bằng voice tiếng Anh.
+function isVietnameseText(text) {
+    const s = String(text || '').trim();
+    if (!s) return false;
+
+    // Chỉ cần có ký tự đặc trưng tiếng Việt là đủ chắc chắn.
+    if (/[ăâđêôơưáàảãạấầẩẫậắằẳẵặéèẻẽẹếềểễệíìỉĩịóòỏõọốồổỗộớờởỡợúùủũụứừửữựýỳỷỹỵ]/i.test(s)) return true;
+
+    // Phòng trường hợp câu tiếng Việt bị thiếu dấu trong dữ liệu.
+    return /\b(tu|nao|co|nghia|la|chon|hay|cau|dap an|con|be|nghe|dung|sai|dien|sap xep|tim|doc)\b/i.test(s);
+}
+
 function speakCurrentQuestion() {
     const q = activeQuestionsList[currentQIndex];
     if (!q) return;
-    // SỬA LỖI: bản lớp 3, field "audio_text" (nạp từ "audio" trong JSON) ở đa số chuyên mục
-    // (Odd One Out, Vocabulary, Grammar...) TRÙNG với đáp án đúng — nếu đọc nó trước khi học
-    // sinh chọn thì vô tình đọc lộ ngay đáp án. CHỈ nhóm Nghe hiểu thật (ENG_LIS) mới có mục
-    // đích sư phạm là "nghe âm/từ rồi chọn đáp án" nên đọc audio_text trước là đúng ý đồ.
-    // Các nhóm còn lại: đọc thẳng câu hỏi tiếng Anh (question_text đã là tiếng Anh ở bản lớp 3).
+
+    // Nhóm Nghe hiểu: audio_text là nội dung tiếng Anh cần nghe để làm bài.
     if (q.skill_tag === 'ENG_LIS' && q.audio_text) return speakEnglish(q.audio_text);
+
+    // Đoạn đọc trong bài Reading là tiếng Anh.
     if (q.reading_passage) return speakEnglish(q.reading_passage);
-    if (q.question_text) return speakEnglish(q.question_text);
-    speakVietnamese(q.question_text, 0.96);
+
+    // Câu hỏi/hướng dẫn: tự nhận diện ngôn ngữ.
+    // Tiếng Việt -> chị Ban Mai; tiếng Anh -> giọng Google English.
+    if (q.question_text) {
+        return isVietnameseText(q.question_text)
+            ? speakVietnamese(q.question_text, 0.96)
+            : speakEnglish(q.question_text, 0.92);
+    }
 }
 
 function playAudio(type) {
@@ -2999,5 +3336,221 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateAutoSpeechButtonUI();
 });
+
+// ==========================================
+// TRUNG TÂM MINI GAME LỚP 3 (12 game, lưới 3x4)
+// ==========================================
+// ==========================================
+// THEME DÙNG CHUNG CHO TOÀN BỘ MINI GAME
+// Giữ ngôn ngữ thiết kế của phần Học: card pastel, 2 cột, badge số lượng,
+// màu sắc luân phiên theo từng game để vui mắt nhưng vẫn đồng bộ toàn app.
+// ==========================================
+const MINIGAME_TOPIC_PALETTES = SUBTOPIC_PALETTES;
+
+function miniGameHash(text = '') {
+    return [...String(text)].reduce((acc, ch) => ((acc * 31) + ch.charCodeAt(0)) >>> 0, 7);
+}
+
+function getMiniGamePaletteOrder(seed = 'minigame') {
+    const order = MINIGAME_TOPIC_PALETTES.map((_, i) => i);
+    let state = miniGameHash(seed) || 1;
+    for (let i = order.length - 1; i > 0; i--) {
+        state = (state * 1664525 + 1013904223) >>> 0;
+        const j = state % (i + 1);
+        [order[i], order[j]] = [order[j], order[i]];
+    }
+    return order.map(i => MINIGAME_TOPIC_PALETTES[i]);
+}
+
+function getMiniGameTopicName(topicId) {
+    if (topicId === null || topicId === undefined || topicId === 'all') return 'Trộn tất cả các nhóm';
+    const g = getMiniGameTopicGroups().find(x => Number(x.id) === Number(topicId));
+    return g ? `${g.id}. ${g.name}` : `Nhóm ${topicId}`;
+}
+
+function renderMiniGameTopicMenu({
+    gameKey,
+    onChoose,
+    subtitle = 'Chọn 1 trong 6 Nhóm từ vựng để bắt đầu chơi nhé!',
+    countFilter = null,
+    mixLabel = 'Trộn tất cả các nhóm'
+}) {
+    const groups = getMiniGameTopicGroups();
+    const palettes = getMiniGamePaletteOrder(gameKey || 'minigame');
+    const countFor = (topicId) => {
+        let pool = getMiniGameVocabPool({ topicId });
+        if (typeof countFilter === 'function') pool = pool.filter(countFilter);
+        return pool.length;
+    };
+    const total = countFor('all');
+    return `
+        <div class="mg-topic-menu w-full max-w-4xl mx-auto">
+            <div class="w-full bg-yellow-50/35 border-2 border-yellow-100 rounded-2xl px-4 py-4 md:py-5 text-center mb-3">
+                <p class="text-base md:text-lg text-gray-700 font-bold leading-relaxed">${escapeHtml(subtitle)}</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full">
+                ${groups.map((g, idx) => {
+                    const style = palettes[idx % palettes.length];
+                    return `
+                        <button onclick="${onChoose}(${g.id})" class="mg-topic-card p-3.5 md:p-4 ${style.card} border-2 rounded-xl font-bold text-left transition-all flex items-center justify-between shadow-sm pastel-btn min-h-[76px]">
+                            <span class="text-base md:text-[17px] leading-snug pr-2"><strong class="${style.num} mr-1.5">${g.id}.</strong>${escapeHtml(g.name)}</span>
+                            <span class="text-sm font-extrabold ${style.badge} px-2.5 py-0.5 rounded-full border shrink-0 ml-1.5 shadow-inner">${countFor(g.id)} từ</span>
+                        </button>`;
+                }).join('')}
+            </div>
+            <div class="mt-3 flex justify-center">
+                <button onclick="${onChoose}('all')" class="mg-mix-btn pastel-btn inline-flex items-center justify-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-purple-400 to-indigo-400 hover:from-purple-500 hover:to-indigo-500 text-white font-extrabold text-sm md:text-base shadow-md border border-purple-300">
+                    <span>🌟 ${escapeHtml(mixLabel)}</span>
+                    <span class="text-xs md:text-sm font-black bg-white/20 px-2 py-0.5 rounded-full">${total} từ</span>
+                </button>
+            </div>
+        </div>`;
+}
+
+function ensureMiniGameThemeStyles() {
+    if (document.getElementById('minigame-theme-v3')) return;
+    const style = document.createElement('style');
+    style.id = 'minigame-theme-v3';
+    style.textContent = `
+        #view-game-play > div { max-width: 56rem !important; }
+        #game-play-title { font-size: 1.2rem !important; }
+        #game-play-container { font-size: 16px; }
+        #game-play-container .text-\\[10px\\] { font-size: 12px !important; }
+        #game-play-container .text-\\[11px\\] { font-size: 13px !important; }
+        #game-play-container .text-xs { font-size: 14px !important; }
+        #game-play-container .mg-topic-card { min-height: 78px; }
+        #game-play-container .mg-topic-card:hover { transform: translateY(-2px); }
+        #game-play-container .mg-mix-btn { min-width: 250px; }
+        @media (max-width: 640px) {
+            #view-game-play > div { max-width: 100% !important; }
+            #game-play-title { font-size: 1.05rem !important; }
+            #game-play-container .mg-mix-btn { min-width: 0; width: auto; }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+const MINIGAME_LIST = [
+    { id: 'word-search', title: '1. Word Search', desc: 'Tìm từ giấu trong ô chữ', icon: '🔍', ready: true },
+    { id: 'word-scramble', title: '2. Word Scramble', desc: 'Sắp xếp chữ cái thành từ', icon: '🔤', ready: true },
+    { id: 'bingo', title: '3. Bingo', desc: 'Nghe và tìm đúng từ trên bảng', icon: '🎲', ready: true },
+    { id: 'fishing-game', title: '4. Fishing Game', desc: 'Câu đúng con cá mang từ', icon: '🎣', ready: true },
+    { id: 'sentence-train', title: '5. Sentence Train', desc: 'Xếp toa từ thành câu đúng', icon: '🚂', ready: true },
+    { id: 'grammar-river', title: '6. Grammar River', desc: 'Nhảy qua đúng giới từ', icon: '🐸', ready: true },
+    { id: 'qa-bridge', title: '7. Q&A Bridge', desc: 'Ghép đúng câu hỏi - trả lời', icon: '🌉', ready: true },
+    { id: 'sentence-doctor', title: '8. Sentence Doctor', desc: 'Tìm và chữa lỗi ngữ pháp', icon: '🩺', ready: true },
+    { id: 'action-race', title: '9. Action Race', desc: 'Đua xe cùng động từ hành động', icon: '🏎️', ready: true },
+    { id: 'feeling-detective', title: '10. Feeling Detective', desc: 'Truy tìm tính từ và trạng thái', icon: '🕵️', ready: true },
+    { id: 'a-or-an-factory', title: '11. A or An Factory', desc: 'Phân loại mạo từ a / an', icon: '🏭', ready: true },
+    { id: 'teacher-says', title: '12. Teacher Says', desc: 'Phản xạ với câu mệnh lệnh', icon: '🤖', ready: true }
+];
+
+function openMiniGameHub() {
+    stopSpeaking();
+    // Bắt buộc đăng nhập mới vào được Mini Game (giống mục 11, Đấu trường đề thi, Tiến trình tuần)
+    if (!currentUser || currentUser.isGuest) {
+        alert('Con cần đăng nhập bằng tài khoản học sinh mới vào được Mini Game nhé!');
+        return;
+    }
+    inAlphaIpaFlow = false;
+    inMiniGameFlow = true;
+    activeExamContext = null; activeRoadmapContext = null; activeTopicId = null; pendingTopicQuiz = null;
+    updateNavTabs("Mini Game", "🎮", null);
+
+    ensureMiniGameThemeStyles();
+    const grid = document.getElementById('minigame-grid');
+    grid.innerHTML = MINIGAME_LIST.map((g, idx) => {
+        const style = getMiniGamePaletteOrder('hub')[idx % MINIGAME_TOPIC_PALETTES.length];
+        return `
+        <div onclick="openGamePlay('${g.id}')" class="p-3.5 md:p-4 flex flex-col items-center text-center cursor-pointer transition-all group ${style.card} border-2 rounded-[26px] min-h-[132px] justify-between relative shadow-sm pastel-btn">
+            ${!g.ready ? `<span class="absolute top-2 right-2 bg-amber-100 text-amber-700 text-[10px] font-black px-2 py-0.5 rounded-full border border-amber-200">Sắp ra mắt</span>` : ''}
+            <div class="text-4xl group-hover:scale-110 transition-transform mt-1">${g.icon}</div>
+            <div class="w-full">
+                <h3 class="font-extrabold ${style.num} text-base leading-tight">${g.title}</h3>
+                <p class="text-sm text-gray-700 font-bold mt-1 w-full leading-snug">${g.desc}</p>
+            </div>
+        </div>`;
+    }).join('');
+
+    switchAppView('view-minigame-hub');
+}
+
+// Đường dẫn file JS riêng của từng game — chỉ tải về máy khi bé THẬT SỰ bấm vào game đó,
+// không bắt tải sẵn hết 12 game ngay từ đầu (giữ app.js gọn nhẹ dù sau này thêm bao nhiêu game).
+const GAME_SCRIPT_MAP = {
+    'word-search': 'assets/js/games/word-search.js?v=mg4',
+    'word-scramble': 'assets/js/games/word-scramble.js?v=mg4',
+    'bingo': 'assets/js/games/bingo.js?v=mg4',
+    'fishing-game': 'assets/js/games/fishing-game.js?v=mg4',
+    'sentence-train': 'assets/js/games/sentence-train.js?v=mg5',
+    'grammar-river': 'assets/js/games/grammar-river.js?v=mg6',
+    'qa-bridge': 'assets/js/games/qa-bridge.js?v=mg7',
+    'sentence-doctor': 'assets/js/games/sentence-doctor.js?v=mg8',
+    'action-race': 'assets/js/games/action-race.js?v=mg9',
+    'feeling-detective': 'assets/js/games/feeling-detective.js?v=mg10',
+    'a-or-an-factory': 'assets/js/games/a-or-an-factory.js?v=mg11',
+    'teacher-says': 'assets/js/games/teacher-says.js?v=mg12'
+};
+const loadedGameScripts = {};
+
+function loadGameScript(src) {
+    if (loadedGameScripts[src]) return Promise.resolve();
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = () => { loadedGameScripts[src] = true; resolve(); };
+        script.onerror = () => reject(new Error(`Không tải được file game: ${src}`));
+        document.body.appendChild(script);
+    });
+}
+
+async function openGamePlay(gameId) {
+    stopSpeaking();
+    ensureMiniGameThemeStyles();
+    inMiniGameFlow = true;
+    const game = MINIGAME_LIST.find(g => g.id === gameId);
+    if (!game) return;
+
+    if (!game.ready) {
+        alert(`Game "${game.title}" đang được xây dựng, sắp ra mắt sớm nhé! Con quay lại sau nha!`);
+        return;
+    }
+
+    document.getElementById('game-play-title').innerHTML = `<span>${game.icon}</span><span>${game.title}</span>`;
+    updateNavTabs("Mini Game", "🎮", game.title);
+    switchAppView('view-game-play');
+
+    const scriptSrc = GAME_SCRIPT_MAP[gameId];
+    if (scriptSrc) {
+        document.getElementById('game-play-container').innerHTML = `<p class="text-center text-gray-400 font-bold py-8">Đang tải game...</p>`;
+        try {
+            await loadGameScript(scriptSrc);
+        } catch (e) {
+            document.getElementById('game-play-container').innerHTML = `<p class="text-center text-rose-500 font-bold py-8">Không tải được game, bé thử lại nhé!</p>`;
+            return;
+        }
+    }
+
+    if (gameId === 'word-search') startWordSearchGame();
+    if (gameId === 'word-scramble') startWordScrambleGame();
+    if (gameId === 'bingo') startBingoGame();
+    if (gameId === 'fishing-game') startFishingGame();
+    if (gameId === 'sentence-train') startSentenceTrainGame();
+    if (gameId === 'grammar-river') startGrammarRiverGame();
+    if (gameId === 'qa-bridge') startQABridgeGame();
+    if (gameId === 'sentence-doctor') startSentenceDoctorGame();
+    if (gameId === 'action-race') startActionRaceGame();
+    if (gameId === 'feeling-detective') startFeelingDetectiveGame();
+    if (gameId === 'a-or-an-factory') startAOrAnFactoryGame();
+    if (gameId === 'teacher-says') startTeacherSaysGame();
+}
+
+/** Lấy nguồn từ vựng thật của chương trình (kho tra nghĩa xây từ Flashcards Library) —
+ * chỉ lấy từ ĐƠN (không dấu cách/gạch nối), độ dài 3-7 ký tự để vừa vặn lưới ô chữ. */
+function getWordSearchVocabPool(topicId = 'all') {
+    return getMiniGameVocabPool({ topicId, singleWordOnly: true, minLength: 3, maxLength: 7 })
+        .map(item => ({ w: item.word.toUpperCase(), vi: item.vietnamese }));
+}
+
 
 tryAutoLogin();
