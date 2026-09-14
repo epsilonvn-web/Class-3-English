@@ -1294,10 +1294,11 @@ function isAdminUser() {
     return !!currentUser && !currentUser.isGuest && String(currentUser.role || '').toLowerCase() === 'admin';
 }
 
+// Trước đây hàm này gửi lại nguyên PIN gốc (đọc từ localStorage) mỗi lần thao tác admin - nay chỉ gửi
+// token đã có sẵn khi đăng nhập, server tự tra lại quyền admin từ token (xem authenticateAdmin bên Code.gs).
 function getAdminCredentials() {
     return {
-        adminMaHS: currentUser?.maHS || localStorage.getItem('ta3_mahs') || '',
-        adminPin: localStorage.getItem('ta3_mapin') || ''
+        token: (currentUser && currentUser.token) || localStorage.getItem('ta3_token') || ''
     };
 }
 
@@ -1518,9 +1519,9 @@ async function doLogin() {
             alert(errMsg);
             return;
         }
-        currentUser = { ...result.student, isGuest: false };
+        currentUser = { ...result.student, isGuest: false, token: result.token };
         localStorage.setItem('ta3_mahs', maHS);
-        localStorage.setItem('ta3_mapin', maPin);
+        localStorage.setItem('ta3_token', result.token);
         enterDashboard();
     } catch (err) {
         const connErr = 'Lỗi kết nối máy chủ: ' + err.message;
@@ -1581,22 +1582,15 @@ async function doRegister() {
 
 async function tryAutoLogin() {
     let maHS = localStorage.getItem('ta3_mahs');
-    let maPin = localStorage.getItem('ta3_mapin');
+    let token = localStorage.getItem('ta3_token');
 
-    // Tương thích phiên cũ từng dùng key tv1_*: tự chuyển sang key riêng TA3 một lần.
-    if (!maHS || !maPin) {
-        const oldMaHS = localStorage.getItem('tv1_mahs');
-        const oldMaPin = localStorage.getItem('tv1_mapin');
-        if (oldMaHS && oldMaPin) {
-            maHS = oldMaHS; maPin = oldMaPin;
-            localStorage.setItem('ta3_mahs', oldMaHS);
-            localStorage.setItem('ta3_mapin', oldMaPin);
-            localStorage.removeItem('tv1_mahs');
-            localStorage.removeItem('tv1_mapin');
-        }
-    }
+    // Dọn phiên kiểu cũ (PIN gốc lưu thẳng trong localStorage) nếu còn sót lại từ bản trước khi vá -
+    // không dùng để tự đăng nhập lại nữa, bắt đăng nhập tay 1 lần để đổi hẳn sang token.
+    localStorage.removeItem('ta3_mapin');
+    localStorage.removeItem('tv1_mahs');
+    localStorage.removeItem('tv1_mapin');
 
-    if (!maHS || !maPin) {
+    if (!maHS || !token) {
         currentUser = makeGuestUser();
         enterDashboard(true);
         return;
@@ -1604,13 +1598,15 @@ async function tryAutoLogin() {
 
     showLoadingOverlay('Đang nhận diện tài khoản của bé...');
     try {
-        const res = await callAppsScript('login', { maHS: maHS.toUpperCase(), maPin });
+        // whoAmI: xác thực lại bằng TOKEN (không phải PIN gốc) - server tự tra lại thông tin học sinh
+        // mới nhất (VD tuần hiện tại, loại tài khoản có thể đã đổi từ lúc đăng nhập).
+        const res = await callAppsScript('whoAmI', { token });
         if (res.ok) {
-            currentUser = { ...res.student, isGuest: false };
+            currentUser = { ...res.student, isGuest: false, token };
             enterDashboard(true);
         } else {
             localStorage.removeItem('ta3_mahs');
-            localStorage.removeItem('ta3_mapin');
+            localStorage.removeItem('ta3_token');
             currentUser = makeGuestUser();
             enterDashboard(true);
         }
@@ -1624,11 +1620,17 @@ async function tryAutoLogin() {
 
 function logout() {
     stopSpeaking();
+    const tokenToRevoke = currentUser && currentUser.token;
     currentUser = makeGuestUser();
     localStorage.removeItem('ta3_mahs');
-    localStorage.removeItem('ta3_mapin');
+    localStorage.removeItem('ta3_token');
     closeAuthModal();
     enterDashboard(true);
+    // Hủy token thật trên server (best-effort) - tránh trường hợp ai đó lỡ có được token này vẫn dùng
+    // tiếp được cho tới khi tự hết hạn dù bé đã bấm đăng xuất.
+    if (tokenToRevoke) {
+        callAppsScript('logout', { token: tokenToRevoke }).catch(() => {});
+    }
 }
 
 function handleGuestMode() {
@@ -2660,6 +2662,7 @@ async function saveExamResultToSheet() {
 
     const payload = {
         maHS: currentUser.maHS,
+        token: currentUser.token, // bắt buộc để server xác nhận đúng chủ tài khoản mới cho ghi điểm
         hoTen: currentUser.hoTen,
         lop: currentUser.lop,
         examCategory: categoryKey,
@@ -2695,6 +2698,7 @@ async function saveWeeklyProgressToSheet(percent, starCount, scoreVal) {
     const payload = {
         student_id: currentUser.maHS,
         maHS: currentUser.maHS,
+        token: currentUser.token, // bắt buộc để server xác nhận đúng chủ tài khoản mới cho ghi điểm
         hoTen: currentUser.hoTen,
         lop: currentUser.lop,
         sheetName: 'LichSuTienTrinhTuan',
@@ -2774,8 +2778,15 @@ async function openHistoryModal(sheetName = 'LichSuTienTrinhTuan') {
 
     showLoadingOverlay('Đang trích xuất dữ liệu và vẽ biểu đồ năng lực...');
     try {
-        const res = await callAppsScript('getHistory', { maHS: currentUser.maHS, sheetName });
+        const res = await callAppsScript('getHistory', { maHS: currentUser.maHS, sheetName, token: currentUser.token });
         hideLoadingOverlay();
+        if (res && res.ok === false) {
+            // Token hết hạn/không hợp lệ hoặc không đúng chủ - đóng modal, báo rõ thay vì âm thầm
+            // hiện báo cáo trống (dễ gây hiểu lầm là bé chưa học gì).
+            closeHistoryModal();
+            alert(res.error || 'Không thể tải lịch sử - bé đăng nhập lại nhé!');
+            return;
+        }
         const rows = (res && res.history) ? res.history : [];
         renderHistoryReport(rows, sheetName);
     } catch (err) {
