@@ -238,12 +238,25 @@ function makeGuestUser() {
     };
 }
 
+function makePendingSessionUser(token) {
+    return {
+        name: "Phiên đăng nhập", isGuest: false, sessionPending: true, token: token || "",
+        tuanHienTai: 1, hoTen: "Đang chờ kết nối...", lop: "", maHS: "", role: "student",
+        loaiTaiKhoan: "regular", premiumAccess: false, premiumReason: "session-pending",
+        trialActive: false, trialDaysLeft: 0, hanDungThu: "", hanVIP: ""
+    };
+}
+
 function hasPremiumAccess() {
     if (isAdminUser()) return true;
     return !!currentUser && !currentUser.isGuest && currentUser.premiumAccess === true;
 }
 
 function getPremiumLockMessage(featureName = 'khu vực nâng cao') {
+    if (currentUser && currentUser.sessionPending) {
+        return `Phiên đăng nhập của con vẫn đang được giữ, nhưng hiện chưa kết nối được máy chủ để xác thực quyền ${featureName}.
+Khi có mạng lại, app sẽ tự xác thực lại bằng session token. Quyền Premium/Admin không lấy từ localStorage.`;
+    }
     if (!currentUser || currentUser.isGuest) {
         return `Đây là ${featureName} dành cho tài khoản Trial hoặc VIP.
 Con có thể Sign in nếu đã có tài khoản hoặc Sign up để đăng ký nhé!
@@ -1519,9 +1532,11 @@ async function doLogin() {
             alert(errMsg);
             return;
         }
-        currentUser = { ...result.student, isGuest: false, token: result.token };
-        localStorage.setItem('ta3_mahs', maHS);
+        currentUser = { ...result.student, isGuest: false, sessionPending: false, token: result.token };
+        // Client chỉ lưu session token; không lưu ID/PIN/mật khẩu hay bản sao quyền tài khoản.
         localStorage.setItem('ta3_token', result.token);
+        localStorage.removeItem('ta3_mahs');
+        localStorage.removeItem('ta3_mapin');
         enterDashboard();
     } catch (err) {
         const connErr = 'Lỗi kết nối máy chủ: ' + err.message;
@@ -1581,37 +1596,43 @@ async function doRegister() {
 }
 
 async function tryAutoLogin() {
-    let maHS = localStorage.getItem('ta3_mahs');
-    let token = localStorage.getItem('ta3_token');
+    const token = localStorage.getItem('ta3_token');
 
-    // Dọn phiên kiểu cũ (PIN gốc lưu thẳng trong localStorage) nếu còn sót lại từ bản trước khi vá -
-    // không dùng để tự đăng nhập lại nữa, bắt đăng nhập tay 1 lần để đổi hẳn sang token.
+    // Dọn dữ liệu đăng nhập kiểu cũ. Từ phiên bản này client CHỈ giữ session token.
+    localStorage.removeItem('ta3_mahs');
     localStorage.removeItem('ta3_mapin');
     localStorage.removeItem('tv1_mahs');
     localStorage.removeItem('tv1_mapin');
 
-    if (!maHS || !token) {
+    if (!token) {
         currentUser = makeGuestUser();
         enterDashboard(true);
         return;
     }
 
-    showLoadingOverlay('Đang nhận diện tài khoản của bé...');
+    showLoadingOverlay('Đang khôi phục phiên đăng nhập...');
     try {
-        // whoAmI: xác thực lại bằng TOKEN (không phải PIN gốc) - server tự tra lại thông tin học sinh
-        // mới nhất (VD tuần hiện tại, loại tài khoản có thể đã đổi từ lúc đăng nhập).
-        const res = await callAppsScript('whoAmI', { token });
-        if (res.ok) {
-            currentUser = { ...res.student, isGuest: false, token };
+        const res = await callAppsScript('restoreSession', { token });
+        if (res && res.ok) {
+            currentUser = { ...res.student, isGuest: false, sessionPending: false, token };
             enterDashboard(true);
-        } else {
-            localStorage.removeItem('ta3_mahs');
+            return;
+        }
+
+        // Chỉ xóa phiên khi backend xác nhận token thực sự không còn hợp lệ.
+        if (res && res.code === 'INVALID_SESSION') {
             localStorage.removeItem('ta3_token');
             currentUser = makeGuestUser();
             enterDashboard(true);
+            return;
         }
+
+        // Lỗi backend tạm thời: giữ nguyên token và trạng thái đăng nhập, không chuyển thành Guest.
+        currentUser = makePendingSessionUser(token);
+        enterDashboard(true);
     } catch (e) {
-        currentUser = makeGuestUser();
+        // Mất mạng/timeout/Apps Script tạm lỗi: GIỮ SESSION. Không xóa token, không về Guest.
+        currentUser = makePendingSessionUser(token);
         enterDashboard(true);
     } finally {
         hideLoadingOverlay();
@@ -1626,8 +1647,7 @@ function logout() {
     localStorage.removeItem('ta3_token');
     closeAuthModal();
     enterDashboard(true);
-    // Hủy token thật trên server (best-effort) - tránh trường hợp ai đó lỡ có được token này vẫn dùng
-    // tiếp được cho tới khi tự hết hạn dù bé đã bấm đăng xuất.
+    // Hủy token thật trên server (best-effort) để phiên không thể tiếp tục được dùng sau khi đã đăng xuất.
     if (tokenToRevoke) {
         callAppsScript('logout', { token: tokenToRevoke }).catch(() => {});
     }
@@ -1666,6 +1686,17 @@ function enterDashboard(isSilent = false) {
 function updateUserInfoBox() {
     const box = document.getElementById('user-info-box');
     if (!box) return;
+    if (currentUser && currentUser.sessionPending) {
+        box.innerHTML = `
+            <div class="flex items-center space-x-2">
+                <div class="text-right">
+                    <div class="text-yellow-600 font-extrabold text-xs md:text-sm leading-tight">Phiên đăng nhập đang được giữ</div>
+                    <div class="text-gray-500 font-semibold text-[10px]">Chờ kết nối để xác thực lại quyền</div>
+                </div>
+                <button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-orange-100 hover:bg-orange-200 text-orange-500 rounded-xl border border-orange-200 text-xs"><i class="fa-solid fa-right-from-bracket"></i></button>
+            </div>`;
+        return;
+    }
     if (currentUser && !currentUser.isGuest) {
         const type = String(currentUser.loaiTaiKhoan || 'regular').toLowerCase();
         const adminBtn = isAdminUser() ? `
