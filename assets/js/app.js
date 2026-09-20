@@ -298,7 +298,7 @@ function closeAuthModal() { document.getElementById('screen-login')?.classList.a
 function openAuthFromPremium(tab) { closePremiumModal(); openAuthModal(tab); }
 function refreshPremiumUI() {
     const locked = !hasPremiumAccess();
-    ['roadmap-lock-icon','minigame-lock-icon'].forEach(id => {
+    ['roadmap-lock-icon','review-lock-icon','exam-lock-icon','minigame-lock-icon'].forEach(id => {
         const el = document.getElementById(id); if (el) el.classList.toggle('hidden', !locked);
     });
 }
@@ -712,12 +712,12 @@ function renderDashboardCards(topicsData = [], totalExamsCount = null) {
     if (!container) return;
     let html = '';
 
-    TOPICS_CONFIG.forEach(t => {
+    TOPICS_CONFIG.filter(t => Number(t.id) !== 11).forEach(t => {
         const topicObj = topicsData.find(item => Number(item.topic_id) === Number(t.id));
         const totalCount = topicObj && topicObj.questions ? topicObj.questions.length : 0;
         const countLabel = totalCount > 0 ? `${totalCount} câu` : 'Đang tải...';
         const iconHtml = t.isCustomTextIcon
-            ? `<div class="w-8 h-8 bg-orange-100 rounded-xl flex items-center justify-center text-[11px] font-black text-orange-600 shadow-inner group-hover:scale-110 transition-transform shrink-0 tracking-tight">S/X</div>`
+            ? `<div class="w-8 h-8 bg-purple-100 rounded-xl flex items-center justify-center text-[11px] font-black text-purple-600 shadow-inner group-hover:scale-110 transition-transform shrink-0 tracking-tight">S/X</div>`
             : `<div class="w-8 h-8 bg-${t.color}-100 rounded-xl flex items-center justify-center text-sm font-extrabold text-${t.color}-600 shadow-inner group-hover:scale-110 transition-transform shrink-0">${t.icon}</div>`;
 
         html += `
@@ -727,26 +727,13 @@ function renderDashboardCards(topicsData = [], totalExamsCount = null) {
                     ${iconHtml}
                     <h3 class="font-extrabold text-${t.color}-700 text-sm md:text-base leading-tight">${t.title}</h3>
                 </div>
-                <div class="flex justify-between items-center mt-1.5 pt-1 border-t border-yellow-100 text-[11px] font-bold text-gray-500">
+                <div class="flex justify-between items-center mt-1.5 pt-1 border-t border-pink-100 text-[11px] font-bold text-gray-500">
                     <span>${t.desc}</span>
                     <span class="bg-${t.color}-50 text-${t.color}-600 px-2 py-0.5 rounded-full">${countLabel}</span>
                 </div>
             </div>`;
     });
 
-    const examCountLabel = Number.isFinite(totalExamsCount) ? `${totalExamsCount} đề thi` : 'Đang tải...';
-    html += `
-        <div onclick="clickProgressOrExam('exam')" class="pastel-card p-3 flex flex-col justify-between cursor-pointer hover:border-amber-400 transition-all group bg-gradient-to-br from-white to-amber-50/50 min-h-[92px] relative">
-            <i class="fa-solid fa-lock absolute top-2 right-2 text-slate-400 text-xs" title="Cần quyền nâng cao"></i>
-            <div class="flex items-center space-x-2.5">
-                <div class="w-8 h-8 bg-amber-100 rounded-xl flex items-center justify-center text-sm font-extrabold text-amber-600 shadow-inner group-hover:scale-110 transition-transform shrink-0">🏆</div>
-                <h3 class="font-extrabold text-amber-700 text-sm md:text-base leading-tight">12. Đấu trường đề thi</h3>
-            </div>
-            <div class="flex justify-between items-center mt-1.5 pt-1 border-t border-amber-100 text-[11px] font-bold text-gray-500">
-                <span>HK1, HK2, HSG</span>
-                <span class="bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">${examCountLabel}</span>
-            </div>
-        </div>`;
     container.innerHTML = html;
     refreshPremiumUI();
 }
@@ -825,6 +812,7 @@ function updateExamTimerDisplay() {
 }
 
 function openExamHub() {
+    setMainTabActive_('exams');
     stopSpeaking();
     inAlphaIpaFlow = false;
     activeExamContext = null;
@@ -855,35 +843,35 @@ async function renderExamHubGrid() {
     const countHSG = getCount('hsg');
 
     let html = `
-        <div class="bg-yellow-50/70 p-5 rounded-3xl border-2 border-yellow-200 flex flex-col justify-between items-center text-center group min-h-[250px] pastel-card">
+        <div class="bg-pink-50/70 p-5 rounded-3xl border-2 border-pink-200 flex flex-col justify-between items-center text-center group min-h-[250px] pastel-card">
             <div>
                 <div class="text-4xl mb-1.5 group-hover:scale-110 transition-transform">📘</div>
-                <h3 class="font-extrabold text-yellow-600 text-lg mb-1">Học kỳ 1</h3>
+                <h3 class="font-extrabold text-pink-600 text-lg mb-1">Học kỳ 1</h3>
                 <p class="text-xs text-gray-500 font-bold mb-2">Kiểm tra kiến thức HK1</p>
-                <span class="inline-block bg-yellow-100 text-yellow-700 px-3 py-0.5 rounded-full text-xs font-black mb-3">${countHK1} đề thi chuẩn</span>
+                <span class="inline-block bg-pink-100 text-pink-700 px-3 py-0.5 rounded-full text-xs font-black mb-3">${countHK1} đề thi chuẩn</span>
             </div>
             <div class="w-full space-y-2">
-                <button onclick="startRandomExam('hocky1')" class="w-full py-2.5 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">
+                <button onclick="startRandomExam('hocky1')" class="w-full py-2.5 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">
                     🚀 Vào thi thử
                 </button>
-                <button onclick="openHistoryModal('LichSuBaiThiHK1')" class="w-full py-2 bg-white text-yellow-700 border border-yellow-300 font-extrabold rounded-xl text-xs pastel-btn hover:bg-yellow-50">
+                <button onclick="openHistoryModal('LichSuBaiThiHK1')" class="w-full py-2 bg-white text-pink-700 border border-pink-300 font-extrabold rounded-xl text-xs pastel-btn hover:bg-pink-50">
                     📊 Xem lịch sử thi
                 </button>
             </div>
         </div>
 
-        <div class="bg-orange-50/70 p-5 rounded-3xl border-2 border-orange-200 flex flex-col justify-between items-center text-center group min-h-[250px] pastel-card">
+        <div class="bg-purple-50/70 p-5 rounded-3xl border-2 border-purple-200 flex flex-col justify-between items-center text-center group min-h-[250px] pastel-card">
             <div>
                 <div class="text-4xl mb-1.5 group-hover:scale-110 transition-transform">📗</div>
-                <h3 class="font-extrabold text-orange-600 text-lg mb-1">Học kỳ 2</h3>
+                <h3 class="font-extrabold text-purple-600 text-lg mb-1">Học kỳ 2</h3>
                 <p class="text-xs text-gray-500 font-bold mb-2">Kiểm tra kiến thức HK2</p>
-                <span class="inline-block bg-orange-100 text-orange-700 px-3 py-0.5 rounded-full text-xs font-black mb-3">${countHK2} đề thi chuẩn</span>
+                <span class="inline-block bg-purple-100 text-purple-700 px-3 py-0.5 rounded-full text-xs font-black mb-3">${countHK2} đề thi chuẩn</span>
             </div>
             <div class="w-full space-y-2">
-                <button onclick="startRandomExam('hocky2')" class="w-full py-2.5 bg-gradient-to-r from-orange-500 to-orange-700 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">
+                <button onclick="startRandomExam('hocky2')" class="w-full py-2.5 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">
                     🚀 Vào thi thử
                 </button>
-                <button onclick="openHistoryModal('LichSuBaiThiHK2')" class="w-full py-2 bg-white text-orange-700 border border-orange-300 font-extrabold rounded-xl text-xs pastel-btn hover:bg-orange-50">
+                <button onclick="openHistoryModal('LichSuBaiThiHK2')" class="w-full py-2 bg-white text-purple-700 border border-purple-300 font-extrabold rounded-xl text-xs pastel-btn hover:bg-purple-50">
                     📊 Xem lịch sử thi
                 </button>
             </div>
@@ -897,7 +885,7 @@ async function renderExamHubGrid() {
                 <span class="inline-block bg-amber-100 text-amber-700 px-3 py-0.5 rounded-full text-xs font-black mb-3">${countHSG} đề thi tuyển chọn</span>
             </div>
             <div class="w-full space-y-2">
-                <button onclick="startRandomExam('hsg')" class="w-full py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">
+                <button onclick="startRandomExam('hsg')" class="w-full py-2.5 bg-gradient-to-r from-amber-500 to-purple-500 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">
                     🚀 Vào thi thử
                 </button>
                 <button onclick="openHistoryModal('LichSuBaiThiHSG')" class="w-full py-2 bg-white text-amber-700 border border-amber-300 font-extrabold rounded-xl text-xs pastel-btn hover:bg-amber-50">
@@ -994,9 +982,9 @@ function openAlphabetMenu(index = 0) {
     const item = ALPHABET_DATA[index];
     const keyboardHtml = ALPHABET_DATA.map((alpha, idx) => {
         const isActive = idx === currentAlphabetIndex;
-        return `<button onclick="openAlphabetMenu(${idx})" class="pastel-btn flex flex-col items-center justify-center rounded-xl p-1.5 shadow-sm cursor-pointer ${isActive ? 'bg-yellow-500 text-white border-2 border-yellow-600 scale-105 ring-2 ring-yellow-200' : 'bg-white text-gray-700 border border-gray-200 hover:bg-yellow-50 hover:border-yellow-300'} min-w-[52px] min-h-[52px]">
+        return `<button onclick="openAlphabetMenu(${idx})" class="pastel-btn flex flex-col items-center justify-center rounded-xl p-1.5 shadow-sm cursor-pointer ${isActive ? 'bg-pink-500 text-white border-2 border-pink-600 scale-105 ring-2 ring-pink-200' : 'bg-white text-gray-700 border border-gray-200 hover:bg-pink-50 hover:border-pink-300'} min-w-[52px] min-h-[52px]">
             <span class="text-base font-black">${alpha.letter}</span>
-            <span class="font-bold ${isActive ? 'text-white' : 'text-yellow-600'} text-xs md:text-sm">${alpha.ipaName}</span>
+            <span class="font-bold ${isActive ? 'text-white' : 'text-pink-600'} text-xs md:text-sm">${alpha.ipaName}</span>
         </button>`;
     }).join('');
 
@@ -1013,18 +1001,18 @@ function openAlphabetMenu(index = 0) {
     document.getElementById('alphaipa-content').innerHTML = `
         <div class="w-full max-w-4xl flex flex-col items-center">
             <div class="mb-2 text-center">
-                <h2 class="text-lg md:text-xl font-black text-yellow-600 mb-0.5">🔤 ENGLISH ALPHABET & PHONICS (A-Z)</h2>
+                <h2 class="text-lg md:text-xl font-black text-pink-600 mb-0.5">🔤 ENGLISH ALPHABET & PHONICS (A-Z)</h2>
                 <p class="text-xs font-bold text-gray-500">Bấm vào chữ cái hoặc từ mẫu để nghe phát âm:</p>
-                <button onclick="speakAlphabetLetter(${index})" class="pastel-btn mt-1.5 bg-yellow-100 hover:bg-yellow-200 text-yellow-700 border border-yellow-300 font-extrabold px-3.5 py-1 rounded-xl text-xs flex items-center justify-center gap-1 mx-auto shadow-sm cursor-pointer">
+                <button onclick="speakAlphabetLetter(${index})" class="pastel-btn mt-1.5 bg-pink-100 hover:bg-pink-200 text-pink-700 border border-pink-300 font-extrabold px-3.5 py-1 rounded-xl text-xs flex items-center justify-center gap-1 mx-auto shadow-sm cursor-pointer">
                     <i class="fa-solid fa-volume-high"></i><span>Listen to Letter ${item.letter}</span>
                 </button>
             </div>
-            <div class="bg-yellow-50/60 border-2 border-dashed border-yellow-300 rounded-2xl p-3 md:p-3.5 w-full mb-3 shadow-sm">
+            <div class="bg-pink-50/60 border-2 border-dashed border-pink-300 rounded-2xl p-3 md:p-3.5 w-full mb-3 shadow-sm">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5 items-stretch">
-                    <div onclick="speakAlphabetLetter(${index})" class="card-hover bg-white border-2 border-yellow-400 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer shadow-sm bg-gradient-to-b from-white to-yellow-50">
-                        <div class="text-5xl md:text-6xl font-black text-yellow-600 mb-1">${item.name}</div>
-                        <div class="text-xs font-extrabold text-gray-600 mb-2">Cách đọc: <b class="text-orange-600 text-lg">${item.ipaName}</b></div>
-                        <span class="bg-yellow-100 text-yellow-700 text-[10px] font-black px-2.5 py-0.5 rounded-full border border-yellow-200">👆 Tap to Listen</span>
+                    <div onclick="speakAlphabetLetter(${index})" class="card-hover bg-white border-2 border-pink-400 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer shadow-sm bg-gradient-to-b from-white to-pink-50">
+                        <div class="text-5xl md:text-6xl font-black text-pink-600 mb-1">${item.name}</div>
+                        <div class="text-xs font-extrabold text-gray-600 mb-2">Cách đọc: <b class="text-purple-600 text-lg">${item.ipaName}</b></div>
+                        <span class="bg-pink-100 text-pink-700 text-[10px] font-black px-2.5 py-0.5 rounded-full border border-pink-200">👆 Tap to Listen</span>
                     </div>
                     ${wordCard(item.word1, 1)}${wordCard(item.word2, 2)}${wordCard(item.word3, 3)}
                 </div>
@@ -1056,10 +1044,10 @@ function openIPAMenu(index = 0) {
     const item = IPA_DATA[currentIPAIndex];
     const soundButtonsHtml = IPA_DATA.map((snd, idx) => {
         const isActive = idx === currentIPAIndex;
-        let badgeColor = isActive ? 'bg-yellow-600 text-white border-yellow-700' : 'bg-yellow-50 text-yellow-700 border-yellow-200 hover:bg-yellow-100';
-        if (snd.type === 'vowel_di') badgeColor = isActive ? 'bg-orange-600 text-white border-orange-700' : 'bg-orange-50 text-orange-700 border-orange-200 hover:bg-orange-100';
+        let badgeColor = isActive ? 'bg-pink-600 text-white border-pink-700' : 'bg-pink-50 text-pink-700 border-pink-200 hover:bg-pink-100';
+        if (snd.type === 'vowel_di') badgeColor = isActive ? 'bg-purple-600 text-white border-purple-700' : 'bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100';
         else if (snd.type && snd.type.startsWith('consonant')) badgeColor = isActive ? 'bg-emerald-600 text-white border-emerald-700' : 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100';
-        return `<button onclick="openIPAMenu(${idx})" class="pastel-btn flex flex-col items-center justify-center rounded-xl p-1 shadow-sm border ${badgeColor} min-w-[50px] min-h-[46px] cursor-pointer ${isActive ? 'scale-105 ring-2 ring-yellow-300 font-black' : ''}">
+        return `<button onclick="openIPAMenu(${idx})" class="pastel-btn flex flex-col items-center justify-center rounded-xl p-1 shadow-sm border ${badgeColor} min-w-[50px] min-h-[46px] cursor-pointer ${isActive ? 'scale-105 ring-2 ring-pink-300 font-black' : ''}">
             <span class="text-base md:text-lg font-black">${snd.ipa}</span>
             <span class="text-[8px] font-bold opacity-80 line-clamp-1">${(snd.name || '').split(' ')[0]}</span>
         </button>`;
@@ -1075,8 +1063,8 @@ function openIPAMenu(index = 0) {
             <span class="mt-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-[9px] font-black px-2.5 py-0.5 rounded-lg">🔊 Listen Word</span>
         </div>`).join('');
 
-    let typeTag = 'Nguyên âm đơn (Monophthong)', typeBg = 'bg-yellow-100 text-yellow-700 border-yellow-300';
-    if (item.type === 'vowel_di') { typeTag = 'Nguyên âm đôi (Diphthong)'; typeBg = 'bg-orange-100 text-orange-700 border-orange-300'; }
+    let typeTag = 'Nguyên âm đơn (Monophthong)', typeBg = 'bg-pink-100 text-pink-700 border-pink-300';
+    if (item.type === 'vowel_di') { typeTag = 'Nguyên âm đôi (Diphthong)'; typeBg = 'bg-purple-100 text-purple-700 border-purple-300'; }
     else if (item.type === 'consonant_unvoiced') { typeTag = 'Phụ âm vô thanh (Voiceless)'; typeBg = 'bg-blue-100 text-blue-700 border-blue-300'; }
     else if (item.type === 'consonant_voiced') { typeTag = 'Phụ âm hữu thanh (Voiced)'; typeBg = 'bg-emerald-100 text-emerald-700 border-emerald-300'; }
 
@@ -1084,20 +1072,20 @@ function openIPAMenu(index = 0) {
         <div class="w-full max-w-5xl flex flex-col items-center">
             <div class="mb-2 text-center w-full">
                 <div class="flex items-center justify-between flex-wrap gap-1 mb-1">
-                    <span class="text-xs font-black bg-yellow-100 text-yellow-700 px-3 py-1 rounded-xl shadow-sm">Âm ${currentIPAIndex + 1} / ${IPA_DATA.length} IPA</span>
-                    <h2 class="text-base md:text-xl font-black text-yellow-600 flex items-center justify-center gap-1.5"><span>🗣️</span><span>BẢNG PHIÊN ÂM QUỐC TẾ IPA</span><span>🎙️</span></h2>
+                    <span class="text-xs font-black bg-pink-100 text-pink-700 px-3 py-1 rounded-xl shadow-sm">Âm ${currentIPAIndex + 1} / ${IPA_DATA.length} IPA</span>
+                    <h2 class="text-base md:text-xl font-black text-pink-600 flex items-center justify-center gap-1.5"><span>🗣️</span><span>BẢNG PHIÊN ÂM QUỐC TẾ IPA</span><span>🎙️</span></h2>
                     <button onclick="openPhonicsMatcher()" class="pastel-btn bg-amber-400 hover:bg-amber-500 text-amber-900 border-2 border-amber-500 text-xs font-black px-3.5 py-1 rounded-xl shadow-sm flex items-center gap-1 cursor-pointer"><span>🎯 IPA Quiz</span></button>
                 </div>
                 <p class="text-xs font-bold text-gray-500">Bấm vào bất kỳ âm IPA nào để nghe phát âm chuẩn và xem hướng dẫn chi tiết:</p>
             </div>
-            <div class="bg-gradient-to-r from-yellow-50/80 via-orange-50/80 to-orange-50/80 border-2 border-dashed border-yellow-300 rounded-2xl p-3 md:p-4 w-full mb-3 shadow-sm">
+            <div class="bg-gradient-to-r from-pink-50/80 via-purple-50/80 to-purple-50/80 border-2 border-dashed border-pink-300 rounded-2xl p-3 md:p-4 w-full mb-3 shadow-sm">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
-                    <div class="md:col-span-5 bg-white/95 rounded-2xl p-3 border border-yellow-200 shadow-sm flex flex-col items-center justify-between text-center">
+                    <div class="md:col-span-5 bg-white/95 rounded-2xl p-3 border border-pink-200 shadow-sm flex flex-col items-center justify-between text-center">
                         <div>
                             <span class="text-[10px] md:text-xs font-black uppercase px-2.5 py-0.5 rounded-full border ${typeBg} inline-block mb-1.5">${typeTag}</span>
                             <div onclick="speakIPASound(${currentIPAIndex})" class="cursor-pointer group">
-                                <div class="text-5xl md:text-6xl font-black text-yellow-600 drop-shadow-sm group-hover:scale-105 transition transform">${item.ipa}</div>
-                                <div class="text-xs md:text-sm font-black text-orange-700 mt-1">${escapeHtml(item.name)}</div>
+                                <div class="text-5xl md:text-6xl font-black text-pink-600 drop-shadow-sm group-hover:scale-105 transition transform">${item.ipa}</div>
+                                <div class="text-xs md:text-sm font-black text-purple-700 mt-1">${escapeHtml(item.name)}</div>
                             </div>
                         </div>
                         <div class="my-2.5 bg-amber-50/80 border border-amber-200 rounded-xl p-2.5 text-left w-full shadow-inner">
@@ -1105,8 +1093,8 @@ function openIPAMenu(index = 0) {
                             <p class="text-xs font-bold text-gray-700 leading-relaxed">${escapeHtml(item.guide || '')}</p>
                         </div>
                         <div class="flex items-center justify-center gap-2 w-full mt-auto">
-                            <button onclick="speakIPASound(${currentIPAIndex})" class="pastel-btn flex-1 bg-yellow-500 hover:bg-yellow-600 text-white font-black text-xs py-2 px-3 rounded-xl shadow-md flex items-center justify-center gap-1.5 cursor-pointer"><i class="fa-solid fa-volume-high"></i><span>Nghe âm ${item.ipa}</span></button>
-                            <button onclick="speakIPAGuideVietnamese(${currentIPAIndex})" class="pastel-btn bg-orange-100 hover:bg-orange-200 text-orange-700 border border-orange-300 font-black text-xs py-2 px-2.5 rounded-xl shadow-sm flex items-center justify-center gap-1 cursor-pointer"><i class="fa-solid fa-language"></i><span>Đọc hướng dẫn</span></button>
+                            <button onclick="speakIPASound(${currentIPAIndex})" class="pastel-btn flex-1 bg-pink-500 hover:bg-pink-600 text-white font-black text-xs py-2 px-3 rounded-xl shadow-md flex items-center justify-center gap-1.5 cursor-pointer"><i class="fa-solid fa-volume-high"></i><span>Nghe âm ${item.ipa}</span></button>
+                            <button onclick="speakIPAGuideVietnamese(${currentIPAIndex})" class="pastel-btn bg-purple-100 hover:bg-purple-200 text-purple-700 border border-purple-300 font-black text-xs py-2 px-2.5 rounded-xl shadow-sm flex items-center justify-center gap-1 cursor-pointer"><i class="fa-solid fa-language"></i><span>Đọc hướng dẫn</span></button>
                         </div>
                     </div>
                     <div class="md:col-span-7 flex flex-col justify-between">
@@ -1232,8 +1220,8 @@ function switchAuthTab(tab) {
     const isLogin = tab === 'login';
     document.getElementById('form-login').classList.toggle('hidden', !isLogin);
     document.getElementById('form-register').classList.toggle('hidden', isLogin);
-    document.getElementById('tab-btn-login').className = `py-2.5 rounded-xl font-extrabold text-sm pastel-btn ${isLogin ? 'bg-white text-yellow-600 shadow-sm' : 'text-gray-400'}`;
-    document.getElementById('tab-btn-register').className = `py-2.5 rounded-xl font-extrabold text-sm pastel-btn ${!isLogin ? 'bg-white text-yellow-600 shadow-sm' : 'text-gray-400'}`;
+    document.getElementById('tab-btn-login').className = `py-2.5 rounded-xl font-extrabold text-sm pastel-btn ${isLogin ? 'bg-white text-pink-600 shadow-sm' : 'text-gray-400'}`;
+    document.getElementById('tab-btn-register').className = `py-2.5 rounded-xl font-extrabold text-sm pastel-btn ${!isLogin ? 'bg-white text-pink-600 shadow-sm' : 'text-gray-400'}`;
     hideAuthError();
 }
 
@@ -1690,10 +1678,10 @@ function updateUserInfoBox() {
         box.innerHTML = `
             <div class="flex items-center space-x-2">
                 <div class="text-right">
-                    <div class="text-yellow-600 font-extrabold text-xs md:text-sm leading-tight">Phiên đăng nhập đang được giữ</div>
+                    <div class="text-pink-600 font-extrabold text-xs md:text-sm leading-tight">Phiên đăng nhập đang được giữ</div>
                     <div class="text-gray-500 font-semibold text-[10px]">Chờ kết nối để xác thực lại quyền</div>
                 </div>
-                <button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-orange-100 hover:bg-orange-200 text-orange-500 rounded-xl border border-orange-200 text-xs"><i class="fa-solid fa-right-from-bracket"></i></button>
+                <button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-purple-100 hover:bg-purple-200 text-purple-500 rounded-xl border border-purple-200 text-xs"><i class="fa-solid fa-right-from-bracket"></i></button>
             </div>`;
         return;
     }
@@ -1701,7 +1689,7 @@ function updateUserInfoBox() {
         const type = String(currentUser.loaiTaiKhoan || 'regular').toLowerCase();
         const adminBtn = isAdminUser() ? `
             <button onclick="openAdminAccountsModal()" title="Quản lý tài khoản"
-                class="h-8 px-2.5 flex items-center gap-1.5 bg-yellow-100 hover:bg-yellow-200 text-orange-700 rounded-xl border border-yellow-200 text-[10px] md:text-xs font-extrabold transition-shadow duration-200 hover:shadow-[0_0_12px_rgba(249,115,22,0.35)]">
+                class="h-8 px-2.5 flex items-center gap-1.5 bg-pink-100 hover:bg-pink-200 text-purple-700 rounded-xl border border-pink-200 text-[10px] md:text-xs font-extrabold transition-shadow duration-200 hover:shadow-[0_0_12px_rgba(168,85,247,0.35)]">
                 <i class="fa-solid fa-users-gear"></i><span class="hidden lg:inline">Quản lý</span>
             </button>` : '';
         let subLabel = 'Regular';
@@ -1711,17 +1699,17 @@ function updateUserInfoBox() {
         box.innerHTML = `
             <div class="flex items-center space-x-2">
                 <div class="text-right">
-                    <div class="text-yellow-600 font-extrabold text-xs md:text-sm leading-tight">${escapeHtml(currentUser.hoTen || currentUser.maHS)}</div>
+                    <div class="text-pink-600 font-extrabold text-xs md:text-sm leading-tight">${escapeHtml(currentUser.hoTen || currentUser.maHS)}</div>
                     <div class="text-gray-500 font-semibold text-[10px]">${escapeHtml(subLabel)} · ID ${escapeHtml(currentUser.maHS)}</div>
                 </div>
                 ${adminBtn}
-                <button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-orange-100 hover:bg-orange-200 text-orange-500 rounded-xl border border-orange-200 text-xs"><i class="fa-solid fa-right-from-bracket"></i></button>
+                <button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-purple-100 hover:bg-purple-200 text-purple-500 rounded-xl border border-purple-200 text-xs"><i class="fa-solid fa-right-from-bracket"></i></button>
             </div>`;
     } else {
         box.innerHTML = `
             <div class="flex items-center gap-1.5">
                 <span class="text-amber-600 font-extrabold text-xs mr-0.5">Khách</span>
-                <button onclick="openAuthModal('login')" class="h-9 px-3 bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-extrabold rounded-xl text-xs shadow-sm pastel-btn">Sign in</button>
+                <button onclick="openAuthModal('login')" class="h-9 px-3 bg-gradient-to-r from-pink-400 to-purple-400 text-white font-extrabold rounded-xl text-xs shadow-sm pastel-btn">Sign in</button>
                 <button onclick="openAuthModal('register')" class="h-9 px-3 bg-white text-fuchsia-600 border border-fuchsia-200 font-extrabold rounded-xl text-xs shadow-sm pastel-btn">Sign up</button>
             </div>`;
     }
@@ -1955,7 +1943,7 @@ function renderRoadmapSVG() {
         let badgeHtml = '';
 
         if (isDone) {
-            badgeHtml = `<text x="${coord.x}" y="${coord.y + 32}" text-anchor="middle" font-size="12" fill="#f59e0b">⭐⭐⭐</text>`;
+            badgeHtml = `<text x="${coord.x}" y="${coord.y + 32}" text-anchor="middle" font-size="12" fill="#ec4899">⭐⭐⭐</text>`;
         } else if (isCurrent) {
             badgeHtml = `<text x="${coord.x}" y="${coord.y + 32}" text-anchor="middle" font-size="10" font-weight="900" fill="#ec4899">Đang học</text>`;
         } else {
@@ -2131,15 +2119,15 @@ function loadQuestion() {
     const isPoemLike = passageLines.length >= 4 && avgLineLen > 0 && avgLineLen < 35;
     const useTwoColumns = isPoemLike;
     const passageHtml = pText ? `
-        <div class="w-full max-w-3xl bg-yellow-50/70 border-2 border-yellow-200 rounded-2xl p-3 mb-1.5 text-left shadow-xs">
-            ${pTitle ? `<p class="font-black text-yellow-700 text-sm md:text-base mb-1">${escapeHtml(pTitle)}</p>` : ''}
+        <div class="w-full max-w-3xl bg-pink-50/70 border-2 border-pink-200 rounded-2xl p-3 mb-1.5 text-left shadow-xs">
+            ${pTitle ? `<p class="font-black text-pink-700 text-sm md:text-base mb-1">${escapeHtml(pTitle)}</p>` : ''}
             <p class="text-gray-800 text-sm md:text-base font-bold whitespace-pre-line leading-relaxed ${useTwoColumns ? 'md:columns-2 md:gap-6' : ''}">${escapeHtml(pText)}</p>
         </div>` : '';
 
     const practiceSpeakerBtnHtml = !isEvaluationMode ? `
         <div class="flex items-center justify-center mt-1 mb-1">
-            <button onclick="speakCurrentQuestion()" class="px-4 py-1.5 bg-yellow-50 hover:bg-yellow-100 text-yellow-700 border border-yellow-200 rounded-2xl text-xs md:text-sm font-extrabold flex items-center space-x-1.5 pastel-btn shadow-xs">
-                <i class="fa-solid fa-volume-high text-yellow-600"></i>
+            <button onclick="speakCurrentQuestion()" class="px-4 py-1.5 bg-pink-50 hover:bg-pink-100 text-pink-700 border border-pink-200 rounded-2xl text-xs md:text-sm font-extrabold flex items-center space-x-1.5 pastel-btn shadow-xs">
+                <i class="fa-solid fa-volume-high text-pink-600"></i>
                 <span>Nghe câu hỏi</span>
             </button>
         </div>
@@ -2151,11 +2139,11 @@ function loadQuestion() {
     if (isLetterListen) {
         html = `
             ${mediaHtml}
-            <div class="w-full max-w-3xl border-2 border-dashed border-yellow-200 bg-yellow-50/40 rounded-3xl px-4 py-4 md:py-5 flex flex-col items-center text-center mb-3">
+            <div class="w-full max-w-3xl border-2 border-dashed border-pink-200 bg-pink-50/40 rounded-3xl px-4 py-4 md:py-5 flex flex-col items-center text-center mb-3">
                 <div class="text-3xl md:text-4xl mb-1.5 space-x-2">
                     <span>🎧</span><span>👂</span><span>🔢</span>
                 </div>
-                <p class="text-sm md:text-base lg:text-lg font-black text-orange-600 leading-snug">${escapeHtml(q.question_text)}</p>
+                <p class="text-sm md:text-base lg:text-lg font-black text-purple-600 leading-snug">${escapeHtml(q.question_text)}</p>
                 ${practiceSpeakerBtnHtml}
             </div>
 
@@ -2170,9 +2158,9 @@ function loadQuestion() {
         html += `</div>`;
         if (q.mascot_text) {
             html += `
-                <div class="mt-4 inline-flex items-center space-x-1.5 bg-yellow-50 border border-yellow-200 rounded-full px-3.5 py-1.5">
+                <div class="mt-4 inline-flex items-center space-x-1.5 bg-pink-50 border border-pink-200 rounded-full px-3.5 py-1.5">
                     <span>🐝</span>
-                    <span class="text-xs md:text-sm font-extrabold text-orange-600">${escapeHtml(q.mascot_text)}</span>
+                    <span class="text-xs md:text-sm font-extrabold text-purple-600">${escapeHtml(q.mascot_text)}</span>
                 </div>`;
         }
     } else {
@@ -2199,18 +2187,18 @@ function loadQuestion() {
 
         if (activeExamContext) {
             html += `
-                <button data-opt="${escapeHtml(opt)}" onclick="checkAnswer('${opt.replace(/'/g, "\\'")}')" class="option-btn w-full p-2.5 md:p-3 bg-white hover:bg-yellow-50/50 border border-yellow-200 rounded-2xl font-extrabold text-gray-800 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs">
+                <button data-opt="${escapeHtml(opt)}" onclick="checkAnswer('${opt.replace(/'/g, "\\'")}')" class="option-btn w-full p-2.5 md:p-3 bg-white hover:bg-pink-50/50 border border-pink-200 rounded-2xl font-extrabold text-gray-800 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs">
                     <div class="flex items-center space-x-2.5">
-                        <span class="opt-badge w-7 h-7 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center font-black text-sm shrink-0">${letter}</span>
+                        <span class="opt-badge w-7 h-7 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center font-black text-sm shrink-0">${letter}</span>
                         <span class="opt-text">${escapeHtml(formattedOpt)}${ipaHtml}</span>
                     </div>
-                    <span class="option-icon text-yellow-500 text-base md:text-lg"></span>
+                    <span class="option-icon text-pink-500 text-base md:text-lg"></span>
                 </button>`;
         } else {
             html += `
-                <button data-opt="${escapeHtml(opt)}" onclick="checkAnswer('${opt.replace(/'/g, "\\'")}')" class="option-btn w-full p-3 md:p-3.5 bg-yellow-50/40 hover:bg-yellow-100/70 border-2 border-yellow-200 rounded-2xl font-extrabold text-gray-800 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs pastel-btn">
-                    <span><strong class="text-yellow-600 mr-2 text-base md:text-lg">${letter}.</strong> ${escapeHtml(formattedOpt)}${ipaHtml}<span class="opt-meaning-vi text-xs md:text-sm text-orange-600 font-bold ml-1.5"></span></span>
-                    <span class="option-icon text-yellow-500 text-base md:text-lg"></span>
+                <button data-opt="${escapeHtml(opt)}" onclick="checkAnswer('${opt.replace(/'/g, "\\'")}')" class="option-btn w-full p-3 md:p-3.5 bg-pink-50/40 hover:bg-pink-100/70 border-2 border-pink-200 rounded-2xl font-extrabold text-gray-800 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs pastel-btn">
+                    <span><strong class="text-pink-600 mr-2 text-base md:text-lg">${letter}.</strong> ${escapeHtml(formattedOpt)}${ipaHtml}<span class="opt-meaning-vi text-xs md:text-sm text-purple-600 font-bold ml-1.5"></span></span>
+                    <span class="option-icon text-pink-500 text-base md:text-lg"></span>
                 </button>`;
         }
     });
@@ -2238,12 +2226,12 @@ function restoreQuestionState(q) {
             const iconSpan = b.querySelector('.option-icon');
 
             if (completedAnswer !== undefined && bOpt === completedAnswer) {
-                b.className = "option-btn w-full p-2.5 md:p-3 bg-yellow-50/30 border-2 border-yellow-500 rounded-2xl font-extrabold text-gray-900 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs";
-                if (badge) badge.className = "opt-badge w-7 h-7 rounded-xl bg-yellow-500 text-white flex items-center justify-center font-black text-sm shrink-0 shadow-xs";
-                if (iconSpan) iconSpan.innerHTML = '<i class="fa-regular fa-circle-check text-yellow-600 text-lg"></i>';
+                b.className = "option-btn w-full p-2.5 md:p-3 bg-pink-50/30 border-2 border-pink-500 rounded-2xl font-extrabold text-gray-900 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs";
+                if (badge) badge.className = "opt-badge w-7 h-7 rounded-xl bg-pink-500 text-white flex items-center justify-center font-black text-sm shrink-0 shadow-xs";
+                if (iconSpan) iconSpan.innerHTML = '<i class="fa-regular fa-circle-check text-pink-600 text-lg"></i>';
             } else {
-                b.className = "option-btn w-full p-2.5 md:p-3 bg-white hover:bg-yellow-50/50 border border-yellow-200 rounded-2xl font-extrabold text-gray-800 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs";
-                if (badge) badge.className = "opt-badge w-7 h-7 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center font-black text-sm shrink-0";
+                b.className = "option-btn w-full p-2.5 md:p-3 bg-white hover:bg-pink-50/50 border border-pink-200 rounded-2xl font-extrabold text-gray-800 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs";
+                if (badge) badge.className = "opt-badge w-7 h-7 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center font-black text-sm shrink-0";
                 if (iconSpan) iconSpan.innerHTML = '';
             }
         });
@@ -2257,10 +2245,10 @@ function restoreQuestionState(q) {
             b.disabled = true;
             const bOpt = b.getAttribute('data-opt');
             if (bOpt === q.answer) {
-                b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
                 b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
             } else if (!isCorrect && bOpt === completedAnswer) {
-                b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
                 b.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
             }
         });
@@ -2271,7 +2259,7 @@ function restoreQuestionState(q) {
         document.querySelectorAll('.option-btn').forEach(b => {
             const bOpt = b.getAttribute('data-opt');
             if (wrongAttempts.includes(bOpt)) {
-                b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
                 b.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
                 b.disabled = true;
             }
@@ -2282,7 +2270,7 @@ function restoreQuestionState(q) {
         document.querySelectorAll('.option-btn').forEach(b => {
             const bOpt = b.getAttribute('data-opt');
             if (bOpt === completedAnswer) {
-                b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
                 b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
                 b.disabled = true;
             }
@@ -2335,12 +2323,12 @@ function checkAnswer(selectedOpt) {
             const iconSpan = b.querySelector('.option-icon');
 
             if (bOpt === selectedOpt) {
-                b.className = "option-btn w-full p-2.5 md:p-3 bg-yellow-50/30 border-2 border-yellow-500 rounded-2xl font-extrabold text-gray-900 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs";
-                if (badge) badge.className = "opt-badge w-7 h-7 rounded-xl bg-yellow-500 text-white flex items-center justify-center font-black text-sm shrink-0 shadow-xs";
-                if (iconSpan) iconSpan.innerHTML = '<i class="fa-regular fa-circle-check text-yellow-600 text-lg"></i>';
+                b.className = "option-btn w-full p-2.5 md:p-3 bg-pink-50/30 border-2 border-pink-500 rounded-2xl font-extrabold text-gray-900 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs";
+                if (badge) badge.className = "opt-badge w-7 h-7 rounded-xl bg-pink-500 text-white flex items-center justify-center font-black text-sm shrink-0 shadow-xs";
+                if (iconSpan) iconSpan.innerHTML = '<i class="fa-regular fa-circle-check text-pink-600 text-lg"></i>';
             } else {
-                b.className = "option-btn w-full p-2.5 md:p-3 bg-white hover:bg-yellow-50/50 border border-yellow-200 rounded-2xl font-extrabold text-gray-800 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs";
-                if (badge) badge.className = "opt-badge w-7 h-7 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center font-black text-sm shrink-0";
+                b.className = "option-btn w-full p-2.5 md:p-3 bg-white hover:bg-pink-50/50 border border-pink-200 rounded-2xl font-extrabold text-gray-800 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs";
+                if (badge) badge.className = "opt-badge w-7 h-7 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center font-black text-sm shrink-0";
                 if (iconSpan) iconSpan.innerHTML = '';
             }
         });
@@ -2369,10 +2357,10 @@ function checkAnswer(selectedOpt) {
             b.disabled = false; // Không khoá nút nữa — để bé bấm nghe lại BẤT KỲ đáp án nào (học đủ cả 4 từ, không chỉ từ đúng)
             const bOpt = b.getAttribute('data-opt');
             if (bOpt === q.answer) {
-                b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
                 b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
             } else if (bOpt === selectedOpt) {
-                b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
                 b.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
             }
             b.onclick = () => {
@@ -2410,7 +2398,7 @@ function checkAnswer(selectedOpt) {
             b.disabled = false; // Không khoá nút nữa — để bé bấm nghe lại BẤT KỲ đáp án nào (học đủ cả 4 từ, không chỉ từ đúng)
             const bOpt = b.getAttribute('data-opt');
             if (bOpt === q.answer) {
-                b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
                 b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
             }
             b.onclick = () => {
@@ -2435,7 +2423,7 @@ function checkAnswer(selectedOpt) {
 
         document.querySelectorAll('.option-btn').forEach(b => {
             if (b.getAttribute('data-opt') === selectedOpt) {
-                b.classList.remove('bg-yellow-50/40', 'border-yellow-200');
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
                 b.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
                 b.disabled = true;
             }
@@ -2554,7 +2542,7 @@ function showResultScreen() {
 
     const nextActionLabel = document.getElementById('report-next-action-label');
     if (nextActionLabel) {
-        nextActionLabel.textContent = activeRoadmapContext ? '🔙 Quay lại tiến trình tuần' : '🚀 Làm đề thi tiếp theo';
+        nextActionLabel.textContent = activeRoadmapContext ? '🔙 Quay lại Bài tập' : '🚀 Làm đề thi tiếp theo';
     }
 
     const historyBtn = document.getElementById('report-history-btn');
@@ -2614,15 +2602,15 @@ function renderReportTopicsBreakdown() {
             ? (data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0)
             : (data.maxScore > 0 ? Math.round((data.earnedScore / data.maxScore) * 100) : 0);
         const isPassed = pct >= 50;
-        const badgeClass = isPassed ? 'bg-amber-100 text-amber-800 border border-amber-200' : 'bg-orange-50 text-orange-700 border border-orange-200';
+        const badgeClass = isPassed ? 'bg-amber-100 text-amber-800 border border-amber-200' : 'bg-purple-50 text-purple-700 border border-purple-200';
         const badgeText = isPassed ? 'Đạt yêu cầu' : 'Cần luyện tập thêm';
-        const barColor = isPassed ? 'bg-gradient-to-r from-amber-400 to-orange-400' : 'bg-gradient-to-r from-yellow-400 to-orange-400';
+        const barColor = isPassed ? 'bg-gradient-to-r from-amber-400 to-purple-400' : 'bg-gradient-to-r from-pink-400 to-purple-400';
         const scoreLine = isRoadmap
-            ? `<span>Số câu đúng: <strong class="text-yellow-600">${data.correct}/${data.total} câu</strong></span>`
-            : `<span>Điểm đạt: <strong class="text-yellow-600">${data.earnedScore.toFixed(1)} / ${data.maxScore.toFixed(1)}đ</strong></span>`;
+            ? `<span>Số câu đúng: <strong class="text-pink-600">${data.correct}/${data.total} câu</strong></span>`
+            : `<span>Điểm đạt: <strong class="text-pink-600">${data.earnedScore.toFixed(1)} / ${data.maxScore.toFixed(1)}đ</strong></span>`;
 
         html += `
-            <div class="bg-yellow-50/40 border border-yellow-100 rounded-2xl p-3 flex flex-col justify-between space-y-2">
+            <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-3 flex flex-col justify-between space-y-2">
                 <div class="flex items-center justify-between">
                     <span class="font-black text-slate-800 text-xs sm:text-sm">${SKILL_TAXONOMY[k].name}</span>
                     <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold ${badgeClass}">${badgeText}</span>
@@ -2631,7 +2619,7 @@ function renderReportTopicsBreakdown() {
                     ${scoreLine}
                     <span class="font-math font-black">${pct}%</span>
                 </div>
-                <div class="w-full bg-yellow-100 rounded-full h-2 overflow-hidden">
+                <div class="w-full bg-pink-100 rounded-full h-2 overflow-hidden">
                     <div class="${barColor} h-full rounded-full transition-all duration-500" style="width: ${pct}%"></div>
                 </div>
             </div>
@@ -2651,14 +2639,14 @@ function openReviewWrongModal() {
         let html = '';
         quizWrongAnswers.forEach((item, idx) => {
             html += `
-                <div class="bg-orange-50/40 border border-orange-200 rounded-2xl p-3.5 space-y-2">
+                <div class="bg-purple-50/40 border border-purple-200 rounded-2xl p-3.5 space-y-2">
                     <div class="flex items-center justify-between">
-                        <span class="px-2.5 py-0.5 bg-orange-100 text-orange-800 font-black text-xs rounded-lg">CÂU ${item.question_number || (idx + 1)}</span>
+                        <span class="px-2.5 py-0.5 bg-purple-100 text-purple-800 font-black text-xs rounded-lg">CÂU ${item.question_number || (idx + 1)}</span>
                         <span class="text-xs font-bold text-slate-500">${escapeHtml(beautifySubtopicName(item.sub_topic_label) || 'Chủ đề tổng hợp')}</span>
                     </div>
                     <p class="font-extrabold text-slate-800 text-sm">${escapeHtml(item.question_text)}</p>
                     <div class="text-xs space-y-1 font-semibold">
-                        <p class="text-orange-600"><i class="fa-solid fa-xmark mr-1"></i> Đáp án con chọn: <strong>${escapeHtml(item.dap_an_chon)}</strong></p>
+                        <p class="text-purple-600"><i class="fa-solid fa-xmark mr-1"></i> Đáp án con chọn: <strong>${escapeHtml(item.dap_an_chon)}</strong></p>
                         <p class="text-emerald-700"><i class="fa-solid fa-check mr-1"></i> Đáp án đúng chuẩn: <strong>${escapeHtml(item.dap_an_dung)}</strong></p>
                     </div>
                     <div class="p-2.5 bg-amber-50/80 border border-amber-200 rounded-xl text-xs text-amber-900 font-semibold flex items-start gap-2">
@@ -2955,7 +2943,7 @@ function renderHistoryReport(rows, sheetName) {
             datasets: [{
                 label: 'Độ thành thạo (%)',
                 data: skillKeys.map(k => skillAverages[k]),
-                backgroundColor: ['#f472b6', '#fb7185', '#f59e0b', '#a855f7', '#ec4899', '#e11d48'],
+                backgroundColor: ['#f472b6', '#fb7185', '#ec4899', '#a855f7', '#ec4899', '#e11d48'],
                 borderRadius: 8,
                 borderSkipped: false,
                 barThickness: 16
@@ -3051,7 +3039,7 @@ function renderPedagogicalEvaluation(rows, skillAverages, touchedSkills) {
     box.innerHTML = `
         <div class="bg-white/80 p-3 rounded-xl border border-amber-200">
             <span class="text-amber-700 font-extrabold block mb-0.5">🌟 1. Đánh giá tổng quan năng lực & xu hướng tiến bộ:</span>
-            <p class="text-gray-700">Học sinh <strong>${escapeHtml(currentUser.hoTen)}</strong> đã hoàn thành <strong>${count} bài kiểm tra</strong> với điểm số trung bình tích lũy đạt <strong class="text-yellow-600">${avgScoreStr}/10 điểm</strong>. ${overviewText}</p>
+            <p class="text-gray-700">Học sinh <strong>${escapeHtml(currentUser.hoTen)}</strong> đã hoàn thành <strong>${count} bài kiểm tra</strong> với điểm số trung bình tích lũy đạt <strong class="text-pink-600">${avgScoreStr}/10 điểm</strong>. ${overviewText}</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -3060,14 +3048,14 @@ function renderPedagogicalEvaluation(rows, skillAverages, touchedSkills) {
                 <p class="text-gray-700">${strengthHtml}</p>
             </div>
 
-            <div class="bg-orange-50/70 p-3 rounded-xl border border-orange-200">
-                <span class="text-orange-700 font-extrabold block mb-0.5">⚠️ 3. Điểm cần lưu ý & khắc phục:</span>
+            <div class="bg-purple-50/70 p-3 rounded-xl border border-purple-200">
+                <span class="text-purple-700 font-extrabold block mb-0.5">⚠️ 3. Điểm cần lưu ý & khắc phục:</span>
                 <p class="text-gray-700">${weaknessHtml}</p>
             </div>
         </div>
 
-        <div class="bg-white/80 p-3 rounded-xl border border-orange-200">
-            <span class="text-orange-700 font-extrabold block mb-0.5">💡 4. Kế hoạch bồi dưỡng & hướng dẫn phụ huynh:</span>
+        <div class="bg-white/80 p-3 rounded-xl border border-purple-200">
+            <span class="text-purple-700 font-extrabold block mb-0.5">💡 4. Kế hoạch bồi dưỡng & hướng dẫn phụ huynh:</span>
             <p class="text-gray-700">Ba mẹ nên dành 15 phút mỗi tối cùng con ôn lại từ vựng, đặt câu hỏi gợi mở bằng tiếng Anh đơn giản và khen ngợi kịp thời để giúp ${studentName} giữ vững niềm yêu thích tiếng Anh nhé!</p>
         </div>
     `;
@@ -3129,10 +3117,10 @@ function renderHistoryTable(rows, sheetName) {
             });
 
             bodyRows += `
-                <tr class="hover:bg-yellow-50/30 transition-colors">
+                <tr class="hover:bg-pink-50/30 transition-colors">
                     <td class="py-2.5 px-2">${idx + 1}</td>
                     <td class="py-2.5 px-2 font-black">Tuần ${r.tuan || (idx + 1)}</td>
-                    <td class="py-2.5 px-2 font-black text-orange-600">${itemDiem}</td>
+                    <td class="py-2.5 px-2 font-black text-purple-600">${itemDiem}</td>
                     ${skillCells}
                     <td class="py-2.5 px-2 text-gray-500">${dateStr}</td>
                     <td class="py-2.5 px-2 text-gray-500">${durationStr}</td>
@@ -3156,10 +3144,10 @@ function renderHistoryTable(rows, sheetName) {
             });
 
             bodyRows += `
-                <tr class="hover:bg-yellow-50/30 transition-colors">
+                <tr class="hover:bg-pink-50/30 transition-colors">
                     <td class="py-2.5 px-2">${idx + 1}</td>
                     <td class="py-2.5 px-2 font-black">${r.deSo ? `Đề ${r.deSo}` : `Tuần ${r.tuan || (idx + 1)}`}</td>
-                    <td class="py-2.5 px-2 font-black text-orange-600">${itemDiem}</td>
+                    <td class="py-2.5 px-2 font-black text-purple-600">${itemDiem}</td>
                     ${examSkillCells}
                     <td class="py-2.5 px-2 text-gray-500">${dateStr}</td>
                     <td class="py-2.5 px-2 text-gray-500">${durationStr}</td>
@@ -3171,7 +3159,7 @@ function renderHistoryTable(rows, sheetName) {
     const html = `
         <tr class="bg-amber-100/90 text-amber-950 font-black border-b-2 border-amber-200">
             <td class="py-2.5 px-2" colspan="2">Điểm trung bình</td>
-            <td class="py-2.5 px-2 text-orange-600">${avgTong}</td>
+            <td class="py-2.5 px-2 text-purple-600">${avgTong}</td>
             ${summaryCells}
             <td class="py-2.5 px-2" colspan="2">--</td>
         </tr>
@@ -3393,7 +3381,7 @@ function updateQuizPalletUI() {
         const answer = userAnswers[idx];
         const isAnswered = answer !== undefined;
         const isCurrent = idx === currentQIndex;
-        let cls = 'bg-white text-yellow-400 border-yellow-200 hover:bg-yellow-50';
+        let cls = 'bg-white text-pink-400 border-pink-200 hover:bg-pink-50';
 
         if (isAnswered) {
             if (isRoadmap) {
@@ -3407,7 +3395,7 @@ function updateQuizPalletUI() {
                 cls = 'bg-emerald-500 text-white border-emerald-600 hover:bg-emerald-600';
             }
         }
-        if (isCurrent) cls = 'bg-gradient-to-br from-yellow-500 to-orange-500 text-white border-yellow-500 shadow-md';
+        if (isCurrent) cls = 'bg-gradient-to-br from-pink-500 to-purple-500 text-white border-pink-500 shadow-md';
         html += `<button onclick="jumpToQuestion(${idx})" class="${btnSize} shrink-0 rounded-xl border-2 font-black flex items-center justify-center transition-colors duration-150 ${cls}">${idx + 1}</button>`;
     });
     container.innerHTML = html;
@@ -3435,7 +3423,7 @@ function showLoadingOverlay(msg) {
         el = document.createElement('div');
         el.id = 'loading-overlay';
         el.className = 'fixed inset-0 bg-black/30 flex items-center justify-center z-50';
-        el.innerHTML = `<div class="bg-white px-6 py-4 rounded-2xl shadow-xl font-extrabold text-yellow-600 flex items-center space-x-3"><i class="fa-solid fa-spinner fa-spin"></i><span id="loading-overlay-text"></span></div>`;
+        el.innerHTML = `<div class="bg-white px-6 py-4 rounded-2xl shadow-xl font-extrabold text-pink-600 flex items-center space-x-3"><i class="fa-solid fa-spinner fa-spin"></i><span id="loading-overlay-text"></span></div>`;
         document.body.appendChild(el);
     }
     document.getElementById('loading-overlay-text').textContent = msg;
@@ -3458,11 +3446,11 @@ function updateAutoSpeechButtonUI() {
         icon.className = 'fa-solid fa-volume-high';
         btn.title = 'Đang BẬT tự động đọc câu hỏi — bấm để tắt';
         btn.classList.remove('bg-gray-100', 'text-gray-400', 'border-gray-200');
-        btn.classList.add('bg-yellow-50', 'text-yellow-600', 'border-yellow-200');
+        btn.classList.add('bg-pink-50', 'text-pink-600', 'border-pink-200');
     } else {
         icon.className = 'fa-solid fa-volume-xmark';
         btn.title = 'Đang TẮT tự động đọc câu hỏi — bấm để bật';
-        btn.classList.remove('bg-yellow-50', 'text-yellow-600', 'border-yellow-200');
+        btn.classList.remove('bg-pink-50', 'text-pink-600', 'border-pink-200');
         btn.classList.add('bg-gray-100', 'text-gray-400', 'border-gray-200');
     }
 }
@@ -3532,7 +3520,7 @@ function renderMiniGameTopicMenu({
     const total = countFor('all');
     return `
         <div class="mg-topic-menu w-full max-w-4xl mx-auto">
-            <div class="w-full bg-yellow-50/35 border-2 border-yellow-100 rounded-2xl px-4 py-4 md:py-5 text-center mb-3">
+            <div class="w-full bg-pink-50/35 border-2 border-pink-100 rounded-2xl px-4 py-4 md:py-5 text-center mb-3">
                 <p class="text-base md:text-lg text-gray-700 font-bold leading-relaxed">${escapeHtml(subtitle)}</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full">
@@ -3593,6 +3581,7 @@ const MINIGAME_LIST = [
 ];
 
 function openMiniGameHub() {
+    setMainTabActive_('games');
     stopSpeaking();
     // Bắt buộc đăng nhập mới vào được Mini Game (giống mục 11, Đấu trường đề thi, Tiến trình tuần)
     if (!requirePremium('Mini Game')) return;
@@ -3696,5 +3685,100 @@ function getWordSearchVocabPool(topicId = 'all') {
         .map(item => ({ w: item.word.toUpperCase(), vi: item.vietnamese }));
 }
 
+
+
+// ==========================================
+// V8 - KHUNG MỚI: KHÁM PHÁ → BÀI HỌC → BÀI TẬP → ÔN TẬP → ĐỀ THI → MINI GAMES
+// SGK Global Success là trục Bài học/Bài tập; giữ nguyên quiz/exam/TTS/minigame/backend cũ.
+// ==========================================
+let currentMainTab = 'discover';
+const BAI_HOC_TA3_DATA_FILE = 'assets/data/bai_hoc_tieng_anh_3.json';
+let baiHocTa3DataCache = null;
+let inBaiHocFlow = false;
+let activeBaiHocContext = { semester: 1, bai: null, lessonId: null, pageNo: 1 };
+
+function setMainTabActive_(tabName) {
+    currentMainTab = tabName || 'discover';
+    document.querySelectorAll('.main-module-tab').forEach(btn => {
+        const active = btn.dataset.tab === currentMainTab;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+}
+function refreshMainTabLocks_() {
+    const locked = !hasPremiumAccess();
+    ['roadmap-lock-icon','review-lock-icon','exam-lock-icon','minigame-lock-icon'].forEach(id => document.getElementById(id)?.classList.toggle('hidden', !locked));
+}
+function openMainTab(tabName) {
+    stopSpeaking(); clearInterval(quizTimerInterval); setMainTabActive_(tabName);
+    if (tabName === 'discover') return goHome();
+    if (tabName === 'lessons') return openLessonsTab();
+    if (tabName === 'exercises') return openRoadmap(1);
+    if (tabName === 'review') return openTopic(11, '11. Practice & Play', '🎮');
+    if (tabName === 'exams') { if (!requirePremium('Đấu trường đề thi')) return setMainTabActive_('discover'); return openExamHub(); }
+    if (tabName === 'games') return openMiniGameHub();
+}
+
+async function loadBaiHocTa3Data() {
+    if (baiHocTa3DataCache) return baiHocTa3DataCache;
+    const res = await fetch(BAI_HOC_TA3_DATA_FILE);
+    if (!res.ok) throw new Error('Không thể tải bai_hoc_tieng_anh_3.json');
+    baiHocTa3DataCache = await res.json(); return baiHocTa3DataCache;
+}
+function getBaiHocTa3ProgressKey_(){ return `ta3_bai_hoc_done_v1_${String(currentUser?.maHS||'KHACH').toUpperCase()}`; }
+function getBaiHocTa3CompletedSet_(){ try{return new Set(JSON.parse(localStorage.getItem(getBaiHocTa3ProgressKey_())||'[]'));}catch(e){return new Set();} }
+function saveBaiHocTa3CompletedSet_(s){ try{localStorage.setItem(getBaiHocTa3ProgressKey_(),JSON.stringify([...s]));}catch(e){} }
+function openLessonsTab(){ return openBaiHocHub(1); }
+async function openBaiHocHub(semesterNumber=1){
+    stopSpeaking(); clearInterval(quizTimerInterval); setMainTabActive_('lessons'); inBaiHocFlow=true; inMiniGameFlow=false;
+    activeExamContext=null; activeRoadmapContext=null; activeTopicId=null; pendingTopicQuiz=null;
+    activeBaiHocContext={semester:Number(semesterNumber)||1,bai:null,lessonId:null,pageNo:1};
+    updateNavTabs('Bài học','📖',null); switchAppView('view-bai-hoc-hub'); showLoadingOverlay('Đang mở Bài học Tiếng Anh 3...');
+    try{const data=await loadBaiHocTa3Data();renderBaiHocTa3Hub_(data,activeBaiHocContext.semester);}catch(err){alert(`Không thể mở Bài học: ${err.message}`);}finally{hideLoadingOverlay();}
+}
+function renderBaiHocTa3Hub_(data,semester){
+    const tabs=document.getElementById('bai-hoc-semester-tabs'),grid=document.getElementById('bai-hoc-grid'),sub=document.getElementById('bai-hoc-hub-subtitle');if(!tabs||!grid)return;
+    const arr=(data.bai_hoc||[]).filter(x=>Number(x.semester)===Number(semester)),done=getBaiHocTa3CompletedSet_();
+    tabs.innerHTML=[1,2].map(s=>`<button onclick="openBaiHocHub(${s})" class="semester-switch-btn ${Number(s)===Number(semester)?'is-active':'is-inactive'}"><span class="block">Semester ${s}</span><span class="block text-[10px] mt-0.5 opacity-80">Học kỳ ${s}</span></button>`).join('');
+    if(sub)sub.innerHTML=`Semester ${semester} · ${arr.length} Units<span class="block text-[10px] text-slate-400 mt-1">Học kỳ ${semester} · mỗi bài 3 trang</span>`;
+    grid.innerHTML=arr.map((l,idx)=>{const ok=done.has(`${l.lesson_id}_done`);return `<button onclick="openBaiHocTa3_(${l.bai},1)" class="text-left min-h-[92px] rounded-2xl border-2 ${ok?'border-emerald-300 bg-emerald-50/60':(idx%2?'border-purple-200 bg-gradient-to-br from-white to-purple-50':'border-pink-200 bg-gradient-to-br from-white to-pink-50')} px-3 py-2.5 hover:border-fuchsia-400 hover:shadow-md transition-shadow"><div class="flex items-center justify-between"><span class="font-black text-purple-700 text-[14px] md:text-[15px]">Unit ${l.bai}</span><span>${ok?'✅':'›'}</span></div><div class="mt-1.5 text-[12px] md:text-[13px] leading-5 font-extrabold text-slate-700">${escapeHtml(l.source_title||'')}</div></button>`}).join('');
+}
+async function openBaiHocTa3_(bai,pageNo=1){
+    stopSpeaking();const data=await loadBaiHocTa3Data(),l=(data.bai_hoc||[]).find(x=>Number(x.bai)===Number(bai));if(!l)return alert('Không tìm thấy bài học.');
+    const p=Math.max(1,Math.min(3,Number(pageNo)||1));activeBaiHocContext={semester:Number(l.semester),bai:Number(bai),lessonId:l.lesson_id,pageNo:p};setMainTabActive_('lessons');updateNavTabs('Bài học','📖',`Unit ${bai}`,l.source_title||'');switchAppView('view-bai-hoc-lesson');renderBaiHocTa3Lesson_(l,p);
+}
+function escapeJsStringTa3_(value){return String(value??'').replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/\r/g,'\\r').replace(/\n/g,'\\n').replace(/<\//g,'<\\/');}
+function renderBaiHocTa3Lesson_(l,pageNo){
+    const meta=document.getElementById('bai-hoc-lesson-meta'),host=document.getElementById('bai-hoc-sections');if(!host)return;if(meta)meta.innerHTML=`Unit ${l.bai} · ${escapeHtml(l.source_title||'')}<div class="text-xs text-slate-400 mt-1">${escapeHtml(l.source_title_vi||'')}</div>`;
+    const p=(l.pages||[]).find(x=>Number(x.page_no)===Number(pageNo))||l.pages?.[0];if(!p)return;let body=p.page_type==='lesson'?renderTa3LessonPage_(p):(p.page_type==='questions'?renderTa3QuestionsPage_(p):renderTa3SummaryPage_(p,l));host.innerHTML=`${renderTa3LessonTabs_(l,pageNo)}${body}${renderTa3LessonBottom_(l,pageNo)}`;
+}
+function renderTa3LessonTabs_(l,pageNo){const a=[['📖','Learn','Bài học'],['❓','Practice','Câu hỏi'],['🌟','Review','Tổng kết']];return `<div class="grid grid-cols-3 gap-2 mb-3">${a.map((x,i)=>{const n=i+1,ac=Number(pageNo)===n;return `<button onclick="openBaiHocTa3_(${l.bai},${n})" class="py-2.5 rounded-xl border font-black text-sm ${ac?'bg-gradient-to-r from-pink-500 to-purple-500 text-white border-purple-400 shadow-md':'bg-pink-50/60 text-purple-700 border-pink-200'}">${x[0]}<span class="block">${x[1]}</span><span class="block text-[9px] opacity-75">${x[2]}</span></button>`}).join('')}</div>`;}
+function renderTa3LessonPage_(p){
+    const ph=p.phonics||{},voc=p.vocabulary||[],dialog=p.mini_dialogue||[];const words=(ph.words||[]).map(w=>`<button onclick="speakEnglish('${escapeJsStringTa3_(w)}',0.88)" class="lesson-chip">${escapeHtml(w)} 🔊</button>`).join('');const vocab=voc.map(v=>`<div class="rounded-xl bg-white border border-pink-100 px-3 py-2 font-black text-slate-700"><div class="flex justify-between gap-2"><div>${escapeHtml(v.word||'')}<div class="text-[10px] text-slate-400">${escapeHtml(v.meaning||'')}</div></div><button onclick="speakEnglish('${escapeJsStringTa3_(v.word||'')}',0.88)" class="w-8 h-8 rounded-lg bg-pink-50 text-purple-600">🔊</button></div></div>`).join('');const dlg=dialog.map(x=>`<div class="rounded-xl bg-purple-50 border border-purple-100 px-3 py-2 text-sm font-bold flex justify-between gap-2"><span>${escapeHtml(x)}</span><button onclick="speakEnglish('${escapeJsStringTa3_(x)}',0.9)" class="w-8 h-8 rounded-lg bg-white text-purple-600">🔊</button></div>`).join('');return `<div class="space-y-3"><section class="rounded-3xl border-2 border-pink-200 bg-gradient-to-br from-pink-50 via-white to-purple-50 p-4"><div class="font-bold text-slate-600">${escapeHtml(p.intro||'')}</div><div class="grid md:grid-cols-2 gap-3 mt-3"><div class="rounded-2xl bg-white border border-pink-100 p-3"><div class="text-xs font-black text-purple-600 mb-2">🔤 PHONICS</div><div class="text-lg font-black">${escapeHtml(ph.letter||'')} · ${escapeHtml(ph.sound||'')}</div><div class="flex flex-wrap gap-2 mt-2">${words}</div></div><div class="rounded-2xl bg-white border border-purple-100 p-3"><div class="text-xs font-black text-purple-600 mb-2">📚 VOCABULARY</div><div class="grid gap-2">${vocab}</div></div></div></section><section class="rounded-2xl bg-purple-50 border border-purple-200 p-4"><div class="text-xs font-black text-purple-700">💬 SENTENCE PATTERN</div><div class="text-lg font-black mt-1">${escapeHtml(p.sentence_pattern||'')}</div><button onclick="speakEnglish('${escapeJsStringTa3_(p.sentence_pattern||'')}',0.88)" class="mt-2 px-3 py-1.5 bg-white border border-purple-200 rounded-xl text-xs font-black text-purple-700">🔊 Nghe mẫu</button></section><section class="space-y-2">${dlg}</section></div>`;
+}
+function handleTa3PracticeChoice_(btn,isCorrect,correctText){if(!btn||btn.disabled)return;const card=btn.closest('[data-ta3-card]'),fb=card?.querySelector('[data-ta3-feedback]');if(isCorrect){card?.querySelectorAll('[data-ta3-choice]').forEach(b=>b.disabled=true);btn.classList.add('bg-emerald-100','border-emerald-400','text-emerald-800');if(fb){fb.className='mt-2 text-xs font-black text-emerald-700';fb.textContent='✅ Great! Đúng rồi.';}if(correctText)speakEnglish(correctText,0.9);}else{btn.disabled=true;btn.classList.add('bg-rose-100','border-rose-400','text-rose-700');if(fb){fb.className='mt-2 text-xs font-black text-amber-700';fb.textContent='💡 Chưa đúng, con thử lại nhé.';}}}
+function renderTa3QuestionsPage_(p){const items=(p.items||[]).map((it,i)=>{if(it.type==='choice'){const correct=Number(it.answer),correctText=(it.options||[])[correct]||'',opts=(it.options||[]).map((o,j)=>`<button data-ta3-choice onclick="handleTa3PracticeChoice_(this,${j===correct},'${escapeJsStringTa3_(correctText)}')" class="text-left rounded-xl border border-pink-200 bg-white px-3 py-2.5 font-bold text-sm">${String.fromCharCode(65+j)}. ${escapeHtml(o)}</button>`).join('');return `<div data-ta3-card class="rounded-2xl bg-pink-50/50 border border-pink-100 p-4"><div class="font-black mb-2">${i+1}. ${escapeHtml(it.prompt||'')}<div class="text-[10px] text-slate-400">${escapeHtml(it.prompt_vi||'')}</div></div><div class="grid gap-2">${opts}</div><div data-ta3-feedback></div></div>`;}const t=it.speak_text||'';return `<div class="rounded-2xl bg-purple-50 border border-purple-100 p-4"><div class="font-black text-purple-700">🎙️ ${escapeHtml(it.prompt||'')}</div><div class="mt-2 font-bold">${escapeHtml(t)}</div><button onclick="speakEnglish('${escapeJsStringTa3_(t)}',0.88)" class="mt-2 px-3 py-1.5 rounded-lg bg-white border border-purple-200 text-xs font-black text-purple-700">🔊 Nghe mẫu</button></div>`;}).join('');return `<div class="space-y-3"><div class="rounded-2xl bg-sky-50 border border-sky-100 p-3 font-bold">${escapeHtml(p.recall||'')}<div class="text-[10px] text-slate-400">${escapeHtml(p.recall_vi||'')}</div></div>${items}</div>`;}
+function renderTa3SummaryPage_(p,l){const pts=(p.key_points||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join(''),lines=(p.practice_lines||[]).map(x=>`<div class="rounded-xl bg-white border border-pink-100 px-3 py-2 font-black flex justify-between"><span>${escapeHtml(x)}</span><button onclick="speakEnglish('${escapeJsStringTa3_(x)}',0.88)">🔊</button></div>`).join('');return `<div class="space-y-3"><section class="rounded-3xl bg-pink-50 border-2 border-pink-200 p-4"><div class="text-xs font-black text-purple-600">🧠 RECALL</div><ul class="list-disc pl-5 mt-2 space-y-2 font-semibold">${pts}</ul></section><section class="rounded-2xl bg-white border border-purple-100 p-4"><div class="font-black text-purple-700 mb-2">🗣️ USE</div>${lines}</section><section class="rounded-2xl bg-purple-50 border border-purple-200 p-4"><div class="text-xs font-black text-purple-600">⭐ MINI CHALLENGE</div><div class="font-black mt-1">${escapeHtml(p.transfer_challenge||p.finish_prompt||'')}</div></section><button onclick="markBaiHocTa3Complete_(${l.bai})" class="w-full py-3 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-500 text-white font-black">✅ Hoàn thành Unit ${l.bai}</button></div>`;}
+function renderTa3LessonBottom_(l,pageNo){const prev=pageNo>1?`<button onclick="openBaiHocTa3_(${l.bai},${pageNo-1})" class="px-4 py-2 rounded-xl bg-white border border-purple-200 text-purple-700 font-black text-xs">← Trang trước</button>`:'<span></span>',next=pageNo<3?`<button onclick="openBaiHocTa3_(${l.bai},${pageNo+1})" class="px-5 py-2 rounded-xl bg-gradient-to-r from-pink-500 to-purple-500 text-white font-black text-xs">Trang tiếp →</button>`:`<button onclick="openBaiHocTa3_(${l.bai},1)" class="px-4 py-2 rounded-xl bg-pink-50 border border-pink-200 text-purple-700 font-black text-xs">↺ Xem lại</button>`;return `<div class="flex items-center justify-between gap-3 pt-3">${prev}<div class="text-xs font-black text-slate-400">${pageNo}/3</div>${next}</div>`;}
+function markBaiHocTa3Complete_(bai){const id=activeBaiHocContext?.lessonId;if(!id)return;const s=getBaiHocTa3CompletedSet_();s.add(`${id}_done`);saveBaiHocTa3CompletedSet_(s);alert(`✅ Bé đã hoàn thành Unit ${bai}!`);}
+
+function getBaiTapTa3UnlockKey_(){return `ta3_bai_tap_unlocked_v1_${String(currentUser?.maHS||'KHACH').toUpperCase()}`;}
+function getUnlockedBaiTapTa3_(){let local=1;try{local=Number(localStorage.getItem(getBaiTapTa3UnlockKey_())||1)||1;}catch(e){}return Math.max(1,local);}
+function saveUnlockedBaiTapTa3_(n){try{localStorage.setItem(getBaiTapTa3UnlockKey_(),String(Math.max(1,Number(n)||1)));}catch(e){}if(currentUser)currentUser.baiTapHienTai=Math.max(Number(currentUser.baiTapHienTai||1),Number(n)||1);}
+function qSearchTa3_(q){return [q.question_text,q.answer,q.audio_text,q.reading_title,q.reading_passage,q.hint,...(q.options||[])].filter(Boolean).join(' ').toLowerCase();}
+function getQuestionsForBaiTapTa3_(bt){const all=allQuestionsFlatCache||[];if(!bt||!all.length)return[];const kw=(bt.keywords||[]).map(x=>String(x).toLowerCase()),weeks=new Set(bt.week_ids||[]);let primary=all.filter(q=>weeks.has(String(q.week||''))||kw.some(k=>qSearchTa3_(q).includes(k)));let candidates=shuffleArray(primary);if(candidates.length<20){const skills=new Set(candidates.map(q=>q.skill_tag));const related=shuffleArray(all.filter(q=>!candidates.includes(q)&&skills.has(q.skill_tag)));candidates=candidates.concat(related.slice(0,30-candidates.length));}const target=Math.min(Number(bt.candidate_pool_target)||30,candidates.length);return shuffleArray(candidates.slice(0,target)).slice(0,Math.min(Number(bt.draw_count)||20,target));}
+async function openRoadmap(semesterNumber=1){stopSpeaking();if(!requirePremium('Bài tập')){setMainTabActive_('discover');return;}setMainTabActive_('exercises');inMiniGameFlow=false;inBaiHocFlow=false;updateNavTabs('Bài tập','✏️',null);switchAppView('view-roadmap');showLoadingOverlay('Đang mở Bài tập...');try{const data=await loadBaiHocTa3Data();renderBaiTapTa3Grid_(data,semesterNumber);}catch(err){alert(`Không thể mở Bài tập: ${err.message}`);}finally{hideLoadingOverlay();}}
+function renderBaiTapTa3Grid_(data,semester){const host=document.getElementById('roadmap-svg-container'),tabs=document.getElementById('bai-tap-semester-tabs');if(!host)return;const arr=(data.bai_tap||[]).filter(x=>Number(x.semester)===Number(semester)),unlocked=getUnlockedBaiTapTa3_();if(tabs)tabs.innerHTML=[1,2].map(s=>`<button onclick="openRoadmap(${s})" class="semester-switch-btn ${Number(s)===Number(semester)?'is-active':'is-inactive'}">Semester ${s}<span class="block text-[9px] opacity-75">Học kỳ ${s}</span></button>`).join('');host.innerHTML=`<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5">${arr.map((bt,idx)=>{const open=Number(bt.bai)<=unlocked;return `<button onclick="${open?`selectBaiTapTa3_(${bt.bai})`:`showLockedBaiTapTa3_(${bt.bai})`}" class="relative text-left min-h-[92px] rounded-2xl border-2 px-3 py-2.5 ${open?(idx%2?'bg-gradient-to-br from-white to-purple-50 border-purple-200 hover:border-fuchsia-400':'bg-gradient-to-br from-white to-pink-50 border-pink-200 hover:border-fuchsia-400'):'bg-slate-50 border-slate-200 opacity-60'} hover:shadow-md transition-shadow"><div class="flex items-center justify-between"><span class="font-black ${open?'text-purple-700':'text-slate-500'} text-[14px] md:text-[15px]">Unit ${bt.bai}</span><span>${open?'':'🔒'}</span></div><div class="text-[12px] md:text-[13px] font-extrabold text-slate-700 mt-1.5 leading-5">${escapeHtml(bt.title||'')}</div><div class="text-[10px] mt-1.5 ${open?'text-fuchsia-600':'text-slate-400'} font-black">${open?'20 câu':'Cần ≥80% bài trước'}</div></button>`}).join('')}</div>`;}
+function showLockedBaiTapTa3_(bai){alert(`🔒 Bài tập ${bai} chưa mở. Bé cần đạt từ 80% ở Bài tập trước để mở khóa nhé!`);}
+async function selectBaiTapTa3_(bai){stopSpeaking();showLoadingOverlay(`Đang chuẩn bị Bài tập ${bai}...`);try{const data=await loadBaiHocTa3Data(),bt=(data.bai_tap||[]).find(x=>Number(x.bai)===Number(bai));if(!bt)throw new Error('Không tìm thấy Bài tập');if(Number(bai)>getUnlockedBaiTapTa3_())return showLockedBaiTapTa3_(bai);await fetchAllTopicsData();const qs=getQuestionsForBaiTapTa3_(bt);if(qs.length<10)throw new Error('Kho câu hỏi phù hợp Unit này chưa đủ dữ liệu');activeRoadmapContext={week:Number(bai),bai:Number(bai),topicId:`TA3_BT${String(bai).padStart(2,'0')}`,chuDe:`Bài tập ${bai} · ${bt.title||''}`};pendingTopicQuiz=null;activeExamContext=null;updateNavTabs('Bài tập','✏️',`Unit ${bai}`,bt.title||'');startTopicQuiz(bai,activeRoadmapContext.chuDe,qs,null);}catch(err){alert(`Không thể mở Bài tập: ${err.message}`);}finally{hideLoadingOverlay();}}
+
+// Ghi đè view switch để nhận thêm 2 view Bài học.
+function switchAppView(viewId){stopSpeaking();['view-dashboard-grid','view-bai-hoc-hub','view-bai-hoc-lesson','view-alphabet','view-lecture','view-quiz','view-roadmap','view-minigame-hub','view-game-play','view-exam-hub','view-result'].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.classList.toggle('hidden',id!==viewId);});}
+function goHome(){stopSpeaking();clearInterval(quizTimerInterval);inAlphaIpaFlow=false;inMiniGameFlow=false;inBaiHocFlow=false;activeExamContext=null;activeRoadmapContext=null;activeTopicId=null;pendingTopicQuiz=null;setMainTabActive_('discover');updateNavTabs(null,null,null);switchAppView('view-dashboard-grid');const g=document.getElementById('view-dashboard-grid');if(g&&!g.children.length)renderDashboardGrid();}
+function returnToTopicLecture(){stopSpeaking();clearInterval(quizTimerInterval);if(inBaiHocFlow){openBaiHocHub(activeBaiHocContext?.semester||1);return;}if(activeExamContext){openExamHub();return;}if(activeRoadmapContext){openRoadmap(activeRoadmapContext?.bai>10?2:1);return;}if(pendingTopicQuiz){showLectureAndSubtopics(pendingTopicQuiz.topicNum,pendingTopicQuiz.topicName,{questions:pendingTopicQuiz.questions});return;}if(inAlphaIpaFlow){openAlphabetIPA();return;}if(inMiniGameFlow){openMiniGameHub();return;}goHome();}
+
+async function saveWeeklyProgressToSheet(percent,starCount,scoreVal){
+    const bai=Number(activeRoadmapContext?.bai??activeRoadmapContext?.week??1),chuDe=activeRoadmapContext?.chuDe||`Bài tập ${bai}`,thoiGianLamBai=quizStartTime?formatDuration(Date.now()-quizStartTime):'',scoreThang10=(scoreVal??((score/Math.max(1,activeQuestionsList.length))*10)).toFixed(1);const skillCorrect={},skillTotal={};SKILL_KEYS.forEach(k=>{skillCorrect[k]=0;skillTotal[k]=0});quizAnsweredLog.forEach(item=>{let k=String(item.skill_tag||'ENG_VOC').toUpperCase();if(!SKILL_KEYS.includes(k))k='ENG_VOC';skillTotal[k]++;if(item.isCorrect)skillCorrect[k]++;});const payload={student_id:currentUser.maHS,maHS:currentUser.maHS,token:currentUser.token,hoTen:currentUser.hoTen,lop:currentUser.lop,sheetName:'LichSuTienTrinhTuan',week_completed:bai,tuan:bai,baiTap:bai,chuDe,topicId:activeRoadmapContext?.topicId||`TA3_BT${String(bai).padStart(2,'0')}`,score:scoreThang10,stars_earned:starCount,tongCauHoi:activeQuestionsList.length,soCauDung:quizAnsweredLog.filter(x=>x.isCorrect).length,percent,thoiGianLamBai,wrongQuestions:quizWrongAnswers};Object.keys(SKILL_TAXONOMY).forEach(k=>{payload[SKILL_TAXONOMY[k].sheetCol]=skillCorrect[k];payload[SKILL_TAXONOMY[k].totalCol]=skillTotal[k];});let next=null;if(percent>=80){try{const data=await loadBaiHocTa3Data(),nums=(data.bai_tap||[]).map(x=>Number(x.bai)).sort((a,b)=>a-b);next=nums.find(x=>x>bai)||null;if(next){saveUnlockedBaiTapTa3_(next);if(currentUser)currentUser.tuanHienTai=Math.max(Number(currentUser.tuanHienTai||1),next);}}catch(e){}}try{await callAppsScript('saveWeeklyProgress',payload);}catch(e){}if(next)setTimeout(()=>alert(`🎉 Chúc mừng bé đạt ${percent}%! Bài tập ${next} đã được mở khóa.`),500);
+}
 
 tryAutoLogin();
