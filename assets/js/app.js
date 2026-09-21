@@ -3772,9 +3772,22 @@ function renderBaiTapTa3Grid_(data,semester){const host=document.getElementById(
 function showLockedBaiTapTa3_(bai){alert(`🔒 Bài tập ${bai} chưa mở. Bé cần đạt từ 80% ở Bài tập trước để mở khóa nhé!`);}
 async function selectBaiTapTa3_(bai){stopSpeaking();showLoadingOverlay(`Đang chuẩn bị Bài tập ${bai}...`);try{const data=await loadBaiHocTa3Data(),bt=(data.bai_tap||[]).find(x=>Number(x.bai)===Number(bai));if(!bt)throw new Error('Không tìm thấy Bài tập');if(Number(bai)>getUnlockedBaiTapTa3_())return showLockedBaiTapTa3_(bai);await fetchAllTopicsData();const qs=getQuestionsForBaiTapTa3_(bt);if(qs.length<10)throw new Error('Kho câu hỏi phù hợp Unit này chưa đủ dữ liệu');activeRoadmapContext={week:Number(bai),bai:Number(bai),topicId:`TA3_BT${String(bai).padStart(2,'0')}`,chuDe:`Bài tập ${bai} · ${bt.title||''}`};pendingTopicQuiz=null;activeExamContext=null;updateNavTabs('Bài tập','✏️',`Unit ${bai}`,bt.title||'');startTopicQuiz(bai,activeRoadmapContext.chuDe,qs,null);}catch(err){alert(`Không thể mở Bài tập: ${err.message}`);}finally{hideLoadingOverlay();}}
 
+// ============================================================
+// TA3 APP SHELL 2026: banner chính ở root tab, banner phụ + breadcrumb khi vào nội dung.
+// Chỉ điều khiển presentation, không thay đổi nghiệp vụ/dữ liệu.
+// ============================================================
+let appShellRootMode_ = true;
+function setAppShellRootMode_(isRoot) {
+    appShellRootMode_ = !!isRoot;
+    const mainBanner = document.getElementById('app-main-banner');
+    const contextBanner = document.getElementById('app-context-banner');
+    if (mainBanner) mainBanner.classList.toggle('hidden', !appShellRootMode_);
+    if (contextBanner) contextBanner.classList.toggle('hidden', appShellRootMode_);
+}
+
 // Ghi đè view switch để nhận thêm 2 view Bài học.
-function switchAppView(viewId){stopSpeaking();['view-dashboard-grid','view-bai-hoc-hub','view-bai-hoc-lesson','view-alphabet','view-lecture','view-quiz','view-roadmap','view-minigame-hub','view-game-play','view-exam-hub','view-result'].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.classList.toggle('hidden',id!==viewId);});}
-function goHome(){stopSpeaking();clearInterval(quizTimerInterval);inAlphaIpaFlow=false;inMiniGameFlow=false;inBaiHocFlow=false;activeExamContext=null;activeRoadmapContext=null;activeTopicId=null;pendingTopicQuiz=null;setMainTabActive_('discover');updateNavTabs(null,null,null);switchAppView('view-dashboard-grid');const g=document.getElementById('view-dashboard-grid');if(g&&!g.children.length)renderDashboardGrid();}
+function switchAppView(viewId){stopSpeaking();const rootViews=new Set(['view-dashboard-grid','view-bai-hoc-hub','view-roadmap','view-minigame-hub','view-exam-hub']);const reviewRoot=viewId==='view-lecture'&&currentMainTab==='review'&&!activeExamContext&&!activeRoadmapContext;setAppShellRootMode_(rootViews.has(viewId)||reviewRoot);['view-dashboard-grid','view-bai-hoc-hub','view-bai-hoc-lesson','view-alphabet','view-lecture','view-quiz','view-roadmap','view-minigame-hub','view-game-play','view-exam-hub','view-result'].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.classList.toggle('hidden',id!==viewId);});}
+function goHome(){setAppShellRootMode_(true);stopSpeaking();clearInterval(quizTimerInterval);inAlphaIpaFlow=false;inMiniGameFlow=false;inBaiHocFlow=false;activeExamContext=null;activeRoadmapContext=null;activeTopicId=null;pendingTopicQuiz=null;setMainTabActive_('discover');updateNavTabs(null,null,null);switchAppView('view-dashboard-grid');const g=document.getElementById('view-dashboard-grid');if(g&&!g.children.length)renderDashboardGrid();}
 function returnToTopicLecture(){stopSpeaking();clearInterval(quizTimerInterval);if(inBaiHocFlow){openBaiHocHub(activeBaiHocContext?.semester||1);return;}if(activeExamContext){openExamHub();return;}if(activeRoadmapContext){openRoadmap(activeRoadmapContext?.bai>10?2:1);return;}if(pendingTopicQuiz){showLectureAndSubtopics(pendingTopicQuiz.topicNum,pendingTopicQuiz.topicName,{questions:pendingTopicQuiz.questions});return;}if(inAlphaIpaFlow){openAlphabetIPA();return;}if(inMiniGameFlow){openMiniGameHub();return;}goHome();}
 
 async function saveWeeklyProgressToSheet(percent,starCount,scoreVal){
