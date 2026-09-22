@@ -229,7 +229,7 @@
         "id": "EXAM_01_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big chair.'",
+        "question": "Fill in the blank: 'He ________ a new book.'",
         "options": [
           "has",
           "are",
@@ -243,9 +243,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "chair",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "book",
+        "image": "📘",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_01_Q12",
@@ -523,7 +523,7 @@
         "id": "EXAM_02_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green ear.'",
+        "question": "Fill in the blank: 'She ________ a new ruler.'",
         "options": [
           "have",
           "has",
@@ -537,9 +537,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "ear",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "ruler",
+        "image": "📏",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_02_Q12",
@@ -817,7 +817,7 @@
         "id": "EXAM_03_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "eye",
           "car",
@@ -830,10 +830,10 @@
           "kləʊðz",
           "flaɪ"
         ],
-        "answer": "eye",
-        "audio": "eye",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_03_Q12",
@@ -1111,7 +1111,7 @@
         "id": "EXAM_04_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice brown.'",
+        "question": "Fill in the blank: 'I ________ a new kite.'",
         "options": [
           "is",
           "have",
@@ -1125,8 +1125,8 @@
           "æm"
         ],
         "answer": "have",
-        "audio": "brown",
-        "image": "📝",
+        "audio": "kite",
+        "image": "🪁",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -1405,7 +1405,7 @@
         "id": "EXAM_05_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big windy.'",
+        "question": "Fill in the blank: 'He ________ a new robot.'",
         "options": [
           "has",
           "have",
@@ -1419,9 +1419,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "windy",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "robot",
+        "image": "🤖",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_05_Q12",
@@ -1699,7 +1699,7 @@
         "id": "EXAM_06_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green friend.'",
+        "question": "Fill in the blank: 'She ________ a new bike.'",
         "options": [
           "are",
           "has",
@@ -1713,9 +1713,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "friend",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "bike",
+        "image": "🚲",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_06_Q12",
@@ -1757,9 +1757,9 @@
           "ˈdrɔːɪŋ"
         ],
         "answer": "playing chess",
-        "audio": "drawing",
+        "audio": "playing chess",
         "image": "📖",
-        "explanation": "Ong Vàng hướng dẫn: Bài đọc ghi rõ 'Linh and Mary are best friends.' nên đáp án đúng là 'playing chess' bé nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Bài đọc ghi rõ 'Mary likes playing chess.' nên đáp án đúng là 'playing chess' bé nhé!"
       }
     ]
   },
@@ -1993,7 +1993,7 @@
         "id": "EXAM_07_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "bed",
           "car",
@@ -2006,10 +2006,10 @@
           "flaɪ",
           "kləʊðz"
         ],
-        "answer": "bed",
-        "audio": "bed",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_07_Q12",
@@ -2287,7 +2287,7 @@
         "id": "EXAM_08_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice word puzzles.'",
+        "question": "Fill in the blank: 'I ________ a new pen.'",
         "options": [
           "have",
           "is",
@@ -2301,8 +2301,8 @@
           "has"
         ],
         "answer": "have",
-        "audio": "word puzzles",
-        "image": "📝",
+        "audio": "pen",
+        "image": "🖊️",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -2581,7 +2581,7 @@
         "id": "EXAM_09_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big playground.'",
+        "question": "Fill in the blank: 'He ________ a new toy.'",
         "options": [
           "are",
           "has",
@@ -2595,9 +2595,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "playground",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "toy",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_09_Q12",
@@ -2875,7 +2875,7 @@
         "id": "EXAM_10_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green hand.'",
+        "question": "Fill in the blank: 'She ________ a new hat.'",
         "options": [
           "is",
           "has",
@@ -2889,9 +2889,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "hand",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "hat",
+        "image": "🧢",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_10_Q12",
@@ -3169,7 +3169,7 @@
         "id": "EXAM_11_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "smoothie",
           "car",
@@ -3182,10 +3182,10 @@
           "kləʊðz",
           "flaɪ"
         ],
-        "answer": "smoothie",
-        "audio": "smoothie",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_11_Q12",
@@ -3463,7 +3463,7 @@
         "id": "EXAM_12_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice garden.'",
+        "question": "Fill in the blank: 'I ________ a new ruler.'",
         "options": [
           "is",
           "have",
@@ -3477,8 +3477,8 @@
           "æm"
         ],
         "answer": "have",
-        "audio": "garden",
-        "image": "📝",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -3757,7 +3757,7 @@
         "id": "EXAM_13_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big shoes.'",
+        "question": "Fill in the blank: 'He ________ a new ball.'",
         "options": [
           "is",
           "are",
@@ -3771,9 +3771,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "shoes",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "ball",
+        "image": "⚽",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_13_Q12",
@@ -4051,7 +4051,7 @@
         "id": "EXAM_14_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green parrot.'",
+        "question": "Fill in the blank: 'She ________ a new kite.'",
         "options": [
           "has",
           "are",
@@ -4065,9 +4065,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "parrot",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "kite",
+        "image": "🪁",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_14_Q12",
@@ -4345,7 +4345,7 @@
         "id": "EXAM_15_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "teacher",
           "car",
@@ -4358,10 +4358,10 @@
           "kləʊðz",
           "flaɪ"
         ],
-        "answer": "teacher",
-        "audio": "teacher",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_15_Q12",
@@ -4639,7 +4639,7 @@
         "id": "EXAM_16_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice cookie.'",
+        "question": "Fill in the blank: 'I ________ a new bike.'",
         "options": [
           "have",
           "is",
@@ -4653,8 +4653,8 @@
           "æm"
         ],
         "answer": "have",
-        "audio": "cookie",
-        "image": "📝",
+        "audio": "bike",
+        "image": "🚲",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -4933,7 +4933,7 @@
         "id": "EXAM_17_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big curly.'",
+        "question": "Fill in the blank: 'He ________ a new bag.'",
         "options": [
           "is",
           "has",
@@ -4947,9 +4947,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "curly",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "bag",
+        "image": "🎒",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_17_Q12",
@@ -5227,7 +5227,7 @@
         "id": "EXAM_18_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green brother.'",
+        "question": "Fill in the blank: 'She ________ a new pen.'",
         "options": [
           "are",
           "have",
@@ -5241,9 +5241,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "brother",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "pen",
+        "image": "🖊️",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_18_Q12",
@@ -5521,7 +5521,7 @@
         "id": "EXAM_19_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "fly",
           "car",
@@ -5534,10 +5534,10 @@
           "kləʊðz",
           "pɛn"
         ],
-        "answer": "pen",
-        "audio": "pen",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_19_Q12",
@@ -5815,7 +5815,7 @@
         "id": "EXAM_20_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice face.'",
+        "question": "Fill in the blank: 'I ________ a new hat.'",
         "options": [
           "have",
           "has",
@@ -5829,8 +5829,8 @@
           "æm"
         ],
         "answer": "have",
-        "audio": "face",
-        "image": "📝",
+        "audio": "hat",
+        "image": "🧢",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -6109,7 +6109,7 @@
         "id": "EXAM_21_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big straight.'",
+        "question": "Fill in the blank: 'He ________ a new book.'",
         "options": [
           "have",
           "are",
@@ -6123,9 +6123,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "straight",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "book",
+        "image": "📘",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_21_Q12",
@@ -6403,7 +6403,7 @@
         "id": "EXAM_22_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green skirt.'",
+        "question": "Fill in the blank: 'She ________ a new ruler.'",
         "options": [
           "has",
           "is",
@@ -6417,9 +6417,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "skirt",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "ruler",
+        "image": "📏",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_22_Q12",
@@ -6697,7 +6697,7 @@
         "id": "EXAM_23_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "fly",
           "clothes",
@@ -6710,10 +6710,10 @@
           "kɑː",
           "table tennis"
         ],
-        "answer": "table tennis",
-        "audio": "table tennis",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_23_Q12",
@@ -6991,7 +6991,7 @@
         "id": "EXAM_24_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice kitchen.'",
+        "question": "Fill in the blank: 'I ________ a new kite.'",
         "options": [
           "is",
           "have",
@@ -7005,8 +7005,8 @@
           "has"
         ],
         "answer": "have",
-        "audio": "kitchen",
-        "image": "📝",
+        "audio": "kite",
+        "image": "🪁",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -7285,7 +7285,7 @@
         "id": "EXAM_25_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big bedroom.'",
+        "question": "Fill in the blank: 'He ________ a new robot.'",
         "options": [
           "have",
           "has",
@@ -7299,9 +7299,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "bedroom",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "robot",
+        "image": "🤖",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_25_Q12",
@@ -7579,7 +7579,7 @@
         "id": "EXAM_26_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green hat.'",
+        "question": "Fill in the blank: 'She ________ a new bike.'",
         "options": [
           "have",
           "is",
@@ -7593,9 +7593,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "hat",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "bike",
+        "image": "🚲",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_26_Q12",
@@ -7873,7 +7873,7 @@
         "id": "EXAM_27_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "clothes",
           "fly",
@@ -7886,10 +7886,10 @@
           "dʒʌmp",
           "kɑː"
         ],
-        "answer": "jump",
-        "audio": "jump",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_27_Q12",
@@ -8167,7 +8167,7 @@
         "id": "EXAM_28_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice shelf.'",
+        "question": "Fill in the blank: 'I ________ a new pen.'",
         "options": [
           "am",
           "is",
@@ -8181,8 +8181,8 @@
           "hæv"
         ],
         "answer": "have",
-        "audio": "shelf",
-        "image": "📝",
+        "audio": "pen",
+        "image": "🖊️",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -8461,7 +8461,7 @@
         "id": "EXAM_29_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big fine.'",
+        "question": "Fill in the blank: 'He ________ a new toy.'",
         "options": [
           "has",
           "is",
@@ -8475,9 +8475,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "fine",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "toy",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_29_Q12",
@@ -8755,7 +8755,7 @@
         "id": "EXAM_30_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green dance.'",
+        "question": "Fill in the blank: 'She ________ a new hat.'",
         "options": [
           "have",
           "has",
@@ -8769,9 +8769,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "dance",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "hat",
+        "image": "🧢",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_30_Q12",
@@ -9049,7 +9049,7 @@
         "id": "EXAM_31_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "meat",
           "car",
@@ -9062,10 +9062,10 @@
           "kləʊðz",
           "flaɪ"
         ],
-        "answer": "meat",
-        "audio": "meat",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_31_Q12",
@@ -9343,7 +9343,7 @@
         "id": "EXAM_32_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice clothes.'",
+        "question": "Fill in the blank: 'I ________ a new ruler.'",
         "options": [
           "has",
           "have",
@@ -9357,8 +9357,8 @@
           "ɪz"
         ],
         "answer": "have",
-        "audio": "clothes",
-        "image": "📝",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -9637,7 +9637,7 @@
         "id": "EXAM_33_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big tree.'",
+        "question": "Fill in the blank: 'He ________ a new ball.'",
         "options": [
           "are",
           "is",
@@ -9651,9 +9651,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "tree",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "ball",
+        "image": "⚽",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_33_Q12",
@@ -9931,7 +9931,7 @@
         "id": "EXAM_34_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green bike.'",
+        "question": "Fill in the blank: 'She ________ a new kite.'",
         "options": [
           "have",
           "are",
@@ -9945,9 +9945,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "bike",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "kite",
+        "image": "🪁",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_34_Q12",
@@ -10225,7 +10225,7 @@
         "id": "EXAM_35_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "car",
           "clothes",
@@ -10238,10 +10238,10 @@
           "slɪm",
           "flaɪ"
         ],
-        "answer": "slim",
-        "audio": "slim",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_35_Q12",
@@ -10519,7 +10519,7 @@
         "id": "EXAM_36_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice sing.'",
+        "question": "Fill in the blank: 'I ________ a new bike.'",
         "options": [
           "has",
           "is",
@@ -10533,8 +10533,8 @@
           "æm"
         ],
         "answer": "have",
-        "audio": "sing",
-        "image": "📝",
+        "audio": "bike",
+        "image": "🚲",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -10813,7 +10813,7 @@
         "id": "EXAM_37_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big ruler.'",
+        "question": "Fill in the blank: 'He ________ a new bag.'",
         "options": [
           "have",
           "has",
@@ -10827,9 +10827,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "ruler",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "bag",
+        "image": "🎒",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_37_Q12",
@@ -11107,7 +11107,7 @@
         "id": "EXAM_38_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green robot.'",
+        "question": "Fill in the blank: 'She ________ a new pen.'",
         "options": [
           "are",
           "have",
@@ -11121,9 +11121,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "robot",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "pen",
+        "image": "🖊️",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_38_Q12",
@@ -11401,7 +11401,7 @@
         "id": "EXAM_39_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "fly",
           "rabbit",
@@ -11414,10 +11414,10 @@
           "kləʊðz",
           "kɑː"
         ],
-        "answer": "rabbit",
-        "audio": "rabbit",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_39_Q12",
@@ -11695,7 +11695,7 @@
         "id": "EXAM_40_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice milk.'",
+        "question": "Fill in the blank: 'I ________ a new hat.'",
         "options": [
           "has",
           "am",
@@ -11709,8 +11709,8 @@
           "ɪz"
         ],
         "answer": "have",
-        "audio": "milk",
-        "image": "📝",
+        "audio": "hat",
+        "image": "🧢",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -11989,7 +11989,7 @@
         "id": "EXAM_41_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big fly.'",
+        "question": "Fill in the blank: 'He ________ a new book.'",
         "options": [
           "has",
           "are",
@@ -12003,9 +12003,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "fly",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "book",
+        "image": "📘",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_41_Q12",
@@ -12283,7 +12283,7 @@
         "id": "EXAM_42_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green classroom.'",
+        "question": "Fill in the blank: 'She ________ a new ruler.'",
         "options": [
           "have",
           "are",
@@ -12297,9 +12297,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "classroom",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "ruler",
+        "image": "📏",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_42_Q12",
@@ -12577,7 +12577,7 @@
         "id": "EXAM_43_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "short",
           "clothes",
@@ -12590,10 +12590,10 @@
           "kɑː",
           "flaɪ"
         ],
-        "answer": "short",
-        "audio": "short",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_43_Q12",
@@ -12871,7 +12871,7 @@
         "id": "EXAM_44_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice apple.'",
+        "question": "Fill in the blank: 'I ________ a new kite.'",
         "options": [
           "is",
           "am",
@@ -12885,8 +12885,8 @@
           "hæv"
         ],
         "answer": "have",
-        "audio": "apple",
-        "image": "📝",
+        "audio": "kite",
+        "image": "🪁",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -13165,7 +13165,7 @@
         "id": "EXAM_45_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big cat.'",
+        "question": "Fill in the blank: 'He ________ a new robot.'",
         "options": [
           "has",
           "is",
@@ -13179,9 +13179,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "cat",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "robot",
+        "image": "🤖",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_45_Q12",
@@ -13459,7 +13459,7 @@
         "id": "EXAM_46_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green years.'",
+        "question": "Fill in the blank: 'She ________ a new bike.'",
         "options": [
           "are",
           "is",
@@ -13473,9 +13473,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "years",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "bike",
+        "image": "🚲",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_46_Q12",
@@ -13753,7 +13753,7 @@
         "id": "EXAM_47_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "car",
           "clothes",
@@ -13766,10 +13766,10 @@
           "flaɪ",
           "ˈreɪnbəʊ"
         ],
-        "answer": "rainbow",
-        "audio": "rainbow",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_47_Q12",
@@ -14047,7 +14047,7 @@
         "id": "EXAM_48_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice tall.'",
+        "question": "Fill in the blank: 'I ________ a new pen.'",
         "options": [
           "has",
           "am",
@@ -14061,8 +14061,8 @@
           "ɪz"
         ],
         "answer": "have",
-        "audio": "tall",
-        "image": "📝",
+        "audio": "pen",
+        "image": "🖊️",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -14341,7 +14341,7 @@
         "id": "EXAM_49_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big wardrobe.'",
+        "question": "Fill in the blank: 'He ________ a new toy.'",
         "options": [
           "is",
           "has",
@@ -14355,9 +14355,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "wardrobe",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "toy",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_49_Q12",
@@ -14635,7 +14635,7 @@
         "id": "EXAM_50_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green car.'",
+        "question": "Fill in the blank: 'She ________ a new hat.'",
         "options": [
           "has",
           "are",
@@ -14649,9 +14649,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "car",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "hat",
+        "image": "🧢",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_50_Q12",
@@ -14929,7 +14929,7 @@
         "id": "EXAM_51_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "car",
           "chair",
@@ -14942,10 +14942,10 @@
           "kləʊðz",
           "flaɪ"
         ],
-        "answer": "chair",
-        "audio": "chair",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_51_Q12",
@@ -15223,7 +15223,7 @@
         "id": "EXAM_52_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice ear.'",
+        "question": "Fill in the blank: 'I ________ a new ruler.'",
         "options": [
           "have",
           "has",
@@ -15237,8 +15237,8 @@
           "ɪz"
         ],
         "answer": "have",
-        "audio": "ear",
-        "image": "📝",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -15517,7 +15517,7 @@
         "id": "EXAM_53_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big eye.'",
+        "question": "Fill in the blank: 'He ________ a new ball.'",
         "options": [
           "are",
           "have",
@@ -15531,9 +15531,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "eye",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "ball",
+        "image": "⚽",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_53_Q12",
@@ -15811,7 +15811,7 @@
         "id": "EXAM_54_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green brown.'",
+        "question": "Fill in the blank: 'She ________ a new kite.'",
         "options": [
           "has",
           "is",
@@ -15825,9 +15825,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "brown",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "kite",
+        "image": "🪁",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_54_Q12",
@@ -16105,7 +16105,7 @@
         "id": "EXAM_55_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "clothes",
           "car",
@@ -16118,10 +16118,10 @@
           "flaɪ",
           "ˈwɪndi"
         ],
-        "answer": "windy",
-        "audio": "windy",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_55_Q12",
@@ -16399,7 +16399,7 @@
         "id": "EXAM_56_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice friend.'",
+        "question": "Fill in the blank: 'I ________ a new bike.'",
         "options": [
           "is",
           "have",
@@ -16413,8 +16413,8 @@
           "æm"
         ],
         "answer": "have",
-        "audio": "friend",
-        "image": "📝",
+        "audio": "bike",
+        "image": "🚲",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -16693,7 +16693,7 @@
         "id": "EXAM_57_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big bed.'",
+        "question": "Fill in the blank: 'He ________ a new bag.'",
         "options": [
           "are",
           "has",
@@ -16707,9 +16707,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "bed",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "bag",
+        "image": "🎒",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_57_Q12",
@@ -16987,7 +16987,7 @@
         "id": "EXAM_58_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green word puzzles.'",
+        "question": "Fill in the blank: 'She ________ a new pen.'",
         "options": [
           "are",
           "have",
@@ -17001,9 +17001,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "word puzzles",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "pen",
+        "image": "🖊️",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_58_Q12",
@@ -17281,7 +17281,7 @@
         "id": "EXAM_59_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "car",
           "clothes",
@@ -17294,10 +17294,10 @@
           "ˈpleɪɡraʊnd",
           "flaɪ"
         ],
-        "answer": "playground",
-        "audio": "playground",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_59_Q12",
@@ -17575,7 +17575,7 @@
         "id": "EXAM_60_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice hand.'",
+        "question": "Fill in the blank: 'I ________ a new hat.'",
         "options": [
           "have",
           "has",
@@ -17589,8 +17589,8 @@
           "æm"
         ],
         "answer": "have",
-        "audio": "hand",
-        "image": "📝",
+        "audio": "hat",
+        "image": "🧢",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -17869,7 +17869,7 @@
         "id": "EXAM_61_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big smoothie.'",
+        "question": "Fill in the blank: 'He ________ a new book.'",
         "options": [
           "has",
           "are",
@@ -17883,9 +17883,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "smoothie",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "book",
+        "image": "📘",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_61_Q12",
@@ -18163,7 +18163,7 @@
         "id": "EXAM_62_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green garden.'",
+        "question": "Fill in the blank: 'She ________ a new ruler.'",
         "options": [
           "are",
           "have",
@@ -18177,9 +18177,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "garden",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "ruler",
+        "image": "📏",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_62_Q12",
@@ -18457,7 +18457,7 @@
         "id": "EXAM_63_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "shoes",
           "fly",
@@ -18470,10 +18470,10 @@
           "kɑː",
           "kləʊðz"
         ],
-        "answer": "shoes",
-        "audio": "shoes",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_63_Q12",
@@ -18751,7 +18751,7 @@
         "id": "EXAM_64_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice parrot.'",
+        "question": "Fill in the blank: 'I ________ a new kite.'",
         "options": [
           "have",
           "is",
@@ -18765,8 +18765,8 @@
           "has"
         ],
         "answer": "have",
-        "audio": "parrot",
-        "image": "📝",
+        "audio": "kite",
+        "image": "🪁",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -19045,7 +19045,7 @@
         "id": "EXAM_65_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big teacher.'",
+        "question": "Fill in the blank: 'He ________ a new robot.'",
         "options": [
           "is",
           "has",
@@ -19059,9 +19059,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "teacher",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "robot",
+        "image": "🤖",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_65_Q12",
@@ -19339,7 +19339,7 @@
         "id": "EXAM_66_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green cookie.'",
+        "question": "Fill in the blank: 'She ________ a new bike.'",
         "options": [
           "has",
           "are",
@@ -19353,9 +19353,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "cookie",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "bike",
+        "image": "🚲",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_66_Q12",
@@ -19633,7 +19633,7 @@
         "id": "EXAM_67_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "curly",
           "fly",
@@ -19646,10 +19646,10 @@
           "kləʊðz",
           "kɑː"
         ],
-        "answer": "curly",
-        "audio": "curly",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_67_Q12",
@@ -19927,7 +19927,7 @@
         "id": "EXAM_68_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice brother.'",
+        "question": "Fill in the blank: 'I ________ a new pen.'",
         "options": [
           "is",
           "am",
@@ -19941,8 +19941,8 @@
           "hæv"
         ],
         "answer": "have",
-        "audio": "brother",
-        "image": "📝",
+        "audio": "pen",
+        "image": "🖊️",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -20221,7 +20221,7 @@
         "id": "EXAM_69_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big pen.'",
+        "question": "Fill in the blank: 'He ________ a new toy.'",
         "options": [
           "have",
           "is",
@@ -20235,9 +20235,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "pen",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "toy",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_69_Q12",
@@ -20515,7 +20515,7 @@
         "id": "EXAM_70_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green face.'",
+        "question": "Fill in the blank: 'She ________ a new hat.'",
         "options": [
           "are",
           "have",
@@ -20529,9 +20529,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "face",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "hat",
+        "image": "🧢",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_70_Q12",
@@ -20809,7 +20809,7 @@
         "id": "EXAM_71_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "clothes",
           "car",
@@ -20822,10 +20822,10 @@
           "flaɪ",
           "streɪt"
         ],
-        "answer": "straight",
-        "audio": "straight",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_71_Q12",
@@ -21103,7 +21103,7 @@
         "id": "EXAM_72_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice skirt.'",
+        "question": "Fill in the blank: 'I ________ a new ruler.'",
         "options": [
           "has",
           "am",
@@ -21117,8 +21117,8 @@
           "ɪz"
         ],
         "answer": "have",
-        "audio": "skirt",
-        "image": "📝",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -21397,7 +21397,7 @@
         "id": "EXAM_73_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big table tennis.'",
+        "question": "Fill in the blank: 'He ________ a new ball.'",
         "options": [
           "have",
           "is",
@@ -21411,9 +21411,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "table tennis",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "ball",
+        "image": "⚽",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_73_Q12",
@@ -21691,7 +21691,7 @@
         "id": "EXAM_74_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green kitchen.'",
+        "question": "Fill in the blank: 'She ________ a new kite.'",
         "options": [
           "are",
           "is",
@@ -21705,9 +21705,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "kitchen",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "kite",
+        "image": "🪁",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_74_Q12",
@@ -21985,7 +21985,7 @@
         "id": "EXAM_75_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "bedroom",
           "car",
@@ -21998,10 +21998,10 @@
           "flaɪ",
           "kləʊðz"
         ],
-        "answer": "bedroom",
-        "audio": "bedroom",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_75_Q12",
@@ -22279,7 +22279,7 @@
         "id": "EXAM_76_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice hat.'",
+        "question": "Fill in the blank: 'I ________ a new bike.'",
         "options": [
           "has",
           "am",
@@ -22293,8 +22293,8 @@
           "ɪz"
         ],
         "answer": "have",
-        "audio": "hat",
-        "image": "📝",
+        "audio": "bike",
+        "image": "🚲",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -22573,7 +22573,7 @@
         "id": "EXAM_77_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big jump.'",
+        "question": "Fill in the blank: 'He ________ a new bag.'",
         "options": [
           "have",
           "has",
@@ -22587,9 +22587,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "jump",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "bag",
+        "image": "🎒",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_77_Q12",
@@ -22867,7 +22867,7 @@
         "id": "EXAM_78_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green shelf.'",
+        "question": "Fill in the blank: 'She ________ a new pen.'",
         "options": [
           "is",
           "are",
@@ -22881,9 +22881,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "shelf",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "pen",
+        "image": "🖊️",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_78_Q12",
@@ -23161,7 +23161,7 @@
         "id": "EXAM_79_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "clothes",
           "fly",
@@ -23174,10 +23174,10 @@
           "kɑː",
           "faɪn"
         ],
-        "answer": "fine",
-        "audio": "fine",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_79_Q12",
@@ -23455,7 +23455,7 @@
         "id": "EXAM_80_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice dance.'",
+        "question": "Fill in the blank: 'I ________ a new hat.'",
         "options": [
           "have",
           "is",
@@ -23469,8 +23469,8 @@
           "æm"
         ],
         "answer": "have",
-        "audio": "dance",
-        "image": "📝",
+        "audio": "hat",
+        "image": "🧢",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -23749,7 +23749,7 @@
         "id": "EXAM_81_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big meat.'",
+        "question": "Fill in the blank: 'He ________ a new book.'",
         "options": [
           "have",
           "has",
@@ -23763,9 +23763,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "meat",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "book",
+        "image": "📘",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_81_Q12",
@@ -24043,7 +24043,7 @@
         "id": "EXAM_82_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green clothes.'",
+        "question": "Fill in the blank: 'She ________ a new ruler.'",
         "options": [
           "have",
           "are",
@@ -24057,9 +24057,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "clothes",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "ruler",
+        "image": "📏",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_82_Q12",
@@ -24337,7 +24337,7 @@
         "id": "EXAM_83_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "car",
           "tree",
@@ -24350,10 +24350,10 @@
           "flaɪ",
           "kləʊðz"
         ],
-        "answer": "tree",
-        "audio": "tree",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_83_Q12",
@@ -24631,7 +24631,7 @@
         "id": "EXAM_84_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice bike.'",
+        "question": "Fill in the blank: 'I ________ a new kite.'",
         "options": [
           "have",
           "am",
@@ -24645,8 +24645,8 @@
           "ɪz"
         ],
         "answer": "have",
-        "audio": "bike",
-        "image": "📝",
+        "audio": "kite",
+        "image": "🪁",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -24925,7 +24925,7 @@
         "id": "EXAM_85_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big slim.'",
+        "question": "Fill in the blank: 'He ________ a new robot.'",
         "options": [
           "are",
           "is",
@@ -24939,9 +24939,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "slim",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "robot",
+        "image": "🤖",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_85_Q12",
@@ -25219,7 +25219,7 @@
         "id": "EXAM_86_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green sing.'",
+        "question": "Fill in the blank: 'She ________ a new bike.'",
         "options": [
           "is",
           "are",
@@ -25233,9 +25233,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "sing",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "bike",
+        "image": "🚲",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_86_Q12",
@@ -25513,7 +25513,7 @@
         "id": "EXAM_87_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "ruler",
           "car",
@@ -25526,10 +25526,10 @@
           "flaɪ",
           "kləʊðz"
         ],
-        "answer": "ruler",
-        "audio": "ruler",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_87_Q12",
@@ -25807,7 +25807,7 @@
         "id": "EXAM_88_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice robot.'",
+        "question": "Fill in the blank: 'I ________ a new pen.'",
         "options": [
           "have",
           "is",
@@ -25821,8 +25821,8 @@
           "æm"
         ],
         "answer": "have",
-        "audio": "robot",
-        "image": "📝",
+        "audio": "pen",
+        "image": "🖊️",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -26101,7 +26101,7 @@
         "id": "EXAM_89_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big rabbit.'",
+        "question": "Fill in the blank: 'He ________ a new toy.'",
         "options": [
           "have",
           "has",
@@ -26115,9 +26115,9 @@
           "ɑː"
         ],
         "answer": "has",
-        "audio": "rabbit",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "toy",
+        "image": "🧸",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_89_Q12",
@@ -26395,7 +26395,7 @@
         "id": "EXAM_90_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green milk.'",
+        "question": "Fill in the blank: 'She ________ a new hat.'",
         "options": [
           "is",
           "are",
@@ -26409,9 +26409,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "milk",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "hat",
+        "image": "🧢",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_90_Q12",
@@ -26689,7 +26689,7 @@
         "id": "EXAM_91_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "table tennis",
           "clothes",
@@ -26702,10 +26702,10 @@
           "kɑː",
           "flaɪ"
         ],
-        "answer": "fly",
-        "audio": "fly",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_91_Q12",
@@ -26983,7 +26983,7 @@
         "id": "EXAM_92_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice classroom.'",
+        "question": "Fill in the blank: 'I ________ a new ruler.'",
         "options": [
           "has",
           "am",
@@ -26997,8 +26997,8 @@
           "hæv"
         ],
         "answer": "have",
-        "audio": "classroom",
-        "image": "📝",
+        "audio": "ruler",
+        "image": "📏",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -27277,7 +27277,7 @@
         "id": "EXAM_93_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big short.'",
+        "question": "Fill in the blank: 'He ________ a new ball.'",
         "options": [
           "have",
           "has",
@@ -27291,9 +27291,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "short",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "ball",
+        "image": "⚽",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_93_Q12",
@@ -27571,7 +27571,7 @@
         "id": "EXAM_94_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green apple.'",
+        "question": "Fill in the blank: 'She ________ a new kite.'",
         "options": [
           "has",
           "are",
@@ -27585,9 +27585,9 @@
           "ɪz"
         ],
         "answer": "has",
-        "audio": "apple",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "kite",
+        "image": "🪁",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_94_Q12",
@@ -27865,7 +27865,7 @@
         "id": "EXAM_95_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "cat",
           "clothes",
@@ -27878,10 +27878,10 @@
           "flaɪ",
           "kɑː"
         ],
-        "answer": "cat",
-        "audio": "cat",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_95_Q12",
@@ -28159,7 +28159,7 @@
         "id": "EXAM_96_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice years.'",
+        "question": "Fill in the blank: 'I ________ a new bike.'",
         "options": [
           "am",
           "has",
@@ -28173,8 +28173,8 @@
           "hæv"
         ],
         "answer": "have",
-        "audio": "years",
-        "image": "📝",
+        "audio": "bike",
+        "image": "🚲",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {
@@ -28453,7 +28453,7 @@
         "id": "EXAM_97_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'He ________ a big rainbow.'",
+        "question": "Fill in the blank: 'He ________ a new bag.'",
         "options": [
           "are",
           "is",
@@ -28467,9 +28467,9 @@
           "has"
         ],
         "answer": "has",
-        "audio": "rainbow",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'He' đi với động từ sở hữu 'has'."
+        "audio": "bag",
+        "image": "🎒",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'He' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_97_Q12",
@@ -28747,7 +28747,7 @@
         "id": "EXAM_98_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'She ________ a green tall.'",
+        "question": "Fill in the blank: 'She ________ a new pen.'",
         "options": [
           "has",
           "is",
@@ -28761,9 +28761,9 @@
           "hæv"
         ],
         "answer": "has",
-        "audio": "tall",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ số ít 'She' đi với động từ sở hữu 'has'."
+        "audio": "pen",
+        "image": "🖊️",
+        "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'She' đi với động từ sở hữu 'has'."
       },
       {
         "id": "EXAM_98_Q12",
@@ -29041,7 +29041,7 @@
         "id": "EXAM_99_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'There is a ________ in the bedroom.'",
+        "question": "Fill in the blank: 'There is a toy ________ in the bedroom.'",
         "options": [
           "fly",
           "wardrobe",
@@ -29054,10 +29054,10 @@
           "kɑː",
           "kləʊðz"
         ],
-        "answer": "wardrobe",
-        "audio": "wardrobe",
-        "image": "📝",
-        "explanation": "Ong Vàng hướng dẫn: Để hoàn thành câu ngữ pháp đúng nghĩa, ta chọn từ danh từ phù hợp."
+        "answer": "car",
+        "audio": "car",
+        "image": "🚗",
+        "explanation": "Ong Vàng hướng dẫn: Cụm từ đúng là 'a toy car' (một chiếc ô tô đồ chơi)."
       },
       {
         "id": "EXAM_99_Q12",
@@ -29335,7 +29335,7 @@
         "id": "EXAM_100_Q11",
         "tag": "ENG_GRA",
         "type": "multiple_choice",
-        "question": "Fill in the blank: 'I ________ a nice car.'",
+        "question": "Fill in the blank: 'I ________ a new hat.'",
         "options": [
           "am",
           "is",
@@ -29349,8 +29349,8 @@
           "has"
         ],
         "answer": "have",
-        "audio": "car",
-        "image": "📝",
+        "audio": "hat",
+        "image": "🧢",
         "explanation": "Ong Vàng hướng dẫn: Chủ ngữ 'I' đi với động từ sở hữu 'have'."
       },
       {

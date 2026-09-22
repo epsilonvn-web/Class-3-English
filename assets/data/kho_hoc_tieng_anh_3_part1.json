@@ -2683,18 +2683,18 @@
           "robot",
           "car",
           "fly",
-          "clothes"
+          "yellow"
         ],
         "options_ipa": [
           "ˈrəʊbɒt",
           "kɑː",
           "flaɪ",
-          "kləʊðz"
+          "ˈjeləʊ"
         ],
-        "answer": "robot",
+        "answer": "yellow",
         "audio": "years",
         "image": "🎂",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'years' và từ 'robot' đều bắt đầu bằng âm đầu /y/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'years' và từ 'yellow' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q08",
@@ -2733,18 +2733,18 @@
           "fly",
           "smoothie",
           "car",
-          "clothes"
+          "shoes"
         ],
         "options_ipa": [
           "flaɪ",
           "ˈsmuːði",
           "kɑː",
-          "kləʊðz"
+          "ʃuːz"
         ],
-        "answer": "smoothie",
+        "answer": "shoes",
         "audio": "shelf",
         "image": "🗄️",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'shelf' và từ 'smoothie' đều bắt đầu bằng âm đầu /s/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'shelf' và từ 'shoes' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q10",
@@ -2808,18 +2808,18 @@
           "parrot",
           "table tennis",
           "fly",
-          "car"
+          "chocolate"
         ],
         "options_ipa": [
           "ˈpærət",
           "table tennis",
           "flaɪ",
-          "kɑː"
+          "ˈtʃɒklət"
         ],
-        "answer": "car",
+        "answer": "chocolate",
         "audio": "chair",
         "image": "🪑",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'chair' và từ 'car' đều bắt đầu bằng âm đầu /c/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'chair' và từ 'chocolate' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q13",
@@ -2883,18 +2883,18 @@
           "car",
           "clothes",
           "fine",
-          "fly"
+          "cat"
         ],
         "options_ipa": [
           "kɑː",
           "kləʊðz",
           "faɪn",
-          "flaɪ"
+          "kæt"
         ],
-        "answer": "fine",
+        "answer": "cat",
         "audio": "kitchen",
         "image": "🍳",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'kitchen' và từ 'fine' đều bắt đầu bằng âm đầu /k/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'kitchen' và từ 'cat' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q16",
@@ -3058,18 +3058,18 @@
           "shelf",
           "fly",
           "car",
-          "clothes"
+          "sing"
         ],
         "options_ipa": [
           "ʃɛlf",
           "flaɪ",
           "kɑː",
-          "kləʊðz"
+          "sɪŋ"
         ],
-        "answer": "shelf",
+        "answer": "sing",
         "audio": "smoothie",
         "image": "🍹",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'smoothie' và từ 'shelf' đều bắt đầu bằng âm đầu /s/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'smoothie' và từ 'sing' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q23",
@@ -3283,18 +3283,18 @@
           "fly",
           "car",
           "clothes",
-          "clothes"
+          "dog"
         ],
         "options_ipa": [
           "flaɪ",
           "kɑː",
           "kləʊðz",
-          "kləʊðz"
+          "dɒɡ"
         ],
-        "answer": "clothes",
+        "answer": "dog",
         "audio": "dance",
         "image": "💃",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'dance' và từ 'clothes' đều bắt đầu bằng âm đầu /d/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'dance' và từ 'dog' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q32",
@@ -3308,18 +3308,18 @@
           "car",
           "clothes",
           "shelf",
-          "fly"
+          "sing"
         ],
         "options_ipa": [
           "kɑː",
           "kləʊðz",
           "ʃɛlf",
-          "flaɪ"
+          "sɪŋ"
         ],
-        "answer": "shelf",
+        "answer": "sing",
         "audio": "straight",
         "image": "📏",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'straight' và từ 'shelf' đều bắt đầu bằng âm đầu /s/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'straight' và từ 'sing' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q33",
@@ -3333,18 +3333,18 @@
           "clothes",
           "car",
           "fly",
-          "tall"
+          "green"
         ],
         "options_ipa": [
           "kləʊðz",
           "kɑː",
           "flaɪ",
-          "tɔːl"
+          "ɡriːn"
         ],
-        "answer": "tall",
+        "answer": "green",
         "audio": "garden",
         "image": "🏡",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'garden' và từ 'tall' đều bắt đầu bằng âm đầu /g/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'garden' và từ 'green' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q34",
@@ -3383,18 +3383,18 @@
           "clothes",
           "car",
           "fly",
-          "meat"
+          "animal"
         ],
         "options_ipa": [
           "kləʊðz",
           "kɑː",
           "flaɪ",
-          "miːt"
+          "ˈænɪməl"
         ],
-        "answer": "meat",
+        "answer": "animal",
         "audio": "apple",
         "image": "🍎",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'apple' và từ 'meat' đều bắt đầu bằng âm đầu /a/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'apple' và từ 'animal' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q36",
@@ -3408,18 +3408,18 @@
           "clothes",
           "car",
           "fly",
-          "shelf"
+          "sing"
         ],
         "options_ipa": [
           "kləʊðz",
           "kɑː",
           "flaɪ",
-          "ʃɛlf"
+          "sɪŋ"
         ],
-        "answer": "shelf",
+        "answer": "sing",
         "audio": "slim",
         "image": "🧍",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'slim' và từ 'shelf' đều bắt đầu bằng âm đầu /s/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'slim' và từ 'sing' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q37",
@@ -3583,18 +3583,18 @@
           "shelf",
           "car",
           "fly",
-          "clothes"
+          "sing"
         ],
         "options_ipa": [
           "ʃɛlf",
           "kɑː",
           "flaɪ",
-          "kləʊðz"
+          "sɪŋ"
         ],
-        "answer": "shelf",
+        "answer": "sing",
         "audio": "skirt",
         "image": "👗",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'skirt' và từ 'shelf' đều bắt đầu bằng âm đầu /s/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'skirt' và từ 'sing' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q44",
@@ -3683,18 +3683,18 @@
           "fly",
           "car",
           "clothes",
-          "shelf"
+          "slim"
         ],
         "options_ipa": [
           "flaɪ",
           "kɑː",
           "kləʊðz",
-          "ʃɛlf"
+          "slɪm"
         ],
-        "answer": "shelf",
+        "answer": "slim",
         "audio": "sing",
         "image": "🎤",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'sing' và từ 'shelf' đều bắt đầu bằng âm đầu /s/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'sing' và từ 'slim' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q48",
@@ -3708,18 +3708,18 @@
           "clothes",
           "fly",
           "teacher",
-          "car"
+          "juice"
         ],
         "options_ipa": [
           "kləʊðz",
           "flaɪ",
           "ˈtiːtʃə",
-          "kɑː"
+          "dʒuːs"
         ],
-        "answer": "teacher",
+        "answer": "juice",
         "audio": "jump",
         "image": "🦘",
-        "explanation": "Ong Vàng hướng dẫn: Từ 'jump' và từ 'teacher' đều bắt đầu bằng âm đầu /j/ nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Từ 'jump' và từ 'juice' có cùng âm đầu nhé bé!"
       },
       {
         "id": "M1_3_Q49",

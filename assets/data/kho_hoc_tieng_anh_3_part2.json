@@ -1595,7 +1595,7 @@
         "week_id": "W18",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big meat. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have some meat. It is for dinner.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "ruler",
           "parrot",
@@ -1611,7 +1611,7 @@
         "answer": "meat",
         "audio": "meat",
         "image": "🥩",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói: 'I have a big meat' nghĩa là tớ có một thịt lớn nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Trong câu chuyện ngắn, Ong Vàng nói 'I have some meat' nghĩa là tớ có một ít thịt nhé!"
       },
       {
         "id": "M6_2_Q15",
@@ -1970,7 +1970,7 @@
         "week_id": "W18",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big meat. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have some meat. It is for dinner.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "meat",
           "parrot",
@@ -1986,7 +1986,7 @@
         "answer": "meat",
         "audio": "meat",
         "image": "🥩",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói: 'I have a big meat' nghĩa là tớ có một thịt lớn nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Trong câu chuyện ngắn, Ong Vàng nói 'I have some meat' nghĩa là tớ có một ít thịt nhé!"
       },
       {
         "id": "M6_2_Q30",
@@ -2345,7 +2345,7 @@
         "week_id": "W18",
         "difficulty": "medium",
         "type": "multiple_choice",
-        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have a big meat. It is very nice.'\n\nQuestion: What does Ong Vàng have?",
+        "question": "Ong Vàng: 'Hello! I am Ong Vàng. I have some meat. It is for dinner.'\n\nQuestion: What does Ong Vàng have?",
         "options": [
           "parrot",
           "car",
@@ -2361,7 +2361,7 @@
         "answer": "meat",
         "audio": "meat",
         "image": "🥩",
-        "explanation": "Ong Vàng hướng dẫn: Trong câu truyện ngắn, Ong Vàng nói: 'I have a big meat' nghĩa là tớ có một thịt lớn nhé!"
+        "explanation": "Ong Vàng hướng dẫn: Trong câu chuyện ngắn, Ong Vàng nói 'I have some meat' nghĩa là tớ có một ít thịt nhé!"
       },
       {
         "id": "M6_2_Q45",
@@ -13963,10 +13963,10 @@
           "jɛs aɪ like ˈtaɪɡə",
           "nəʊ it ɪz ˈwɪndi"
         ],
-        "answer": "They are running.",
+        "answer": "They're running.",
         "audio": "running",
         "image": "🦁",
-        "explanation": "Hỏi nhiều chú hổ đang làm gì, bé trả lời số nhiều: 'They are running.'"
+        "explanation": "Ong Vàng hướng dẫn: Hỏi 'What are the tigers doing?' thì câu trả lời phù hợp là \"They're running.\" (Chúng đang chạy)."
       },
       {
         "id": "M9_3_Q06",
@@ -14088,10 +14088,10 @@
           "jɛs aɪ like ˈtaɪɡə",
           "nəʊ it ɪz ˈwɪndi"
         ],
-        "answer": "They are running.",
+        "answer": "They're running.",
         "audio": "running",
         "image": "🦁",
-        "explanation": "Hỏi nhiều chú hổ đang làm gì, bé trả lời số nhiều: 'They are running.'"
+        "explanation": "Ong Vàng hướng dẫn: Hỏi 'What are the tigers doing?' thì câu trả lời phù hợp là \"They're running.\" (Chúng đang chạy)."
       },
       {
         "id": "M9_3_Q11",
@@ -14213,10 +14213,10 @@
           "jɛs aɪ like ˈtaɪɡə",
           "nəʊ it ɪz ˈwɪndi"
         ],
-        "answer": "They are running.",
+        "answer": "They're running.",
         "audio": "running",
         "image": "🦁",
-        "explanation": "Hỏi nhiều chú hổ đang làm gì, bé trả lời số nhiều: 'They are running.'"
+        "explanation": "Ong Vàng hướng dẫn: Hỏi 'What are the tigers doing?' thì câu trả lời phù hợp là \"They're running.\" (Chúng đang chạy)."
       },
       {
         "id": "M9_3_Q16",
@@ -14338,10 +14338,10 @@
           "jɛs aɪ like ˈtaɪɡə",
           "nəʊ it ɪz ˈwɪndi"
         ],
-        "answer": "They are running.",
+        "answer": "They're running.",
         "audio": "running",
         "image": "🦁",
-        "explanation": "Hỏi nhiều chú hổ đang làm gì, bé trả lời số nhiều: 'They are running.'"
+        "explanation": "Ong Vàng hướng dẫn: Hỏi 'What are the tigers doing?' thì câu trả lời phù hợp là \"They're running.\" (Chúng đang chạy)."
       },
       {
         "id": "M9_3_Q21",
@@ -14463,10 +14463,10 @@
           "jɛs aɪ like ˈtaɪɡə",
           "nəʊ it ɪz ˈwɪndi"
         ],
-        "answer": "They are running.",
+        "answer": "They're running.",
         "audio": "running",
         "image": "🦁",
-        "explanation": "Hỏi nhiều chú hổ đang làm gì, bé trả lời số nhiều: 'They are running.'"
+        "explanation": "Ong Vàng hướng dẫn: Hỏi 'What are the tigers doing?' thì câu trả lời phù hợp là \"They're running.\" (Chúng đang chạy)."
       },
       {
         "id": "M9_3_Q26",
@@ -14588,10 +14588,10 @@
           "jɛs aɪ like ˈtaɪɡə",
           "nəʊ it ɪz ˈwɪndi"
         ],
-        "answer": "They are running.",
+        "answer": "They're running.",
         "audio": "running",
         "image": "🦁",
-        "explanation": "Hỏi nhiều chú hổ đang làm gì, bé trả lời số nhiều: 'They are running.'"
+        "explanation": "Ong Vàng hướng dẫn: Hỏi 'What are the tigers doing?' thì câu trả lời phù hợp là \"They're running.\" (Chúng đang chạy)."
       },
       {
         "id": "M9_3_Q31",
@@ -14713,10 +14713,10 @@
           "jɛs aɪ like ˈtaɪɡə",
           "nəʊ it ɪz ˈwɪndi"
         ],
-        "answer": "They are running.",
+        "answer": "They're running.",
         "audio": "running",
         "image": "🦁",
-        "explanation": "Hỏi nhiều chú hổ đang làm gì, bé trả lời số nhiều: 'They are running.'"
+        "explanation": "Ong Vàng hướng dẫn: Hỏi 'What are the tigers doing?' thì câu trả lời phù hợp là \"They're running.\" (Chúng đang chạy)."
       },
       {
         "id": "M9_3_Q36",
@@ -14838,10 +14838,10 @@
           "jɛs aɪ like ˈtaɪɡə",
           "nəʊ it ɪz ˈwɪndi"
         ],
-        "answer": "They are running.",
+        "answer": "They're running.",
         "audio": "running",
         "image": "🦁",
-        "explanation": "Hỏi nhiều chú hổ đang làm gì, bé trả lời số nhiều: 'They are running.'"
+        "explanation": "Ong Vàng hướng dẫn: Hỏi 'What are the tigers doing?' thì câu trả lời phù hợp là \"They're running.\" (Chúng đang chạy)."
       },
       {
         "id": "M9_3_Q41",
@@ -14963,10 +14963,10 @@
           "jɛs aɪ like ˈtaɪɡə",
           "nəʊ it ɪz ˈwɪndi"
         ],
-        "answer": "They are running.",
+        "answer": "They're running.",
         "audio": "running",
         "image": "🦁",
-        "explanation": "Hỏi nhiều chú hổ đang làm gì, bé trả lời số nhiều: 'They are running.'"
+        "explanation": "Ong Vàng hướng dẫn: Hỏi 'What are the tigers doing?' thì câu trả lời phù hợp là \"They're running.\" (Chúng đang chạy)."
       },
       {
         "id": "M9_3_Q46",
@@ -15088,10 +15088,10 @@
           "jɛs aɪ like ˈtaɪɡə",
           "nəʊ it ɪz ˈwɪndi"
         ],
-        "answer": "They are running.",
+        "answer": "They're running.",
         "audio": "running",
         "image": "🦁",
-        "explanation": "Hỏi nhiều chú hổ đang làm gì, bé trả lời số nhiều: 'They are running.'"
+        "explanation": "Ong Vàng hướng dẫn: Hỏi 'What are the tigers doing?' thì câu trả lời phù hợp là \"They're running.\" (Chúng đang chạy)."
       }
     ]
   },
