@@ -378,36 +378,57 @@
 
     
 
-        /* TA3 - Phong to cum diem Dung/Sai can xung nut Home */
-        @media (min-width: 768px) {
-            #header-score-box {
-                min-width: 92px !important;
-                min-height: 62px !important;
-                padding: 7px 9px !important;
-                border-radius: 15px !important;
-                justify-content: center !important;
-                gap: 5px !important;
+        /* TA3 - cum sao Dung/Sai dong bo kich thuoc Toan 3 */
+        #header-score-box{
+            min-width:92px !important;
+            padding:7px 9px !important;
+            row-gap:4px !important;
+            border-radius:14px !important;
+        }
+        #header-score-box > div{
+            min-height:21px;
+            gap:8px !important;
+        }
+        #header-score-box > div > span:first-child{
+            min-width:48px;
+            padding:3px 6px !important;
+            font-size:12px !important;
+            line-height:1.15 !important;
+            border-radius:7px !important;
+        }
+        #header-score-box > div > span:first-child i{
+            font-size:12px !important;
+        }
+        #star-green-count,
+        #star-red-count{
+            min-width:16px;
+            text-align:center;
+            font-size:15px !important;
+            line-height:1 !important;
+        }
+
+        @media (max-width:767px){
+            #header-score-box{
+                min-width:72px !important;
+                padding:5px 6px !important;
+                row-gap:3px !important;
+                border-radius:12px !important;
             }
-            #header-score-box > div {
-                min-height: 22px !important;
-                column-gap: 8px !important;
+            #header-score-box > div{
+                min-height:18px;
+                gap:5px !important;
             }
-            #header-score-box > div > span:first-child {
-                min-width: 50px !important;
-                padding: 3px 6px !important;
-                border-radius: 7px !important;
-                font-size: 13px !important;
-                line-height: 1.1 !important;
+            #header-score-box > div > span:first-child{
+                min-width:30px;
+                padding:3px 5px !important;
+                font-size:11px !important;
             }
-            #header-score-box > div > span:first-child i {
-                font-size: 12px !important;
+            #header-score-box > div > span:first-child i{
+                font-size:11px !important;
             }
             #star-green-count,
-            #star-red-count {
-                min-width: 15px !important;
-                text-align: center !important;
-                font-size: 16px !important;
-                line-height: 1 !important;
+            #star-red-count{
+                font-size:13px !important;
             }
         }
 </style>
