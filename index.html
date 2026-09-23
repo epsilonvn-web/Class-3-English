@@ -639,6 +639,29 @@
                 flex: 0 0 auto !important;
             }
         }
+
+        /* TA3 MOBILE TWEAK - compact score + larger main tab labels */
+        @media (max-width: 767px) {
+            /* Mobile: chi hien sao + so, an chu True/False; desktop giu nguyen. */
+            #header-star-box > div > span:first-child span {
+                display: none !important;
+            }
+            #header-star-box > div > span:first-child {
+                min-width: 28px !important;
+                width: 28px !important;
+                padding: 3px 4px !important;
+                justify-content: center !important;
+            }
+            #header-star-box > div > span:first-child i {
+                margin: 0 !important;
+                font-size: 12px !important;
+            }
+            /* Tang nhe co chu 6 tab chinh tren mobile. */
+            .main-module-tab {
+                font-size: 15px !important;
+            }
+        }
+
 </style>
 </head>
 <body class="p-1 md:p-2 w-full" style="padding-top:0;padding-bottom:max(0.25rem,env(safe-area-inset-bottom));padding-left:max(0.25rem,env(safe-area-inset-left));padding-right:max(0.25rem,env(safe-area-inset-right));">
