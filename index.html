@@ -512,7 +512,7 @@
 
 
 
-        /* TA3 MOBILE HEADER FIX 2026-09-23: Home + True/False + account tren; 6 tab duoi */
+        /* TA3 MOBILE HEADER FIX 2026-09-23: Home + score + account tren; 6 tab duoi */
         @media (max-width: 767px) {
             #app-header {
                 display: grid !important;
@@ -572,8 +572,7 @@
                 margin-right: 2px !important;
             }
             #header-score-box .score-label-text {
-                display: inline !important;
-                font-size: 10px !important;
+                display: none !important;
             }
             #star-green-count,
             #star-red-count {
@@ -761,11 +760,11 @@
                 <div id="header-info-zone" class="flex items-center">
                     <div id="header-score-box" class="flex flex-col space-y-0.5 bg-pink-50/90 px-1.5 md:px-2.5 py-1 rounded-xl border border-pink-200 shadow-inner">
                         <div class="flex items-center justify-between space-x-2 font-extrabold">
-                            <span class="px-1.5 py-0.5 bg-emerald-500 text-white rounded text-[10px] shadow-sm flex items-center justify-center"><i class="fa-solid fa-star md:mr-0.5"></i><span class="score-label-text"> True</span></span>
+                            <span class="px-1.5 py-0.5 bg-emerald-500 text-white rounded text-[10px] shadow-sm flex items-center justify-center"><i class="fa-solid fa-star md:mr-0.5"></i><span class="score-label-text hidden md:inline"> True</span></span>
                             <span class="text-emerald-600 font-extrabold text-xs" id="star-green-count">0</span>
                         </div>
                         <div class="flex items-center justify-between space-x-2 font-extrabold">
-                            <span class="px-1.5 py-0.5 bg-rose-500 text-white rounded text-[10px] shadow-sm flex items-center justify-center"><i class="fa-solid fa-star md:mr-0.5"></i><span class="score-label-text"> False</span></span>
+                            <span class="px-1.5 py-0.5 bg-rose-500 text-white rounded text-[10px] shadow-sm flex items-center justify-center"><i class="fa-solid fa-star md:mr-0.5"></i><span class="score-label-text hidden md:inline"> False</span></span>
                             <span class="text-rose-600 font-extrabold text-xs" id="star-red-count">0</span>
                         </div>
                     </div>
