@@ -987,7 +987,7 @@
                             <h2 class="font-extrabold text-amber-600 text-lg md:text-xl flex items-center justify-center space-x-2">
                                 <span>🏆</span><span>Đấu trường đề thi thử</span>
                             </h2>
-                            <p class="text-xs md:text-sm text-gray-500 font-bold mt-1">Thử sức các bộ đề thi chuẩn ma trận 13 câu - 6 nhóm năng lực</p>
+                            <p class="text-xs md:text-sm text-gray-500 font-bold mt-1">35 đề/HK • khung 6 năng lực • chỉ đánh giá nhóm có đủ dữ liệu</p>
                         </div>
                         <div id="exam-categories-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
                     </div>
@@ -1024,9 +1024,10 @@
                     <div class="bg-white rounded-3xl p-4 sm:p-5 border border-pink-100 soft-shadow-pink space-y-2.5">
                         <h3 class="text-sm sm:text-base font-black text-slate-800 tracking-tight flex items-center space-x-2">
                             <i class="fa-solid fa-chart-bar text-pink-600"></i>
-                            <span>Bóc tách điểm số & đánh giá năng lực 6 chủ đề</span>
+                            <span>Điểm số & đánh giá năng lực theo dữ liệu thực tế</span>
                         </h3>
                         <div id="report-topics-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
+                        <div class="rounded-xl border border-sky-200 bg-sky-50/70 px-3 py-2 text-[11px] sm:text-xs font-bold text-sky-800">ℹ️ Khung toàn chương trình có 6 năng lực. Năng lực không được đo hoặc chưa đủ bằng chứng sẽ hiển thị <strong>Chưa đánh giá / Chưa đủ dữ liệu</strong>, không quy thành 0%.</div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-0.5">
@@ -1164,7 +1165,7 @@
                         <div class="w-full md:w-[40%] bg-pink-50/40 border border-pink-100 rounded-2xl p-4 flex flex-col justify-between shadow-xs">
                             <h4 class="text-xs sm:text-sm font-black text-slate-800 mb-2 flex items-center space-x-1.5">
                                 <i class="fa-solid fa-chart-bar text-purple-600"></i>
-                                <span>Năng lực trung bình 6 chủ đề (%)</span>
+                                <span>Năng lực trung bình của các nhóm đã được đánh giá (%)</span>
                             </h4>
                             <div class="h-64 w-full relative">
                                 <canvas id="topicRadarChartCanvas"></canvas>
@@ -1183,7 +1184,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-base font-black text-amber-950 leading-tight">Nhận xét sư phạm & kế hoạch bồi dưỡng của giáo viên</h4>
-                                    <p class="text-xs font-bold text-amber-700">Đánh giá năng lực tư duy 6 chủ đề & lời khuyên phụ huynh đồng hành</p>
+                                    <p class="text-xs font-bold text-amber-700">Chỉ nhận xét năng lực có đủ dữ liệu đo & gợi ý phần cần ôn</p>
                                 </div>
                             </div>
                             <button onclick="speakPedagogicalEvaluation()" id="btn-speak-evaluation" class="no-print shrink-0 flex items-center space-x-1.5 bg-white border-2 border-amber-300 hover:bg-amber-50 text-amber-700 font-extrabold text-xs px-3 py-2 rounded-xl shadow-xs transition-all whitespace-nowrap">
@@ -1246,7 +1247,7 @@
     </footer>
 
     <!-- NẠP ENGINE JAVASCRIPT ĐỒNG BỘ -->
-    <script src="assets/js/app.js?v=8.1-ta1-shell"></script>
+    <script src="assets/js/app.js?v=8.2-assessment-v3"></script>
     <script>
         // Đăng ký Service Worker (chỉ chạy khi trình duyệt hỗ trợ) — cho phép mở app tạm thời
         // khi mất mạng và là điều kiện bắt buộc để trình duyệt cho phép "Cài đặt/Thêm vào Màn hình chính".
